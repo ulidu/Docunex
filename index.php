@@ -322,7 +322,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="main-light-error-page.html" class="menu">
+                            <a href="main-light-error-page.php" class="menu">
                                 <div class="menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="menu__title"> Error Page </div>
                             </a>
@@ -863,7 +863,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="main-light-error-page.html" class="side-menu">
+                                <a href="main-light-error-page.php" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Error Page </div>
                                 </a>
