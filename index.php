@@ -6,10 +6,9 @@
         <meta charset="utf-8">
         <link href="dist/images/logo.svg" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Rubick admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
-        <meta name="keywords" content="admin template, Rubick Admin Template, dashboard template, flat admin template, responsive admin template, web app">
-        <meta name="author" content="LEFT4CODE">
-        <title>Dashboard - Rubick - Tailwind HTML Admin Template</title>
+        <meta name="description" content="Docunex - Document Management System">
+         <meta name="author" content="Docunex">
+        <title>Docunex</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="dist/css/app.css" />
         <!-- END: CSS Assets-->
@@ -32,7 +31,7 @@
                     </a>
                     <ul class="menu__sub-open">
                         <li>
-                            <a href="index.html" class="menu menu--active">
+                            <a href="index.php" class="menu menu--active">
                                 <div class="menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="menu__title"> Overview 1 </div>
                             </a>
@@ -58,7 +57,7 @@
                     </a>
                     <ul class="">
                         <li>
-                            <a href="index.html" class="menu menu--active">
+                            <a href="index.php" class="menu menu--active">
                                 <div class="menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="menu__title"> Side Menu </div>
                             </a>
@@ -311,13 +310,13 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="login-light-login.html" class="menu">
+                            <a href="login-light-login.php" class="menu">
                                 <div class="menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="menu__title"> Login </div>
                             </a>
                         </li>
                         <li>
-                            <a href="login-light-register.html" class="menu">
+                            <a href="login-light-register.php" class="menu">
                                 <div class="menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="menu__title"> Register </div>
                             </a>
@@ -525,10 +524,11 @@
         </div>
         <!-- END: Mobile Menu -->
         <div class="flex">
-            <!-- BEGIN: Simple Menu -->
-            <nav class="side-nav side-nav--simple">
+            <!-- BEGIN: Side Menu -->
+            <nav class="side-nav">
                 <a href="" class="intro-x flex items-center pl-5 pt-4">
                     <img alt="Rubick Tailwind HTML Admin Template" class="w-6" src="dist/images/logo.svg">
+                    <span class="hidden xl:block text-white text-lg ml-3"> Ru<span class="font-medium">bick</span> </span>
                 </a>
                 <div class="side-nav__devider my-6"></div>
                 <ul>
@@ -537,24 +537,24 @@
                             <div class="side-menu__icon"> <i data-feather="home"></i> </div>
                             <div class="side-menu__title">
                                 Dashboard 
-                                <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                <div class="side-menu__sub-icon transform rotate-180"> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
                         <ul class="side-menu__sub-open">
                             <li>
-                                <a href="simple-menu-light-dashboard-overview-1.html" class="side-menu side-menu--active">
+                                <a href="index.php" class="side-menu side-menu--active">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Overview 1 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-dashboard-overview-2.html" class="side-menu">
+                                <a href="side-menu-light-dashboard-overview-2.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Overview 2 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-dashboard-overview-3.html" class="side-menu">
+                                <a href="side-menu-light-dashboard-overview-3.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Overview 3 </div>
                                 </a>
@@ -566,24 +566,24 @@
                             <div class="side-menu__icon"> <i data-feather="box"></i> </div>
                             <div class="side-menu__title">
                                 Menu Layout 
-                                <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
                         <ul class="">
                             <li>
-                                <a href="index.html" class="side-menu side-menu--active">
+                                <a href="index.php" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Side Menu </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-dashboard-overview-1.html" class="side-menu side-menu--active">
+                                <a href="simple-menu-light-dashboard-overview-1.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Simple Menu </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="top-menu-light-dashboard-overview-1.html" class="side-menu side-menu--active">
+                                <a href="top-menu-light-dashboard-overview-1.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Top Menu </div>
                                 </a>
@@ -591,37 +591,37 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="simple-menu-light-inbox.html" class="side-menu">
+                        <a href="side-menu-light-inbox.html" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
                             <div class="side-menu__title"> Inbox </div>
                         </a>
                     </li>
                     <li>
-                        <a href="simple-menu-light-file-manager.html" class="side-menu">
+                        <a href="side-menu-light-file-manager.html" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="hard-drive"></i> </div>
                             <div class="side-menu__title"> File Manager </div>
                         </a>
                     </li>
                     <li>
-                        <a href="simple-menu-light-point-of-sale.html" class="side-menu">
+                        <a href="side-menu-light-point-of-sale.html" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="credit-card"></i> </div>
                             <div class="side-menu__title"> Point of Sale </div>
                         </a>
                     </li>
                     <li>
-                        <a href="simple-menu-light-chat.html" class="side-menu">
+                        <a href="side-menu-light-chat.html" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="message-square"></i> </div>
                             <div class="side-menu__title"> Chat </div>
                         </a>
                     </li>
                     <li>
-                        <a href="simple-menu-light-post.html" class="side-menu">
+                        <a href="side-menu-light-post.html" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="file-text"></i> </div>
                             <div class="side-menu__title"> Post </div>
                         </a>
                     </li>
                     <li>
-                        <a href="simple-menu-light-calendar.html" class="side-menu">
+                        <a href="side-menu-light-calendar.html" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="calendar"></i> </div>
                             <div class="side-menu__title"> Calendar </div>
                         </a>
@@ -632,7 +632,7 @@
                             <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
                             <div class="side-menu__title">
                                 Crud 
-                                <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
                         <ul class="">
@@ -655,24 +655,24 @@
                             <div class="side-menu__icon"> <i data-feather="users"></i> </div>
                             <div class="side-menu__title">
                                 Users 
-                                <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
                         <ul class="">
                             <li>
-                                <a href="simple-menu-light-users-layout-1.html" class="side-menu">
+                                <a href="side-menu-light-users-layout-1.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Layout 1 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-users-layout-2.html" class="side-menu">
+                                <a href="side-menu-light-users-layout-2.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Layout 2 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-users-layout-3.html" class="side-menu">
+                                <a href="side-menu-light-users-layout-3.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Layout 3 </div>
                                 </a>
@@ -684,24 +684,24 @@
                             <div class="side-menu__icon"> <i data-feather="trello"></i> </div>
                             <div class="side-menu__title">
                                 Profile 
-                                <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
                         <ul class="">
                             <li>
-                                <a href="simple-menu-light-profile-overview-1.html" class="side-menu">
+                                <a href="side-menu-light-profile-overview-1.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Overview 1 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-profile-overview-2.html" class="side-menu">
+                                <a href="side-menu-light-profile-overview-2.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Overview 2 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-profile-overview-3.html" class="side-menu">
+                                <a href="side-menu-light-profile-overview-3.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Overview 3 </div>
                                 </a>
@@ -713,7 +713,7 @@
                             <div class="side-menu__icon"> <i data-feather="layout"></i> </div>
                             <div class="side-menu__title">
                                 Pages 
-                                <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
                         <ul class="">
@@ -722,24 +722,24 @@
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title">
                                         Wizards 
-                                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                        <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                                     </div>
                                 </a>
                                 <ul class="">
                                     <li>
-                                        <a href="simple-menu-light-wizard-layout-1.html" class="side-menu">
+                                        <a href="side-menu-light-wizard-layout-1.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 1</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="simple-menu-light-wizard-layout-2.html" class="side-menu">
+                                        <a href="side-menu-light-wizard-layout-2.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 2</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="simple-menu-light-wizard-layout-3.html" class="side-menu">
+                                        <a href="side-menu-light-wizard-layout-3.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 3</div>
                                         </a>
@@ -751,24 +751,24 @@
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title">
                                         Blog 
-                                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                        <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                                     </div>
                                 </a>
                                 <ul class="">
                                     <li>
-                                        <a href="simple-menu-light-blog-layout-1.html" class="side-menu">
+                                        <a href="side-menu-light-blog-layout-1.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 1</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="simple-menu-light-blog-layout-2.html" class="side-menu">
+                                        <a href="side-menu-light-blog-layout-2.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 2</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="simple-menu-light-blog-layout-3.html" class="side-menu">
+                                        <a href="side-menu-light-blog-layout-3.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 3</div>
                                         </a>
@@ -780,18 +780,18 @@
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title">
                                         Pricing 
-                                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                        <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                                     </div>
                                 </a>
                                 <ul class="">
                                     <li>
-                                        <a href="simple-menu-light-pricing-layout-1.html" class="side-menu">
+                                        <a href="side-menu-light-pricing-layout-1.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 1</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="simple-menu-light-pricing-layout-2.html" class="side-menu">
+                                        <a href="side-menu-light-pricing-layout-2.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 2</div>
                                         </a>
@@ -803,18 +803,18 @@
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title">
                                         Invoice 
-                                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                        <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                                     </div>
                                 </a>
                                 <ul class="">
                                     <li>
-                                        <a href="simple-menu-light-invoice-layout-1.html" class="side-menu">
+                                        <a href="side-menu-light-invoice-layout-1.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 1</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="simple-menu-light-invoice-layout-2.html" class="side-menu">
+                                        <a href="side-menu-light-invoice-layout-2.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 2</div>
                                         </a>
@@ -826,24 +826,24 @@
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title">
                                         FAQ 
-                                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                        <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                                     </div>
                                 </a>
                                 <ul class="">
                                     <li>
-                                        <a href="simple-menu-light-faq-layout-1.html" class="side-menu">
+                                        <a href="side-menu-light-faq-layout-1.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 1</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="simple-menu-light-faq-layout-2.html" class="side-menu">
+                                        <a href="side-menu-light-faq-layout-2.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 2</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="simple-menu-light-faq-layout-3.html" class="side-menu">
+                                        <a href="side-menu-light-faq-layout-3.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Layout 3</div>
                                         </a>
@@ -851,13 +851,13 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="login-light-login.html" class="side-menu">
+                                <a href="login-light-login.php" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Login </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="login-light-register.html" class="side-menu">
+                                <a href="login-light-register.php" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Register </div>
                                 </a>
@@ -869,13 +869,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-update-profile.html" class="side-menu">
+                                <a href="side-menu-light-update-profile.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Update profile </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-change-password.html" class="side-menu">
+                                <a href="side-menu-light-change-password.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Change Password </div>
                                 </a>
@@ -888,7 +888,7 @@
                             <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
                             <div class="side-menu__title">
                                 Components 
-                                <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
                         <ul class="">
@@ -897,18 +897,18 @@
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title">
                                         Table 
-                                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                        <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                                     </div>
                                 </a>
                                 <ul class="">
                                     <li>
-                                        <a href="simple-menu-light-regular-table.html" class="side-menu">
+                                        <a href="side-menu-light-regular-table.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Regular Table</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="simple-menu-light-tabulator.html" class="side-menu">
+                                        <a href="side-menu-light-tabulator.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Tabulator</div>
                                         </a>
@@ -920,24 +920,24 @@
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title">
                                         Overlay 
-                                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                        <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                                     </div>
                                 </a>
                                 <ul class="">
                                     <li>
-                                        <a href="simple-menu-light-modal.html" class="side-menu">
+                                        <a href="side-menu-light-modal.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Modal</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="simple-menu-light-slide-over.html" class="side-menu">
+                                        <a href="side-menu-light-slide-over.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Slide Over</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="simple-menu-light-notification.html" class="side-menu">
+                                        <a href="side-menu-light-notification.html" class="side-menu">
                                             <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                             <div class="side-menu__title">Notification</div>
                                         </a>
@@ -945,49 +945,49 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="simple-menu-light-accordion.html" class="side-menu">
+                                <a href="side-menu-light-accordion.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Accordion </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-button.html" class="side-menu">
+                                <a href="side-menu-light-button.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Button </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-alert.html" class="side-menu">
+                                <a href="side-menu-light-alert.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Alert </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-progress-bar.html" class="side-menu">
+                                <a href="side-menu-light-progress-bar.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Progress Bar </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-tooltip.html" class="side-menu">
+                                <a href="side-menu-light-tooltip.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Tooltip </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-dropdown.html" class="side-menu">
+                                <a href="side-menu-light-dropdown.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Dropdown </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-typography.html" class="side-menu">
+                                <a href="side-menu-light-typography.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Typography </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-icon.html" class="side-menu">
+                                <a href="side-menu-light-icon.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Icon </div>
                                 </a>
@@ -1005,42 +1005,42 @@
                             <div class="side-menu__icon"> <i data-feather="sidebar"></i> </div>
                             <div class="side-menu__title">
                                 Forms 
-                                <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
                         <ul class="">
                             <li>
-                                <a href="simple-menu-light-regular-form.html" class="side-menu">
+                                <a href="side-menu-light-regular-form.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Regular Form </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-datepicker.html" class="side-menu">
+                                <a href="side-menu-light-datepicker.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Datepicker </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-tom-select.html" class="side-menu">
+                                <a href="side-menu-light-tom-select.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Tom Select </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-file-upload.html" class="side-menu">
+                                <a href="side-menu-light-file-upload.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> File Upload </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-wysiwyg-editor.html" class="side-menu">
+                                <a href="side-menu-light-wysiwyg-editor.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Wysiwyg Editor </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-validation.html" class="side-menu">
+                                <a href="side-menu-light-validation.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Validation </div>
                                 </a>
@@ -1052,24 +1052,24 @@
                             <div class="side-menu__icon"> <i data-feather="hard-drive"></i> </div>
                             <div class="side-menu__title">
                                 Widgets 
-                                <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
                         <ul class="">
                             <li>
-                                <a href="simple-menu-light-chart.html" class="side-menu">
+                                <a href="side-menu-light-chart.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Chart </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-slider.html" class="side-menu">
+                                <a href="side-menu-light-slider.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Slider </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="simple-menu-light-image-zoom.html" class="side-menu">
+                                <a href="side-menu-light-image-zoom.html" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Image Zoom </div>
                                 </a>
@@ -1078,7 +1078,7 @@
                     </li>
                 </ul>
             </nav>
-            <!-- END: Simple Menu -->
+            <!-- END: Side Menu -->
             <!-- BEGIN: Content -->
             <div class="content">
                 <!-- BEGIN: Top Bar -->
@@ -1114,61 +1114,61 @@
                                 <div class="mb-5">
                                     <a href="" class="flex items-center mt-2">
                                         <div class="w-8 h-8 image-fit">
-                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-4.jpg">
+                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-8.jpg">
                                         </div>
                                         <div class="ml-3">Denzel Washington</div>
                                         <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">denzelwashington@left4code.com</div>
                                     </a>
                                     <a href="" class="flex items-center mt-2">
                                         <div class="w-8 h-8 image-fit">
-                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-13.jpg">
+                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-3.jpg">
                                         </div>
-                                        <div class="ml-3">Angelina Jolie</div>
-                                        <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">angelinajolie@left4code.com</div>
+                                        <div class="ml-3">Leonardo DiCaprio</div>
+                                        <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">leonardodicaprio@left4code.com</div>
                                     </a>
                                     <a href="" class="flex items-center mt-2">
                                         <div class="w-8 h-8 image-fit">
-                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-12.jpg">
+                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-15.jpg">
                                         </div>
-                                        <div class="ml-3">Al Pacino</div>
-                                        <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">alpacino@left4code.com</div>
+                                        <div class="ml-3">Brad Pitt</div>
+                                        <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">bradpitt@left4code.com</div>
                                     </a>
                                     <a href="" class="flex items-center mt-2">
                                         <div class="w-8 h-8 image-fit">
-                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-6.jpg">
+                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-7.jpg">
                                         </div>
-                                        <div class="ml-3">Tom Cruise</div>
-                                        <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">tomcruise@left4code.com</div>
+                                        <div class="ml-3">Denzel Washington</div>
+                                        <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">denzelwashington@left4code.com</div>
                                     </a>
                                 </div>
                                 <div class="search-result__content__title">Products</div>
                                 <a href="" class="flex items-center mt-2">
                                     <div class="w-8 h-8 image-fit">
-                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-13.jpg">
-                                    </div>
-                                    <div class="ml-3">Samsung Q90 QLED TV</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Electronic</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-2.jpg">
-                                    </div>
-                                    <div class="ml-3">Nikon Z6</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Photography</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-3.jpg">
+                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-11.jpg">
                                     </div>
                                     <div class="ml-3">Nike Air Max 270</div>
                                     <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Sport &amp; Outdoor</div>
                                 </a>
                                 <a href="" class="flex items-center mt-2">
                                     <div class="w-8 h-8 image-fit">
-                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-2.jpg">
+                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-12.jpg">
                                     </div>
-                                    <div class="ml-3">Dell XPS 13</div>
+                                    <div class="ml-3">Sony Master Series A9G</div>
+                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Electronic</div>
+                                </a>
+                                <a href="" class="flex items-center mt-2">
+                                    <div class="w-8 h-8 image-fit">
+                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-6.jpg">
+                                    </div>
+                                    <div class="ml-3">Apple MacBook Pro 13</div>
                                     <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">PC &amp; Laptop</div>
+                                </a>
+                                <a href="" class="flex items-center mt-2">
+                                    <div class="w-8 h-8 image-fit">
+                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-7.jpg">
+                                    </div>
+                                    <div class="ml-3">Samsung Galaxy S20 Ultra</div>
+                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Smartphone &amp; Tablet</div>
                                 </a>
                             </div>
                         </div>
@@ -1182,38 +1182,25 @@
                                 <div class="notification-content__title">Notifications</div>
                                 <div class="cursor-pointer relative flex items-center ">
                                     <div class="w-12 h-12 flex-none image-fit mr-1">
-                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-4.jpg">
+                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-8.jpg">
                                         <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
                                     </div>
                                     <div class="ml-2 overflow-hidden">
                                         <div class="flex items-center">
                                             <a href="javascript:;" class="font-medium truncate mr-5">Denzel Washington</a> 
-                                            <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">06:05 AM</div>
+                                            <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">01:10 PM</div>
                                         </div>
-                                        <div class="w-full truncate text-gray-600 mt-0.5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomi</div>
+                                        <div class="w-full truncate text-gray-600 mt-0.5">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 20</div>
                                     </div>
                                 </div>
                                 <div class="cursor-pointer relative flex items-center mt-5">
                                     <div class="w-12 h-12 flex-none image-fit mr-1">
-                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-13.jpg">
+                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-3.jpg">
                                         <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
                                     </div>
                                     <div class="ml-2 overflow-hidden">
                                         <div class="flex items-center">
-                                            <a href="javascript:;" class="font-medium truncate mr-5">Angelina Jolie</a> 
-                                            <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">05:09 AM</div>
-                                        </div>
-                                        <div class="w-full truncate text-gray-600 mt-0.5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomi</div>
-                                    </div>
-                                </div>
-                                <div class="cursor-pointer relative flex items-center mt-5">
-                                    <div class="w-12 h-12 flex-none image-fit mr-1">
-                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-12.jpg">
-                                        <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                    </div>
-                                    <div class="ml-2 overflow-hidden">
-                                        <div class="flex items-center">
-                                            <a href="javascript:;" class="font-medium truncate mr-5">Al Pacino</a> 
+                                            <a href="javascript:;" class="font-medium truncate mr-5">Leonardo DiCaprio</a> 
                                             <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">01:10 PM</div>
                                         </div>
                                         <div class="w-full truncate text-gray-600 mt-0.5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500</div>
@@ -1221,12 +1208,25 @@
                                 </div>
                                 <div class="cursor-pointer relative flex items-center mt-5">
                                     <div class="w-12 h-12 flex-none image-fit mr-1">
-                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-6.jpg">
+                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-15.jpg">
                                         <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
                                     </div>
                                     <div class="ml-2 overflow-hidden">
                                         <div class="flex items-center">
-                                            <a href="javascript:;" class="font-medium truncate mr-5">Tom Cruise</a> 
+                                            <a href="javascript:;" class="font-medium truncate mr-5">Brad Pitt</a> 
+                                            <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">01:10 PM</div>
+                                        </div>
+                                        <div class="w-full truncate text-gray-600 mt-0.5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomi</div>
+                                    </div>
+                                </div>
+                                <div class="cursor-pointer relative flex items-center mt-5">
+                                    <div class="w-12 h-12 flex-none image-fit mr-1">
+                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-7.jpg">
+                                        <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
+                                    </div>
+                                    <div class="ml-2 overflow-hidden">
+                                        <div class="flex items-center">
+                                            <a href="javascript:;" class="font-medium truncate mr-5">Denzel Washington</a> 
                                             <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">05:09 AM</div>
                                         </div>
                                         <div class="w-full truncate text-gray-600 mt-0.5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomi</div>
@@ -1234,15 +1234,15 @@
                                 </div>
                                 <div class="cursor-pointer relative flex items-center mt-5">
                                     <div class="w-12 h-12 flex-none image-fit mr-1">
-                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-5.jpg">
+                                        <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-11.jpg">
                                         <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
                                     </div>
                                     <div class="ml-2 overflow-hidden">
                                         <div class="flex items-center">
-                                            <a href="javascript:;" class="font-medium truncate mr-5">Brad Pitt</a> 
-                                            <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">06:05 AM</div>
+                                            <a href="javascript:;" class="font-medium truncate mr-5">Leonardo DiCaprio</a> 
+                                            <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">05:09 AM</div>
                                         </div>
-                                        <div class="w-full truncate text-gray-600 mt-0.5">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 20</div>
+                                        <div class="w-full truncate text-gray-600 mt-0.5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500</div>
                                     </div>
                                 </div>
                             </div>
@@ -1258,7 +1258,7 @@
                             <div class="dropdown-menu__content box bg-theme-26 dark:bg-dark-6 text-white">
                                 <div class="p-4 border-b border-theme-27 dark:border-dark-3">
                                     <div class="font-medium">Denzel Washington</div>
-                                    <div class="text-xs text-theme-28 mt-0.5 dark:text-gray-600">Backend Engineer</div>
+                                    <div class="text-xs text-theme-28 mt-0.5 dark:text-gray-600">Software Engineer</div>
                                 </div>
                                 <div class="p-2">
                                     <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
@@ -1477,11 +1477,35 @@
                                     <div class="intro-y">
                                         <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
                                             <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                                <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-10.jpg">
+                                                <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-7.jpg">
                                             </div>
                                             <div class="ml-4 mr-auto">
-                                                <div class="font-medium">Kevin Spacey</div>
-                                                <div class="text-gray-600 text-xs mt-0.5">14 July 2020</div>
+                                                <div class="font-medium">Morgan Freeman</div>
+                                                <div class="text-gray-600 text-xs mt-0.5">11 June 2022</div>
+                                            </div>
+                                            <div class="py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium">137 Sales</div>
+                                        </div>
+                                    </div>
+                                    <div class="intro-y">
+                                        <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
+                                            <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
+                                                <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-5.jpg">
+                                            </div>
+                                            <div class="ml-4 mr-auto">
+                                                <div class="font-medium">Johnny Depp</div>
+                                                <div class="text-gray-600 text-xs mt-0.5">27 March 2021</div>
+                                            </div>
+                                            <div class="py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium">137 Sales</div>
+                                        </div>
+                                    </div>
+                                    <div class="intro-y">
+                                        <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
+                                            <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
+                                                <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-13.jpg">
+                                            </div>
+                                            <div class="ml-4 mr-auto">
+                                                <div class="font-medium">Johnny Depp</div>
+                                                <div class="text-gray-600 text-xs mt-0.5">28 August 2020</div>
                                             </div>
                                             <div class="py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium">137 Sales</div>
                                         </div>
@@ -1493,31 +1517,7 @@
                                             </div>
                                             <div class="ml-4 mr-auto">
                                                 <div class="font-medium">Johnny Depp</div>
-                                                <div class="text-gray-600 text-xs mt-0.5">12 October 2022</div>
-                                            </div>
-                                            <div class="py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium">137 Sales</div>
-                                        </div>
-                                    </div>
-                                    <div class="intro-y">
-                                        <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
-                                            <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                                <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-3.jpg">
-                                            </div>
-                                            <div class="ml-4 mr-auto">
-                                                <div class="font-medium">Nicolas Cage</div>
-                                                <div class="text-gray-600 text-xs mt-0.5">3 October 2022</div>
-                                            </div>
-                                            <div class="py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium">137 Sales</div>
-                                        </div>
-                                    </div>
-                                    <div class="intro-y">
-                                        <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
-                                            <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                                <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-2.jpg">
-                                            </div>
-                                            <div class="ml-4 mr-auto">
-                                                <div class="font-medium">John Travolta</div>
-                                                <div class="text-gray-600 text-xs mt-0.5">7 January 2022</div>
+                                                <div class="text-gray-600 text-xs mt-0.5">22 December 2022</div>
                                             </div>
                                             <div class="py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium">137 Sales</div>
                                         </div>
@@ -1607,19 +1607,48 @@
                                                 <td class="w-40">
                                                     <div class="flex">
                                                         <div class="w-10 h-10 image-fit zoom-in">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-12.jpg" title="Uploaded at 14 July 2020">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-3.jpg" title="Uploaded at 11 June 2022">
                                                         </div>
                                                         <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-11.jpg" title="Uploaded at 27 September 2020">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-8.jpg" title="Uploaded at 11 December 2020">
                                                         </div>
                                                         <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-2.jpg" title="Uploaded at 10 October 2020">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-11.jpg" title="Uploaded at 14 September 2021">
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <a href="" class="font-medium whitespace-nowrap">Nikon Z6</a> 
-                                                    <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
+                                                    <a href="" class="font-medium whitespace-nowrap">Nike Air Max 270</a> 
+                                                    <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Sport &amp; Outdoor</div>
+                                                </td>
+                                                <td class="text-center">50</td>
+                                                <td class="w-40">
+                                                    <div class="flex items-center justify-center text-theme-6"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Inactive </div>
+                                                </td>
+                                                <td class="table-report__action w-56">
+                                                    <div class="flex justify-center items-center">
+                                                        <a class="flex items-center mr-3" href=""> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
+                                                        <a class="flex items-center text-theme-6" href=""> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="intro-x">
+                                                <td class="w-40">
+                                                    <div class="flex">
+                                                        <div class="w-10 h-10 image-fit zoom-in">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-13.jpg" title="Uploaded at 27 March 2021">
+                                                        </div>
+                                                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-3.jpg" title="Uploaded at 3 June 2020">
+                                                        </div>
+                                                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-2.jpg" title="Uploaded at 11 March 2021">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="" class="font-medium whitespace-nowrap">Samsung Q90 QLED TV</a> 
+                                                    <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Electronic</div>
                                                 </td>
                                                 <td class="text-center">50</td>
                                                 <td class="w-40">
@@ -1636,81 +1665,52 @@
                                                 <td class="w-40">
                                                     <div class="flex">
                                                         <div class="w-10 h-10 image-fit zoom-in">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-5.jpg" title="Uploaded at 12 October 2022">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-4.jpg" title="Uploaded at 28 August 2020">
                                                         </div>
                                                         <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-10.jpg" title="Uploaded at 2 February 2022">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-3.jpg" title="Uploaded at 27 September 2021">
                                                         </div>
                                                         <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-8.jpg" title="Uploaded at 12 September 2022">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-7.jpg" title="Uploaded at 19 April 2022">
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <a href="" class="font-medium whitespace-nowrap">Nike Tanjun</a> 
-                                                    <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Sport &amp; Outdoor</div>
-                                                </td>
-                                                <td class="text-center">116</td>
-                                                <td class="w-40">
-                                                    <div class="flex items-center justify-center text-theme-6"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Inactive </div>
-                                                </td>
-                                                <td class="table-report__action w-56">
-                                                    <div class="flex justify-center items-center">
-                                                        <a class="flex items-center mr-3" href=""> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
-                                                        <a class="flex items-center text-theme-6" href=""> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="intro-x">
-                                                <td class="w-40">
-                                                    <div class="flex">
-                                                        <div class="w-10 h-10 image-fit zoom-in">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-8.jpg" title="Uploaded at 3 October 2022">
-                                                        </div>
-                                                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-13.jpg" title="Uploaded at 21 September 2021">
-                                                        </div>
-                                                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-5.jpg" title="Uploaded at 18 April 2020">
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a href="" class="font-medium whitespace-nowrap">Sony A7 III</a> 
-                                                    <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
-                                                </td>
-                                                <td class="text-center">136</td>
-                                                <td class="w-40">
-                                                    <div class="flex items-center justify-center text-theme-6"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Inactive </div>
-                                                </td>
-                                                <td class="table-report__action w-56">
-                                                    <div class="flex justify-center items-center">
-                                                        <a class="flex items-center mr-3" href=""> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
-                                                        <a class="flex items-center text-theme-6" href=""> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="intro-x">
-                                                <td class="w-40">
-                                                    <div class="flex">
-                                                        <div class="w-10 h-10 image-fit zoom-in">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-1.jpg" title="Uploaded at 7 January 2022">
-                                                        </div>
-                                                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-8.jpg" title="Uploaded at 20 November 2022">
-                                                        </div>
-                                                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-2.jpg" title="Uploaded at 21 February 2022">
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a href="" class="font-medium whitespace-nowrap">Samsung Q90 QLED TV</a> 
+                                                    <a href="" class="font-medium whitespace-nowrap">Sony Master Series A9G</a> 
                                                     <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Electronic</div>
                                                 </td>
-                                                <td class="text-center">188</td>
+                                                <td class="text-center">127</td>
                                                 <td class="w-40">
-                                                    <div class="flex items-center justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Active </div>
+                                                    <div class="flex items-center justify-center text-theme-6"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Inactive </div>
+                                                </td>
+                                                <td class="table-report__action w-56">
+                                                    <div class="flex justify-center items-center">
+                                                        <a class="flex items-center mr-3" href=""> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
+                                                        <a class="flex items-center text-theme-6" href=""> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="intro-x">
+                                                <td class="w-40">
+                                                    <div class="flex">
+                                                        <div class="w-10 h-10 image-fit zoom-in">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-6.jpg" title="Uploaded at 22 December 2022">
+                                                        </div>
+                                                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-12.jpg" title="Uploaded at 19 December 2022">
+                                                        </div>
+                                                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="tooltip rounded-full" src="dist/images/preview-15.jpg" title="Uploaded at 19 August 2022">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="" class="font-medium whitespace-nowrap">Dell XPS 13</a> 
+                                                    <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">PC &amp; Laptop</div>
+                                                </td>
+                                                <td class="text-center">59</td>
+                                                <td class="w-40">
+                                                    <div class="flex items-center justify-center text-theme-6"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Inactive </div>
                                                 </td>
                                                 <td class="table-report__action w-56">
                                                     <div class="flex justify-center items-center">
@@ -1767,13 +1767,37 @@
                                         <div class="intro-x">
                                             <div class="box px-5 py-3 mb-3 flex items-center zoom-in">
                                                 <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-10.jpg">
+                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-7.jpg">
                                                 </div>
                                                 <div class="ml-4 mr-auto">
-                                                    <div class="font-medium">Kevin Spacey</div>
-                                                    <div class="text-gray-600 text-xs mt-0.5">14 July 2020</div>
+                                                    <div class="font-medium">Morgan Freeman</div>
+                                                    <div class="text-gray-600 text-xs mt-0.5">11 June 2022</div>
                                                 </div>
-                                                <div class="text-theme-9">+$33</div>
+                                                <div class="text-theme-6">-$65</div>
+                                            </div>
+                                        </div>
+                                        <div class="intro-x">
+                                            <div class="box px-5 py-3 mb-3 flex items-center zoom-in">
+                                                <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
+                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-5.jpg">
+                                                </div>
+                                                <div class="ml-4 mr-auto">
+                                                    <div class="font-medium">Johnny Depp</div>
+                                                    <div class="text-gray-600 text-xs mt-0.5">27 March 2021</div>
+                                                </div>
+                                                <div class="text-theme-9">+$119</div>
+                                            </div>
+                                        </div>
+                                        <div class="intro-x">
+                                            <div class="box px-5 py-3 mb-3 flex items-center zoom-in">
+                                                <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
+                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-13.jpg">
+                                                </div>
+                                                <div class="ml-4 mr-auto">
+                                                    <div class="font-medium">Johnny Depp</div>
+                                                    <div class="text-gray-600 text-xs mt-0.5">28 August 2020</div>
+                                                </div>
+                                                <div class="text-theme-6">-$127</div>
                                             </div>
                                         </div>
                                         <div class="intro-x">
@@ -1783,45 +1807,21 @@
                                                 </div>
                                                 <div class="ml-4 mr-auto">
                                                     <div class="font-medium">Johnny Depp</div>
-                                                    <div class="text-gray-600 text-xs mt-0.5">12 October 2022</div>
+                                                    <div class="text-gray-600 text-xs mt-0.5">22 December 2022</div>
                                                 </div>
-                                                <div class="text-theme-6">-$110</div>
+                                                <div class="text-theme-6">-$115</div>
                                             </div>
                                         </div>
                                         <div class="intro-x">
                                             <div class="box px-5 py-3 mb-3 flex items-center zoom-in">
                                                 <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-3.jpg">
-                                                </div>
-                                                <div class="ml-4 mr-auto">
-                                                    <div class="font-medium">Nicolas Cage</div>
-                                                    <div class="text-gray-600 text-xs mt-0.5">3 October 2022</div>
-                                                </div>
-                                                <div class="text-theme-6">-$100</div>
-                                            </div>
-                                        </div>
-                                        <div class="intro-x">
-                                            <div class="box px-5 py-3 mb-3 flex items-center zoom-in">
-                                                <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-2.jpg">
-                                                </div>
-                                                <div class="ml-4 mr-auto">
-                                                    <div class="font-medium">John Travolta</div>
-                                                    <div class="text-gray-600 text-xs mt-0.5">7 January 2022</div>
-                                                </div>
-                                                <div class="text-theme-9">+$198</div>
-                                            </div>
-                                        </div>
-                                        <div class="intro-x">
-                                            <div class="box px-5 py-3 mb-3 flex items-center zoom-in">
-                                                <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-11.jpg">
+                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-6.jpg">
                                                 </div>
                                                 <div class="ml-4 mr-auto">
                                                     <div class="font-medium">Russell Crowe</div>
-                                                    <div class="text-gray-600 text-xs mt-0.5">19 June 2020</div>
+                                                    <div class="text-gray-600 text-xs mt-0.5">15 December 2020</div>
                                                 </div>
-                                                <div class="text-theme-6">-$200</div>
+                                                <div class="text-theme-6">-$50</div>
                                             </div>
                                         </div>
                                         <a href="" class="intro-x w-full block text-center rounded-md py-3 border border-dotted border-theme-15 dark:border-dark-5 text-theme-16 dark:text-gray-600">View More</a> 
@@ -1840,12 +1840,12 @@
                                         <div class="intro-x relative flex items-center mb-3">
                                             <div class="report-timeline__image">
                                                 <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-1.jpg">
+                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-8.jpg">
                                                 </div>
                                             </div>
                                             <div class="box px-5 py-3 ml-4 flex-1 zoom-in">
                                                 <div class="flex items-center">
-                                                    <div class="font-medium">Sean Connery</div>
+                                                    <div class="font-medium">Edward Norton</div>
                                                     <div class="text-xs text-gray-500 ml-auto">07:00 PM</div>
                                                 </div>
                                                 <div class="text-gray-600 mt-1">Has joined the team</div>
@@ -1854,25 +1854,25 @@
                                         <div class="intro-x relative flex items-center mb-3">
                                             <div class="report-timeline__image">
                                                 <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-13.jpg">
+                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-2.jpg">
                                                 </div>
                                             </div>
                                             <div class="box px-5 py-3 ml-4 flex-1 zoom-in">
                                                 <div class="flex items-center">
-                                                    <div class="font-medium">Morgan Freeman</div>
+                                                    <div class="font-medium">Brad Pitt</div>
                                                     <div class="text-xs text-gray-500 ml-auto">07:00 PM</div>
                                                 </div>
                                                 <div class="text-gray-600">
                                                     <div class="mt-1">Added 3 new photos</div>
                                                     <div class="flex mt-2">
-                                                        <div class="tooltip w-8 h-8 image-fit mr-1 zoom-in" title="Nikon Z6">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-md border border-white" src="dist/images/preview-3.jpg">
-                                                        </div>
-                                                        <div class="tooltip w-8 h-8 image-fit mr-1 zoom-in" title="Nike Tanjun">
-                                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-md border border-white" src="dist/images/preview-1.jpg">
-                                                        </div>
-                                                        <div class="tooltip w-8 h-8 image-fit mr-1 zoom-in" title="Sony A7 III">
+                                                        <div class="tooltip w-8 h-8 image-fit mr-1 zoom-in" title="Nike Air Max 270">
                                                             <img alt="Rubick Tailwind HTML Admin Template" class="rounded-md border border-white" src="dist/images/preview-12.jpg">
+                                                        </div>
+                                                        <div class="tooltip w-8 h-8 image-fit mr-1 zoom-in" title="Samsung Q90 QLED TV">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-md border border-white" src="dist/images/preview-10.jpg">
+                                                        </div>
+                                                        <div class="tooltip w-8 h-8 image-fit mr-1 zoom-in" title="Sony Master Series A9G">
+                                                            <img alt="Rubick Tailwind HTML Admin Template" class="rounded-md border border-white" src="dist/images/preview-5.jpg">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1882,12 +1882,12 @@
                                         <div class="intro-x relative flex items-center mb-3">
                                             <div class="report-timeline__image">
                                                 <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-10.jpg">
+                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-2.jpg">
                                                 </div>
                                             </div>
                                             <div class="box px-5 py-3 ml-4 flex-1 zoom-in">
                                                 <div class="flex items-center">
-                                                    <div class="font-medium">Charlize Theron</div>
+                                                    <div class="font-medium">Keira Knightley</div>
                                                     <div class="text-xs text-gray-500 ml-auto">07:00 PM</div>
                                                 </div>
                                                 <div class="text-gray-600 mt-1">Has changed <a class="text-theme-1 dark:text-theme-10" href="">Samsung Galaxy S20 Ultra</a> price and description</div>
@@ -1896,15 +1896,15 @@
                                         <div class="intro-x relative flex items-center mb-3">
                                             <div class="report-timeline__image">
                                                 <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-7.jpg">
+                                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-1.jpg">
                                                 </div>
                                             </div>
                                             <div class="box px-5 py-3 ml-4 flex-1 zoom-in">
                                                 <div class="flex items-center">
-                                                    <div class="font-medium">Arnold Schwarzenegger</div>
+                                                    <div class="font-medium">Denzel Washington</div>
                                                     <div class="text-xs text-gray-500 ml-auto">07:00 PM</div>
                                                 </div>
-                                                <div class="text-gray-600 mt-1">Has changed <a class="text-theme-1 dark:text-theme-10" href="">Nike Air Max 270</a> description</div>
+                                                <div class="text-gray-600 mt-1">Has changed <a class="text-theme-1 dark:text-theme-10" href="">Samsung Q90 QLED TV</a> description</div>
                                             </div>
                                         </div>
                                     </div>
@@ -2054,7 +2054,7 @@
             <!-- END: Content -->
         </div>
         <!-- BEGIN: Dark Mode Switcher-->
-        <div data-url="simple-menu-dark-dashboard-overview-1.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box dark:bg-dark-2 border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
+        <div data-url="side-menu-dark-dashboard-overview-1.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box dark:bg-dark-2 border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
             <div class="mr-4 text-gray-700 dark:text-gray-300">Dark Mode</div>
             <div class="dark-mode-switcher__toggle border"></div>
         </div>
