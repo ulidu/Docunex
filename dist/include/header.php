@@ -114,7 +114,7 @@ $page = end($link_array);
 
             <li>
                 <a href="file-manager.php" class="side-menu
-                <?php if ($page == "file-manager.php") { ?>
+                <?php if ($page == "file-manager.php" || $page == "new-doc.php") { ?>
                 side-menu--active
                 <?php } ?>">
                     <div class="side-menu__icon"><i data-feather="hard-drive"></i></div>
@@ -125,7 +125,7 @@ $page = end($link_array);
 
             <li>
                 <a href="forum.php" class="side-menu
-                <?php if ($page == "forum.php") { ?>
+                <?php if ($page == "forum.php" || $page == "new-forum.php") { ?>
                 side-menu--active
                 <?php } ?>">
                     <div class="side-menu__icon"><i data-feather="message-square"></i></div>
