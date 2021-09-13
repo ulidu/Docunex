@@ -45,7 +45,7 @@ $page = end($link_array);
 <!-- BEGIN: Mobile Menu -->
 <div class="mobile-menu md:hidden">
     <div class="mobile-menu-bar">
-        <a href="" class="flex mr-auto">
+        <a href="index.php" class="flex mr-auto">
             <img class="w-8" src="dist/images/logo.png">
         </a>
         <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2"
@@ -91,7 +91,7 @@ $page = end($link_array);
 <div class="flex">
     <!-- BEGIN: Side Menu -->
     <nav class="side-nav">
-        <a href="" class="intro-x flex items-center pl-5 pt-4">
+        <a href="index.php" class="intro-x flex items-center pl-5 pt-4">
             <img class="w-8" src="dist/images/logo.png">
             <span class="hidden xl:block text-white text-lg ml-3" style="letter-spacing: 0.05rem;">
                 Docunex</span>
