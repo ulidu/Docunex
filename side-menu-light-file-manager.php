@@ -84,7 +84,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="side-menu-light-file-manager.html" class="menu menu--active">
+                    <a href="side-menu-light-file-manager.php" class="menu menu--active">
                         <div class="menu__icon"> <i data-feather="hard-drive"></i> </div>
                         <div class="menu__title"> File Manager </div>
                     </a>
@@ -598,7 +598,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="side-menu-light-file-manager.html" class="side-menu side-menu--active">
+                        <a href="side-menu-light-file-manager.php" class="side-menu side-menu--active">
                             <div class="side-menu__icon"> <i data-feather="hard-drive"></i> </div>
                             <div class="side-menu__title"> File Manager </div>
                         </a>
