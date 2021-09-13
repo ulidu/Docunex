@@ -3,14 +3,25 @@
 <!-- BEGIN: Head -->
 <head>
     <meta charset="utf-8">
-    <link href="dist/images/logo.svg" rel="shortcut icon">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="dist/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="dist/favicon/site.webmanifest">
+    <link rel="mask-icon" href="dist/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Docunex - Document Management System">
     <meta name="author" content="Docunex">
+
     <title>Docunex</title>
+
     <!-- BEGIN: CSS Assets-->
     <link rel="stylesheet" href="dist/css/app.css"/>
     <!-- END: CSS Assets-->
+
 </head>
 <!-- END: Head -->
 <body class="main">
@@ -84,7 +95,7 @@
             </a>
         </li>
         <li>
-            <a href="side-menu-light-file-manager.php" class="menu">
+            <a href="file-manager.php" class="menu">
                 <div class="menu__icon"><i data-feather="hard-drive"></i></div>
                 <div class="menu__title"> File Manager</div>
             </a>
@@ -314,19 +325,19 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="login-light-login.php" class="menu">
+                    <a href="login.php" class="menu">
                         <div class="menu__icon"><i data-feather="activity"></i></div>
                         <div class="menu__title"> Login</div>
                     </a>
                 </li>
                 <li>
-                    <a href="login-light-register.php" class="menu">
+                    <a href="register.php" class="menu">
                         <div class="menu__icon"><i data-feather="activity"></i></div>
                         <div class="menu__title"> Register</div>
                     </a>
                 </li>
                 <li>
-                    <a href="main-light-error-page.php" class="menu">
+                    <a href="error-page.php" class="menu">
                         <div class="menu__icon"><i data-feather="activity"></i></div>
                         <div class="menu__title"> Error Page</div>
                     </a>
@@ -547,38 +558,26 @@
                     </div>
                 </a>
             </li>
-
-
-            <li>
-                <a href="side-menu-light-file-manager.php" class="side-menu">
-                    <div class="side-menu__icon"><i data-feather="hard-drive"></i></div>
-                    <div class="side-menu__title"> File Manager</div>
-                </a>
-            </li>
-
-
-            <li>
-                <a href="side-menu-light-post.html" class="side-menu">
-                    <div class="side-menu__icon"><i data-feather="file-text"></i></div>
-                    <div class="side-menu__title"> Post</div>
-                </a>
-            </li>
-
-
             <li class="side-nav__devider my-6"></li>
 
             <li>
-                <a href="side-menu-light-chart.html" class="side-menu">
-                    <div class="side-menu__icon"><i data-feather="activity"></i></div>
-                    <div class="side-menu__title"> Chart</div>
+                <a href="file-manager.php" class="side-menu">
+                    <div class="side-menu__icon"><i data-feather="hard-drive"></i></div>
+                    <div class="side-menu__title"> Documents</div>
                 </a>
             </li>
+
+
+
             <li>
-                <a href="side-menu-light-slider.html" class="side-menu">
-                    <div class="side-menu__icon"><i data-feather="activity"></i></div>
-                    <div class="side-menu__title"> Slider</div>
+                <a href="side-menu-light-chat.html" class="side-menu">
+                    <div class="side-menu__icon"> <i data-feather="message-square"></i> </div>
+                    <div class="side-menu__title"> Forum </div>
                 </a>
             </li>
+
+
+
         </ul>
     </nav>
     <!-- END: Side Menu -->

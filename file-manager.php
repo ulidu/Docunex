@@ -84,7 +84,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="side-menu-light-file-manager.php" class="menu menu--active">
+                    <a href="file-manager.php" class="menu menu--active">
                         <div class="menu__icon"> <i data-feather="hard-drive"></i> </div>
                         <div class="menu__title"> File Manager </div>
                     </a>
@@ -311,19 +311,19 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="login-light-login.php" class="menu">
+                            <a href="login.php" class="menu">
                                 <div class="menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="menu__title"> Login </div>
                             </a>
                         </li>
                         <li>
-                            <a href="login-light-register.php" class="menu">
+                            <a href="register.php" class="menu">
                                 <div class="menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="menu__title"> Register </div>
                             </a>
                         </li>
                         <li>
-                            <a href="main-light-error-page.php" class="menu">
+                            <a href="error-page.php" class="menu">
                                 <div class="menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="menu__title"> Error Page </div>
                             </a>
@@ -598,7 +598,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="side-menu-light-file-manager.php" class="side-menu side-menu--active">
+                        <a href="file-manager.php" class="side-menu side-menu--active">
                             <div class="side-menu__icon"> <i data-feather="hard-drive"></i> </div>
                             <div class="side-menu__title"> File Manager </div>
                         </a>
@@ -852,19 +852,19 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="login-light-login.php" class="side-menu">
+                                <a href="login.php" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Login </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="login-light-register.php" class="side-menu">
+                                <a href="register.php" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Register </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="main-light-error-page.php" class="side-menu">
+                                <a href="error-page.php" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Error Page </div>
                                 </a>
@@ -1358,7 +1358,7 @@
                                 </div>
                             </div>
                             <div class="w-full sm:w-auto flex">
-                                <button class="btn btn-primary shadow-md mr-2">Upload New Files</button>
+                                <a href="side-menu-light-post.html" class="btn btn-primary shadow-md mr-2">Upload New Files</a>
                                 <div class="dropdown">
                                     <button class="dropdown-toggle btn px-2 box text-gray-700 dark:text-gray-300" aria-expanded="false">
                                         <span class="w-5 h-5 flex items-center justify-center"> <i class="w-4 h-4" data-feather="plus"></i> </span>
