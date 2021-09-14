@@ -35,7 +35,7 @@
                 <!-- END: Top Bar -->
                 <div class="grid grid-cols-12 gap-6 mt-8">
                     <div class="col-span-12 lg:col-span-3 xxl:col-span-2">
-                        <h2 class="intro-y text-lg font-medium mr-auto mt-2">
+                        <h2 class="intro-y text-xl font-medium mr-auto mt-2">
                             File Manager
                         </h2>
                         <!-- BEGIN: File Manager Menu -->
