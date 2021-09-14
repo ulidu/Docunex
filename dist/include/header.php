@@ -6,6 +6,24 @@ session_start();
 
 ?>
 
+<!--
+
+Document Management System 8 Components
+
+Forum - Tacit
+1. Create a new topic - @ulidu
+2. Closing a forum - @ulidu
+3. Search a forum topic - @fasliya
+4. Make replies to a topic - @fasliya
+
+Document - Explicit
+5. Create Folders - @thilina
+6. Delete documents - @thilina
+7. Add documents by category (images, documents, videos) - For new interns, guide documents - @aruni
+8. Search documents - @tharushika
+
+-->
+
 <!DOCTYPE html>
 <html lang="en" class="light">
 <!-- BEGIN: Head -->
