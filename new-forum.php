@@ -152,20 +152,24 @@
                         </div>
                         <div class="mt-3">
                             <label for="post-form-3" class="form-label">Main Category</label>
-                            <select data-placeholder="Select categories" class="tom-select w-full" id="post-form-3">
-                                <option value="general">General</option>
-                                <option value="dev">Dev</option>
-                                <option value="intern">Training</option>
+                            <select data-placeholder="Select Category" class="tom-select w-full" name="post-form-3" id="post-form-3">
+                                <option value="General">General</option>
+                                <option value="Dev">Dev</option>
+                                <option value="Training">Training</option>
                             </select>
                         </div>
                         <div class="mt-3">
                             <label for="post-form-4" class="form-label">Sub Category</label>
-                            <select data-placeholder="Enter topic tags" class="tom-select w-full" id="post-form-4">
-                                <option value="1">HR</option>
-                                <option value="2">Finance</option>
-                                <option value="3">Marketing</option>
-                                <option value="4"></option>
-                                <option value="5">Comedy</option>
+                            <select data-placeholder="Topic Sub Category" class="tom-select w-full" name="post-form-4" id="post-form-4">
+                                <option value="HR">HR</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Technical">Technical</option>
+                                <option value="Pickbox Project">Pickbox Project</option>
+                                <option value="Aurea Project">Aurea Project</option>
+                                <option value="Nishtshade Project">Nishtshade Project</option>
+                                <option value="Development">Development</option>
+                                <option value="Quality Assurance">Quality Assurance</option>
                             </select>
                         </div>
 
@@ -177,22 +181,5 @@
         </form>
 
     </div>
-    <!-- BEGIN: Success Notification Content -->
-    <div id="success-notification-content" class="toastify-content hidden flex">
-        <i class="text-theme-9" data-feather="check-circle"></i>
-        <div class="ml-4 mr-4">
-            <div class="font-medium">Registration success!</div>
-            <div class="text-gray-600 mt-1"> Please check your e-mail for further info!</div>
-        </div>
-    </div>
-    <!-- END: Success Notification Content -->
-    <!-- BEGIN: Failed Notification Content -->
-    <div id="failed-notification-content" class="toastify-content hidden flex">
-        <i class="text-theme-6" data-feather="x-circle"></i>
-        <div class="ml-4 mr-4">
-            <div class="font-medium">Registration failed!</div>
-            <div class="text-gray-600 mt-1"> Please check the fileld form.</div>
-        </div>
-    </div>
-    <!-- END: Failed Notification Content -->
+
 <?php include 'dist/include/footer.php' ?>
