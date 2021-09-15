@@ -16,7 +16,7 @@
             <div class="intro-x dropdown w-8 h-8">
                 <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
                      role="button" aria-expanded="false">
-                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/2.png">
+                    <img alt="" src="dist/images/2.png">
                 </div>
                 <div class="dropdown-menu w-56">
                     <div class="dropdown-menu__content box bg-theme-26 dark:bg-dark-6 text-white">

@@ -14,7 +14,7 @@
             <div class="intro-x dropdown w-8 h-8">
                 <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
                      role="button" aria-expanded="false">
-                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/2.png">
+                    <img alt="" src="dist/images/2.png">
                 </div>
                 <div class="dropdown-menu w-56">
                     <div class="dropdown-menu__content box bg-theme-26 dark:bg-dark-6 text-white">
@@ -33,129 +33,166 @@
             </div>
             <!-- END: Account Menu -->
         </div>
-        <!-- END: Top Bar -->
-        <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
-            <h2 class="text-xl font-medium mr-auto">
-                Create New Forum Topic
-            </h2>
 
+        <form class="validate-form" name="new_forum" id="new_forum" method="post" action="">
 
-            <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-                <div class="dropdown mr-2" style="position: relative;">
-                    <button class="dropdown-toggle btn box text-gray-700 dark:text-gray-300 flex items-center"
-                            aria-expanded="false"> Cancel
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                             class="feather feather-chevron-down w-4 h-4 ml-2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="dropdown-menu w-40" id="_az8lq0288" data-popper-placement="bottom-end"
-                         style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-64px, 38px);">
-                        <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                            <a href=""
-                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                <i data-feather="x" class="w-4 h-4 mr-2"></i>
-                                <span class="truncate">Cancel</span> </a>
+            <!-- END: Top Bar -->
 
+            <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
+                <h2 class="text-xl font-medium mr-auto">
+                    Create New Forum Topic
+                </h2>
+                <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
+                    <div class="dropdown mr-2" style="position: relative;">
+                        <a class="dropdown-toggle btn box text-gray-700 dark:text-gray-300 flex items-center"
+                           aria-expanded="false"> Cancel
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                 class="feather feather-chevron-down w-4 h-4 ml-2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu w-40" id="_az8lq0288" data-popper-placement="bottom-end"
+                             style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-64px, 38px);">
+                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
+                                <a href="forum.php"
+                                   class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
+                                    <i data-feather="x" class="w-4 h-4 mr-2"></i>
+                                    <span class="truncate">Cancel</span> </a>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropdown-toggle btn btn-primary shadow-md flex items-center" aria-expanded="false">
-                        Save <i class="w-4 h-4 ml-2" data-feather="chevron-down"></i></button>
-                    <div class="dropdown-menu w-40">
-                        <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                            <a href=""
-                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                <i data-feather="save" class="w-4 h-4 mr-2"></i> As New Post </a>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle btn btn-primary shadow-md flex items-center" aria-expanded="false">
+                            Save <i class="w-4 h-4 ml-2" data-feather="chevron-down"></i></a>
+                        <div class="dropdown-menu w-40">
+                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
+                                <button type="submit" id="submitTopic" name="submitTopic"
+                                        class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
+                                    <i data-feather="save" class="w-4 h-4 mr-2"></i> Publish Topic
+                                </button>
 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="pos intro-y grid grid-cols-12 gap-5 mt-5">
-            <!-- BEGIN: Post Content -->
-            <div class="intro-y col-span-12 lg:col-span-8">
-                <h2 class="text-lg font-medium mr-auto">
-                    Title
-                </h2>
-                <input type="text" class="intro-y form-control py-3 px-4 box pr-10 placeholder-theme-13"
-                       placeholder="Be specific and imagine you’re asking a question to another person">
-                <div class="post intro-y overflow-hidden box mt-5">
-                    <div class="post__tabs nav nav-tabs flex-col sm:flex-row bg-gray-300 dark:bg-dark-2 text-gray-600"
-                         role="tablist">
-                        <a title="Fill in the article content"
-                           class="tooltip w-full sm:w-40 py-4 text-center flex justify-center items-center active"
-                           id="content-tab" role="tab" aria-controls="content" aria-selected="true"> <i
-                                    data-feather="file-text" class="w-4 h-4 mr-2"></i> Content </a>
-                    </div>
-                    <div class="post__content tab-content">
-                        <div id="content" class="tab-pane p-5 active" role="tabpanel" aria-labelledby="content-tab">
-                            <div class="border border-gray-200 dark:border-dark-5 rounded-md p-5">
-                                <div class="font-medium flex items-center border-b border-gray-200 dark:border-dark-5 pb-5">
-                                    <i data-feather="chevron-down" class="w-4 h-4 mr-2"></i> Ask Question
-                                </div>
-                                <div class="mt-5">
-                                    <div class="editor">
-                                        <p>Include all the information someone would need to answer your question.</p>
+            <div class="pos intro-y grid grid-cols-12 gap-5 mt-5">
+                <!-- BEGIN: Post Content -->
+                <div class="intro-y col-span-12 lg:col-span-8">
+                    <h2 class="text-lg font-medium mr-auto">
+                        Title
+                    </h2>
+                    <small>Be specific and imagine you’re asking a question to another person.</small>
+
+                    <input type="text" id="title" name="title"
+                           class="mt-3 intro-y form-control py-3 px-4 box pr-10 placeholder-theme-13"
+                           placeholder="Enter a title">
+                    <div class="post intro-y overflow-hidden box mt-5">
+                        <div class="post__tabs nav nav-tabs flex-col sm:flex-row bg-gray-300 dark:bg-dark-2 text-gray-600"
+                             role="tablist">
+                            <a title="Fill in the article content"
+                               class="tooltip w-full sm:w-40 py-4 text-center flex justify-center items-center active"
+                               id="content-tab" role="tab" aria-controls="content" aria-selected="true"> <i
+                                        data-feather="file-text" class="w-4 h-4 mr-2"></i> Content </a>
+                        </div>
+                        <div class="post__content tab-content">
+                            <div id="content" class="tab-pane p-5 active" role="tabpanel" aria-labelledby="content-tab">
+                                <div class="border border-gray-200 dark:border-dark-5 rounded-md p-5">
+                                    <div class="font-medium flex items-center border-b border-gray-200 dark:border-dark-5 pb-5">
+                                        <i data-feather="chevron-down" class="w-4 h-4 mr-2"></i> Ask Question &nbsp; |
+                                        &nbsp;&nbsp;
+
+                                        <small>Include all the information someone would need to answer your
+                                            question.</small>
+
+                                    </div>
+
+                                    <div class="mt-5">
+                                        <div class="editor">
+
+                                            <input type="text" id="content" name="content"
+                                                   class="intro-y form-control py-3 px-4 box pr-10 placeholder-theme-13">
+
+
+                                        </div>
                                     </div>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- END: Post Content -->
-            <!-- BEGIN: Post Info -->
-            <div class="col-span-12 lg:col-span-4">
-                <div class="intro-y box p-5">
-                    <div>
-                        <label class="form-label">Written By</label>
-                        <div class="">
-                            <div class="dropdown-toggle btn w-full btn-outline-secondary dark:bg-dark-2 dark:border-dark-2 flex items-center justify-start"
-                                 role="button" aria-expanded="false">
-                                <div class="w-6 h-6 image-fit mr-3">
-                                    <img class="rounded" alt="Rubick Tailwind HTML Admin Template"
-                                         src="dist/images/profile-5.jpg">
+                <!-- END: Post Content -->
+                <!-- BEGIN: Post Info -->
+                <div class="col-span-12 lg:col-span-4">
+                    <div class="intro-y box p-5">
+                        <div>
+                            <label class="form-label">Written By</label>
+                            <div class="">
+                                <div class="dropdown-toggle btn w-full btn-outline-secondary dark:bg-dark-2 dark:border-dark-2 flex items-center justify-start"
+                                     role="button" aria-expanded="false">
+                                    <div class="w-6 h-6 image-fit mr-3">
+                                        <img class="rounded" alt=""
+                                             src="dist/images/profile-5.jpg">
+                                    </div>
+                                    <div class="truncate">Robert De Niro</div>
+                                    <input hidden value="Robert De Niro" name="author" id="author">
                                 </div>
-                                <div class="truncate">Robert De Niro</div>
 
                             </div>
-
                         </div>
-                    </div>
-                    <div class="mt-3">
-                        <label for="post-form-2" class="form-label">Topic Created Date</label>
-                        <input class="datepicker form-control" id="post-form-2" disabled data-single-mode="true">
-                    </div>
-                    <div class="mt-3">
-                        <label for="post-form-3" class="form-label">Main Category</label>
-                        <select data-placeholder="Select categories" class="tom-select w-full" id="post-form-3"
-                                >
-                            <option value="1">Horror</option>
-                            <option value="2">Sci-fi</option>
-                            <option value="3">Action</option>
-                            <option value="4">Drama</option>
-                            <option value="5">Comedy</option>
-                        </select>
-                    </div>
-                    <div class="mt-3">
-                        <label for="post-form-4" class="form-label">Sub Category</label>
-                        <select data-placeholder="Enter topic tags" class="tom-select w-full" id="post-form-4">
-                            <option value="1">Horror</option>
-                            <option value="2">Sci-fi</option>
-                            <option value="3">Action</option>
-                            <option value="4">Drama</option>
-                            <option value="5">Comedy</option>
-                        </select>
-                    </div>
 
+                        <div class="mt-3">
+                            <label for="post-form-2" class="form-label">Topic Created Date</label>
+                            <input class="datepicker form-control" id="post-form-2" disabled data-single-mode="true">
+                        </div>
+                        <div class="mt-3">
+                            <label for="post-form-3" class="form-label">Main Category</label>
+                            <select data-placeholder="Select categories" class="tom-select w-full" id="post-form-3">
+                                <option value="general">General</option>
+                                <option value="dev">Dev</option>
+                                <option value="intern">Training</option>
+                            </select>
+                        </div>
+                        <div class="mt-3">
+                            <label for="post-form-4" class="form-label">Sub Category</label>
+                            <select data-placeholder="Enter topic tags" class="tom-select w-full" id="post-form-4">
+                                <option value="1">HR</option>
+                                <option value="2">Finance</option>
+                                <option value="3">Marketing</option>
+                                <option value="4"></option>
+                                <option value="5">Comedy</option>
+                            </select>
+                        </div>
+
+                    </div>
                 </div>
+                <!-- END: Post Info -->
             </div>
-            <!-- END: Post Info -->
+
+        </form>
+
+    </div>
+    <!-- BEGIN: Success Notification Content -->
+    <div id="success-notification-content" class="toastify-content hidden flex">
+        <i class="text-theme-9" data-feather="check-circle"></i>
+        <div class="ml-4 mr-4">
+            <div class="font-medium">Registration success!</div>
+            <div class="text-gray-600 mt-1"> Please check your e-mail for further info!</div>
         </div>
     </div>
-
+    <!-- END: Success Notification Content -->
+    <!-- BEGIN: Failed Notification Content -->
+    <div id="failed-notification-content" class="toastify-content hidden flex">
+        <i class="text-theme-6" data-feather="x-circle"></i>
+        <div class="ml-4 mr-4">
+            <div class="font-medium">Registration failed!</div>
+            <div class="text-gray-600 mt-1"> Please check the fileld form.</div>
+        </div>
+    </div>
+    <!-- END: Failed Notification Content -->
 <?php include 'dist/include/footer.php' ?>

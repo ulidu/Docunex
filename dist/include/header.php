@@ -45,7 +45,13 @@ Document - Explicit
     <title>Docunex</title>
 
     <!-- BEGIN: CSS Assets-->
+
     <link rel="stylesheet" href="dist/css/app.css"/>
+
+
+    <link rel="stylesheet" href="dist/css/toastr.min.css" />
+    <link rel="stylesheet" href="dist/css/jquery-ui.min.css" type="text/css">
+
     <!-- END: CSS Assets-->
 
 </head>
