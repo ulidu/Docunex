@@ -33,10 +33,9 @@
             var title = $('#title').val();
             var content = $('#content').val();
             var author = $('#author').val();
-            var created_date = $('#created_date').val();
-            var main_category = $('#main_category').val();
-            var sub_category = $('#sub_category').val();
-
+            var created_date = '<?php if (!empty($date)) { echo $date; } ?>';
+            var main_category = $('#post-form-3').val();
+            var sub_category = $('#post-form-4').val();
 
             const isEmpty = str => !str.trim().length;
 
@@ -91,16 +90,10 @@
 
                 success: function (data) {
 
-                    if (data.toString() == 2) {
-
-                        uiPreloader.destroy();
-                        swal.fire("User Already Exists !", "An user with same username already exists.", "error");
-
-                    }
                     if (data.toString() == 1) {
 
                         uiPreloader.destroy();
-                        location.href = 'init.php';
+                        swal.fire("ok", "ok", "success");
 
                     }
                     if (data.toString() == 0) {

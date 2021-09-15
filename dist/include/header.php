@@ -4,6 +4,12 @@ include 'dist/include/db.php';
 
 session_start();
 
+date_default_timezone_set('Asia/Colombo');
+
+$string = date("Y-m-d");
+$date = DateTime::createFromFormat("Y-m-d", $string);
+$date = date_format($date, 'Y-m-d H:i:s');
+
 ?>
 
 <!--
