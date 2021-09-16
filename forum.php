@@ -1167,21 +1167,504 @@
 
                             <div class="mt-4 text-gray-600">HR</div>
 
+                            <?php
+
+                            $query_t_hr = "select * from forum where topic_category='Training' and topic_sub_category='HR' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_t_hr = mysqli_query($con, $query_t_hr);
+
+                            }
+
+                            $count_t_hr = mysqli_num_rows($run_query_t_hr);
+
+                            if ($count_t_hr == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_t_hr)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
+                                    </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
+
                             <div class="mt-4 text-gray-600">Finance</div>
+
+                            <?php
+
+                            $query_t_finance = "select * from forum where topic_category='Training' and topic_sub_category='Finance' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_t_finance = mysqli_query($con, $query_t_finance);
+
+                            }
+
+                            $count_t_finance = mysqli_num_rows($run_query_t_finance);
+
+                            if ($count_t_finance == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_t_finance)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
+                                    </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
 
                             <div class="mt-4 text-gray-600">Marketing</div>
 
+                            <?php
+
+                            $query_t_marketing = "select * from forum where topic_category='Training' and topic_sub_category='Marketing' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_t_marketing = mysqli_query($con, $query_t_marketing);
+
+                            }
+
+                            $count_t_marketing = mysqli_num_rows($run_query_t_marketing);
+
+                            if ($count_t_marketing == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_t_marketing)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
+                                    </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
+
                             <div class="mt-4 text-gray-600">Technical</div>
+
+                            <?php
+
+                            $query_t_technical = "select * from forum where topic_category='Training' and topic_sub_category='Technical' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_t_technical = mysqli_query($con, $query_t_technical);
+
+                            }
+
+                            $count_t_technical = mysqli_num_rows($run_query_t_technical);
+
+                            if ($count_t_technical == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_t_technical)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
+                                    </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
 
                             <div class="mt-4 text-gray-600">Pickbox Project</div>
 
+                            <?php
+
+                            $query_t_pickbox = "select * from forum where topic_category='Training' and topic_sub_category='Pickbox Project' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_t_pickbox = mysqli_query($con, $query_t_pickbox);
+
+                            }
+
+                            $count_t_pickbox = mysqli_num_rows($run_query_t_pickbox);
+
+                            if ($count_t_pickbox == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_t_pickbox)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
+                                    </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
                             <div class="mt-4 text-gray-600">Aurea Project</div>
+
+                            <?php
+
+                            $query_t_aurea = "select * from forum where topic_category='Training' and topic_sub_category='Aurea Project' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_t_aurea = mysqli_query($con, $query_t_aurea);
+
+                            }
+
+                            $count_t_aurea = mysqli_num_rows($run_query_t_aurea);
+
+                            if ($count_t_aurea == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_t_aurea)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
+                                    </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
 
                             <div class="mt-4 text-gray-600">Nishtshade Project</div>
 
+                            <?php
+
+                            $query_t_nishtshade = "select * from forum where topic_category='Training' and topic_sub_category='Nishtshade Project' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_t_nishtshade = mysqli_query($con, $query_t_nishtshade);
+
+                            }
+
+                            $count_t_nishtshade = mysqli_num_rows($run_query_t_nishtshade);
+
+                            if ($count_t_nishtshade == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_t_nishtshade)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
+                                    </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
+
                             <div class="mt-4 text-gray-600">Development</div>
 
+                            <?php
+
+                            $query_t_development = "select * from forum where topic_category='Training' and topic_sub_category='Development' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_t_development = mysqli_query($con, $query_t_development);
+
+                            }
+
+                            $count_t_development = mysqli_num_rows($run_query_t_development);
+
+                            if ($count_t_development == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_t_development)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
+                                    </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
+
                             <div class="mt-4 text-gray-600">Quality Assurance</div>
+
+                            <?php
+
+                            $query_t_quality = "select * from forum where topic_category='Training' and topic_sub_category='Quality Assurance' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_t_quality = mysqli_query($con, $query_t_quality);
+
+                            }
+
+                            $count_t_quality = mysqli_num_rows($run_query_t_quality);
+
+                            if ($count_t_quality == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_t_quality)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
+                                    </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
 
                         </div>
                         <!-- Training End -->
