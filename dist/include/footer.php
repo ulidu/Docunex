@@ -93,9 +93,20 @@
                     if (data.toString() == 1) {
 
                         uiPreloader.destroy();
-                        swal.fire("ok", "ok", "success");
 
+                        Swal.fire({
+                            title: "Published",
+                            html: "Your Forum Topic has been Published Successfully.",
+                            icon: 'success',
+                            showCancelButton: false,
+                            confirmButtonText: "OK",
+                            confirmButtonColor: '#1c3faa',
+                            timer: 5000
+                        }).then(function() {
+                            window.location = "forum.php";
+                        });
                     }
+
                     if (data.toString() == 0) {
 
                         uiPreloader.destroy();

@@ -98,8 +98,8 @@
                                id="content-tab" role="tab" aria-controls="content" aria-selected="true"> <i
                                         data-feather="file-text" class="w-4 h-4 mr-2"></i> Content </a>
                         </div>
-                        <div class="post__content tab-content">
-                            <div id="content" class="tab-pane p-5 active" role="tabpanel" aria-labelledby="content-tab">
+                        <div class="tab-content">
+                            <div id="" class="tab-pane p-5 active" role="tabpanel" aria-labelledby="content-tab">
                                 <div class="border border-gray-200 dark:border-dark-5 rounded-md p-5">
                                     <div class="font-medium flex items-center border-b border-gray-200 dark:border-dark-5 pb-5">
                                         <i data-feather="chevron-down" class="w-4 h-4 mr-2"></i> Ask Question &nbsp; |
@@ -111,13 +111,9 @@
                                     </div>
 
                                     <div class="mt-5">
-                                        <div class="editor">
 
-                                            <input type="text" id="content" name="content"
-                                                   class="intro-y form-control py-3 px-4 box pr-10 placeholder-theme-13">
+                                        <textarea type="text" id="content" name="content" rows="6" cols="50" class="form-control" placeholder="Enter the Content"></textarea>
 
-
-                                        </div>
                                     </div>
                                 </div>
 
@@ -161,6 +157,7 @@
                         <div class="mt-3">
                             <label for="post-form-4" class="form-label">Sub Category</label>
                             <select data-placeholder="Topic Sub Category" class="tom-select w-full" name="post-form-4" id="post-form-4">
+
                                 <option value="HR">HR</option>
                                 <option value="Finance">Finance</option>
                                 <option value="Marketing">Marketing</option>
@@ -170,6 +167,7 @@
                                 <option value="Nishtshade Project">Nishtshade Project</option>
                                 <option value="Development">Development</option>
                                 <option value="Quality Assurance">Quality Assurance</option>
+
                             </select>
                         </div>
 

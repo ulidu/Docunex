@@ -60,8 +60,10 @@
             </div>
         </div>
         <div class="intro-y chat grid grid-cols-12 gap-5 mt-5">
+
             <!-- BEGIN: Chat Side Menu -->
             <div class="col-span-12 lg:col-span-4 xxl:col-span-3">
+
                 <div class="intro-y pr-1">
                     <div class="box p-2">
                         <div class="chat__tabs nav nav-tabs justify-center" role="tablist">
@@ -77,7 +79,9 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="tab-content">
+
                     <div id="chats" class="tab-pane active" role="tabpanel" aria-labelledby="chats-tab">
                         <div class="pr-1">
                             <div class="box px-5 pt-5 pb-5 lg:pb-0 mt-5">
@@ -99,50 +103,188 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- General Start -->
                         <div class="chat__chat-list overflow-y-auto scrollbar-hidden pr-1 pt-1 mt-4">
 
-                            <div class="mt-4 text-gray-600">A</div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="" class="rounded-full"
-                                         src="dist/images/profile-10.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Kevin Spacey</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">It is a long established fact that
-                                        a reader will be distracted by the readable content of a page when looking at
-                                        its layout. The point of using Lorem
-                                    </div>
-                                </div>
-                                <div class="w-5 h-5 flex items-center justify-center absolute top-0 right-0 text-xs text-white rounded-full bg-theme-1 font-medium -mt-1 -mr-1">
-                                    1
-                                </div>
-                            </div>
+                            <div class="mt-4 text-gray-600">HR</div>
+                            <?php
 
-                            <div class="mt-4 text-gray-600">A</div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="" class="rounded-full"
-                                         src="dist/images/profile-1.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Sylvester Stallone</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
+                            $query_g_hr = "select * from forum where topic_category='General' and topic_sub_category='HR' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_g_hr = mysqli_query($con, $query_g_hr);
+
+                            }
+
+                            $count_h_hr = mysqli_num_rows($run_query_g_hr);
+
+                            if ($count_h_hr == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_g_hr)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                           </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
                                     </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">There are many variations of
-                                        passages of Lorem Ipsum available, but the majority have suffered alteration in
-                                        some form, by injected humour, or randomi
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
+                            <div class="mt-4 text-gray-600">Finance</div>
+                            <?php
+
+                            $query_g_finance = "select * from forum where topic_category='General' and topic_sub_category='Finance' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_g_finance = mysqli_query($con, $query_g_finance);
+
+                            }
+
+                            $count_g_finance = mysqli_num_rows($run_query_g_finance);
+
+                            if ($count_g_finance == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_g_finance)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
+                            <div class="mt-4 text-gray-600">Marketing</div>
+                            <?php
+
+                            $query_g_marketing = "select * from forum where topic_category='General' and topic_sub_category='Marketing' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_g_marketing = mysqli_query($con, $query_g_marketing);
+
+                            }
+
+                            $count_g_marketing = mysqli_num_rows($run_query_g_marketing);
+
+                            if ($count_g_marketing == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_g_marketing)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
+                                    </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
+                            <div class="mt-4 text-gray-600">Technical</div>
+
+                            <div class="mt-4 text-gray-600">Pickbox Project</div>
+
+                            <div class="mt-4 text-gray-600">Aurea Project</div>
+
+                            <div class="mt-4 text-gray-600">Nishtshade Project</div>
+
+                            <div class="mt-4 text-gray-600">Development</div>
+
+                            <div class="mt-4 text-gray-600">Quality Assurance</div>
+
 
                         </div>
+                        <!-- General End -->
+
                     </div>
                     <div id="friends" class="tab-pane" role="tabpanel" aria-labelledby="friends-tab">
                         <div class="pr-1">
@@ -165,52 +307,32 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Dev Start -->
                         <div class="chat__chat-list overflow-y-auto scrollbar-hidden pr-1 pt-1 mt-4">
 
-                            <div class="mt-4 text-gray-600">A</div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="" class="rounded-full"
-                                         src="dist/images/profile-10.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Kevin Spacey</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">It is a long established fact that
-                                        a reader will be distracted by the readable content of a page when looking at
-                                        its layout. The point of using Lorem
-                                    </div>
-                                </div>
-                                <div class="w-5 h-5 flex items-center justify-center absolute top-0 right-0 text-xs text-white rounded-full bg-theme-1 font-medium -mt-1 -mr-1">
-                                    1
-                                </div>
-                            </div>
+                            <div class="mt-4 text-gray-600">HR</div>
 
-                            <div class="mt-4 text-gray-600">A</div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="" class="rounded-full"
-                                         src="dist/images/profile-1.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Sylvester Stallone</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">There are many variations of
-                                        passages of Lorem Ipsum available, but the majority have suffered alteration in
-                                        some form, by injected humour, or randomi
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="mt-4 text-gray-600">Finance</div>
+
+                            <div class="mt-4 text-gray-600">Marketing</div>
+
+                            <div class="mt-4 text-gray-600">Technical</div>
+
+                            <div class="mt-4 text-gray-600">Pickbox Project</div>
+
+                            <div class="mt-4 text-gray-600">Aurea Project</div>
+
+                            <div class="mt-4 text-gray-600">Nishtshade Project</div>
+
+                            <div class="mt-4 text-gray-600">Development</div>
+
+                            <div class="mt-4 text-gray-600">Quality Assurance</div>
 
                         </div>
-                    </div>
+                        <!-- Dev End -->
 
+                    </div>
                     <div id="profile" class="tab-pane" role="tabpanel" aria-labelledby="profile-tab">
                         <div class="pr-1">
                             <div class="box px-5 pt-5 pb-5 lg:pb-0 mt-5">
@@ -232,55 +354,37 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Training Start -->
                         <div class="chat__chat-list overflow-y-auto scrollbar-hidden pr-1 pt-1 mt-4">
 
-                            <div class="mt-4 text-gray-600">A</div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="" class="rounded-full"
-                                         src="dist/images/profile-10.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Kevin Spacey</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">It is a long established fact that
-                                        a reader will be distracted by the readable content of a page when looking at
-                                        its layout. The point of using Lorem
-                                    </div>
-                                </div>
-                                <div class="w-5 h-5 flex items-center justify-center absolute top-0 right-0 text-xs text-white rounded-full bg-theme-1 font-medium -mt-1 -mr-1">
-                                    1
-                                </div>
-                            </div>
+                            <div class="mt-4 text-gray-600">HR</div>
 
-                            <div class="mt-4 text-gray-600">A</div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="" class="rounded-full"
-                                         src="dist/images/profile-1.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Sylvester Stallone</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">There are many variations of
-                                        passages of Lorem Ipsum available, but the majority have suffered alteration in
-                                        some form, by injected humour, or randomi
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="mt-4 text-gray-600">Finance</div>
+
+                            <div class="mt-4 text-gray-600">Marketing</div>
+
+                            <div class="mt-4 text-gray-600">Technical</div>
+
+                            <div class="mt-4 text-gray-600">Pickbox Project</div>
+
+                            <div class="mt-4 text-gray-600">Aurea Project</div>
+
+                            <div class="mt-4 text-gray-600">Nishtshade Project</div>
+
+                            <div class="mt-4 text-gray-600">Development</div>
+
+                            <div class="mt-4 text-gray-600">Quality Assurance</div>
 
                         </div>
+                        <!-- Training End -->
+
                     </div>
 
                 </div>
             </div>
             <!-- END: Chat Side Menu -->
+
             <!-- BEGIN: Chat Content -->
             <div class="intro-y col-span-12 lg:col-span-8 xxl:col-span-9">
                 <div class="chat__box box">
@@ -4557,6 +4661,7 @@
                 </div>
             </div>
             <!-- END: Chat Content -->
+
         </div>
     </div>
     <!-- END: Content -->
