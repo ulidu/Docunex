@@ -1,4 +1,3 @@
-
 </div>
 
 <!-- BEGIN: JS Assets-->
@@ -6,17 +5,61 @@
 <script src="dist/js/jquery-3.5.1.min.js"></script>
 <script src="dist/js/jquery-ui.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
 <script src="dist/js/bootstrap/bootstrap.js"></script>
 
 <script src="dist/js/app.js"></script>
 
 <script src="dist/js/ui-preloader.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- END: JS Assets-->
+
+<script>
+
+    $('.globalSearchResultNoFoundFeedback').hide()
+    $(".globalInputSearch").keyup(function() {
+
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(),
+            count = 0;
+
+        if (count == 0) {
+            $('.globalSearchResultNoFoundFeedback').hide()
+            $('.no-small-mute').hide()
+            $('.hide-title').hide()
+        }
+
+
+        // Loop through the comment list
+        $('.globalTargetList li').each(function() {
+            // If the list item does not contain the text phrase fade it out
+
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).hide(); // MY CHANGE
+                if (count == 0) {
+                    $('.globalSearchResultNoFoundFeedback').show()
+                } else {
+                    $('.globalSearchResultNoFoundFeedback').hide()
+                }
+                // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show(); // MY CHANGE
+                count++;
+
+            }
+
+        });
+
+    });
+
+</script>
 
 <script>
 
@@ -33,7 +76,9 @@
             var title = $('#title').val();
             var content = $('#content').val();
             var author = $('#author').val();
-            var created_date = '<?php if (!empty($date)) { echo $date; } ?>';
+            var created_date = '<?php if (!empty($date)) {
+                echo $date;
+            } ?>';
             var main_category = $('#post-form-3').val();
             var sub_category = $('#post-form-4').val();
 
@@ -80,7 +125,7 @@
                 url: "new-forum-app.php",
                 method: "POST",
                 data: {
-                    title : title,
+                    title: title,
                     content: content,
                     author: author,
                     created_date: created_date,
@@ -102,7 +147,7 @@
                             confirmButtonText: "OK",
                             confirmButtonColor: '#1c3faa',
                             timer: 5000
-                        }).then(function() {
+                        }).then(function () {
                             window.location = "forum.php";
                         });
                     }

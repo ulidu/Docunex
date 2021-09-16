@@ -120,6 +120,8 @@ Document - Explicit
             background-color: rgba(0, 0, 0, 0.8);
         }
 
+        .globalSearchResultNoFoundFeedback{font-size: 30px;  padding: 20px; color: #999; text-align: center;}
+
     </style>
 
 </head>
