@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 13, 2021 at 08:08 PM
+-- Generation Time: Sep 16, 2021 at 09:22 AM
 -- Server version: 8.0.21
 -- PHP Version: 7.3.21
 
@@ -36,13 +36,42 @@ CREATE TABLE IF NOT EXISTS `documents` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `forums`
+-- Table structure for table `forum`
 --
 
-DROP TABLE IF EXISTS `forums`;
-CREATE TABLE IF NOT EXISTS `forums` (
+DROP TABLE IF EXISTS `forum`;
+CREATE TABLE IF NOT EXISTS `forum` (
   `forum_ID` int NOT NULL AUTO_INCREMENT,
+  `topic_title` varchar(200) DEFAULT NULL,
+  `topic_content` varchar(200) DEFAULT NULL,
+  `topic_author` varchar(200) DEFAULT NULL,
+  `topic_created_date` varchar(200) DEFAULT NULL,
+  `topic_category` varchar(200) DEFAULT NULL,
+  `topic_sub_category` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`forum_ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `forum`
+--
+
+INSERT INTO `forum` (`forum_ID`, `topic_title`, `topic_content`, `topic_author`, `topic_created_date`, `topic_category`, `topic_sub_category`) VALUES
+(48, 'dfsad', 'azfdf', 'Robert De Niro', '2021-09-16 13:56:03', 'General', 'HR');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `forum_reply`
+--
+
+DROP TABLE IF EXISTS `forum_reply`;
+CREATE TABLE IF NOT EXISTS `forum_reply` (
+  `reply_ID` int NOT NULL AUTO_INCREMENT,
+  `forum_ID` varchar(200) DEFAULT NULL,
+  `reply_date` varchar(200) DEFAULT NULL,
+  `reply_content` varchar(200) DEFAULT NULL,
+  `replied_by` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`reply_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 COMMIT;
 

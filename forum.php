@@ -404,11 +404,7 @@
                                 </div>
                             </div>
                             <div class="flex items-center sm:ml-auto mt-5 sm:mt-0 border-t sm:border-0 border-gray-200 pt-3 sm:pt-0 -mx-5 sm:mx-0 px-5 sm:px-0">
-                                <a href="javascript:;" class="w-5 h-5 text-gray-600"> <i data-feather="search"
-                                                                                         class="w-5 h-5"></i> </a>
-                                <a href="javascript:;" class="w-5 h-5 text-gray-600 ml-5"> <i data-feather="user-plus"
-                                                                                              class="w-5 h-5"></i> </a>
-                                <div class="dropdown ml-auto sm:ml-3">
+                                 <div class="dropdown ml-auto sm:ml-3">
                                     <a href="javascript:;" class="dropdown-toggle w-5 h-5 text-gray-600"
                                        aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5"></i> </a>
                                     <div class="dropdown-menu w-40">
