@@ -1,5 +1,54 @@
 <?php include 'dist/include/header.php' ?>
 
+<?php
+
+if ($_GET['f_id'] != null) {
+    $f_id_get = $_GET['f_id'];
+}else{
+
+    echo '<script type="text/javascript">
+           window.location = "error-page.php"
+      </script>';
+
+}
+
+$query_f_details = "SELECT * FROM forum f LEFT JOIN forum_reply r ON f.forum_ID = r.forum_ID WHERE f.forum_ID='$f_id_get' order by f.forum_ID desc";
+
+if (!empty($con)) {
+
+    $run_query_f_details = mysqli_query($con, $query_f_details);
+
+}
+
+$count_get_chat_details = mysqli_num_rows($run_query_f_details);
+
+if ($count_get_chat_details == 0) {
+
+    echo '<script type="text/javascript">
+           window.location = "error-page.php"
+      </script>';
+
+}
+
+while ($row = mysqli_fetch_assoc($run_query_f_details)) {
+
+    $get_forum_ID = $row['forum_ID'];
+    $get_topic_title = $row['topic_title'];
+    $get_topic_content = $row['topic_content'];
+    $get_topic_author = $row['topic_author'];
+    $get_topic_created_date = $row['topic_created_date'];
+    $get_topic_category = $row['topic_category'];
+    $get_topic_sub_category = $row['topic_sub_category'];
+
+    $get_reply_ID = $row['reply_ID'];
+    $get_reply_date = $row['reply_date'];
+    $get_reply_content = $row['reply_content'];
+    $get_replied_by = $row['replied_by'];
+
+
+
+?>
+
     <!-- BEGIN: Content -->
     <div class="content">
         <!-- BEGIN: Top Bar -->
@@ -144,7 +193,7 @@
                             <!-- list -->
                             <ul class="globalTargetList">
 
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
+                                <li onclick="location.href='forum_chat.php?f_id=1';">
 
                                     <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                         <div class="w-12 h-12 flex-none image-fit mr-1">
@@ -203,7 +252,7 @@
 
                                         ?>
 
-                                        <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
+                                        <li>
                                             <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                 <div class="w-12 h-12 flex-none image-fit mr-1">
                                                     <img alt="" class="rounded-full"
@@ -249,7 +298,348 @@
 
                                 } else {
 
-                                while ($row = mysqli_fetch_assoc($run_query_g_marketing)) {
+                                    while ($row = mysqli_fetch_assoc($run_query_g_marketing)) {
+
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
+
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <?php
+
+                                    }
+                                }
+
+                                ?>
+
+                                <div class="mt-4 text-gray-600 hide-title">Technical</div>
+
+                                <?php
+
+                                $query_g_technical = "select * from forum where topic_category='General' and topic_sub_category='Technical' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_g_technical = mysqli_query($con, $query_g_technical);
+
+                                }
+
+                                $count_g_technical = mysqli_num_rows($run_query_g_technical);
+
+                                if ($count_g_technical == 0) {
+
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
+
+                                } else {
+
+                                    while ($row = mysqli_fetch_assoc($run_query_g_technical)) {
+
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
+
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <?php
+
+                                    }
+                                }
+
+                                ?>
+
+
+                                <div class="mt-4 text-gray-600 hide-title">Pickbox Project</div>
+
+                                <?php
+
+                                $query_g_pickbox = "select * from forum where topic_category='General' and topic_sub_category='Pickbox Project' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_g_pickbox = mysqli_query($con, $query_g_pickbox);
+
+                                }
+
+                                $count_g_pickbox = mysqli_num_rows($run_query_g_pickbox);
+
+                                if ($count_g_pickbox == 0) {
+
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
+
+                                } else {
+
+                                    while ($row = mysqli_fetch_assoc($run_query_g_pickbox)) {
+
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
+
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <?php
+
+                                    }
+                                }
+
+                                ?>
+
+
+                                <div class="mt-4 text-gray-600 hide-title">Aurea Project</div>
+
+                                <?php
+
+                                $query_g_aurea = "select * from forum where topic_category='General' and topic_sub_category='Aurea Project' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_g_aurea = mysqli_query($con, $query_g_aurea);
+
+                                }
+
+                                $count_g_aurea = mysqli_num_rows($run_query_g_aurea);
+
+                                if ($count_g_aurea == 0) {
+
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
+
+                                } else {
+
+                                    while ($row = mysqli_fetch_assoc($run_query_g_aurea)) {
+
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
+
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <?php
+
+                                    }
+                                }
+
+                                ?>
+
+
+                                <div class="mt-4 text-gray-600 hide-title">Nishtshade Project</div>
+
+                                <?php
+
+                                $query_g_nishtshade = "select * from forum where topic_category='General' and topic_sub_category='Nishtshade Project' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_g_nishtshade = mysqli_query($con, $query_g_nishtshade);
+
+                                }
+
+                                $count_g_nishtshade = mysqli_num_rows($run_query_g_nishtshade);
+
+                                if ($count_g_nishtshade == 0) {
+
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
+
+                                } else {
+
+                                    while ($row = mysqli_fetch_assoc($run_query_g_nishtshade)) {
+
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
+
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <?php
+
+                                    }
+                                }
+
+                                ?>
+
+
+                                <div class="mt-4 text-gray-600 hide-title">Development</div>
+
+                                <?php
+
+                                $query_g_development = "select * from forum where topic_category='General' and topic_sub_category='Development' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_g_development = mysqli_query($con, $query_g_development);
+
+                                }
+
+                                $count_g_development = mysqli_num_rows($run_query_g_development);
+
+                                if ($count_g_development == 0) {
+
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
+
+                                } else {
+
+                                    while ($row = mysqli_fetch_assoc($run_query_g_development)) {
+
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
+
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <?php
+
+                                    }
+                                }
+
+                                ?>
+
+
+                                <div class="mt-4 text-gray-600 hide-title">Quality Assurance</div>
+
+                                <?php
+
+                                $query_g_quality = "select * from forum where topic_category='General' and topic_sub_category='Quality Assurance' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_g_quality = mysqli_query($con, $query_g_quality);
+
+                                }
+
+                                $count_g_quality = mysqli_num_rows($run_query_g_quality);
+
+                                if ($count_g_quality == 0) {
+
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
+
+                                } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_g_quality)) {
 
                                 $forum_ID = $row['forum_ID'];
                                 $topic_title = $row['topic_title'];
@@ -260,7 +650,7 @@
                                 $topic_sub_category = $row['topic_sub_category'];
 
                                 ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
+                                <li>
                                     <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                         <div class="w-12 h-12 flex-none image-fit mr-1">
                                             <img alt="" class="rounded-full"
@@ -278,354 +668,13 @@
                                         </div>
                                     </div>
                                 </li>
-                                    <?php
-
-                                    }
-                                    }
-
-                                    ?>
-
-                                    <div class="mt-4 text-gray-600 hide-title">Technical</div>
-
-                                    <?php
-
-                                    $query_g_technical = "select * from forum where topic_category='General' and topic_sub_category='Technical' order by forum_ID desc";
-
-                                    if (!empty($con)) {
-
-                                        $run_query_g_technical = mysqli_query($con, $query_g_technical);
-
-                                    }
-
-                                    $count_g_technical = mysqli_num_rows($run_query_g_technical);
-
-                                    if ($count_g_technical == 0) {
-
-                                        echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                                    } else {
-
-                                        while ($row = mysqli_fetch_assoc($run_query_g_technical)) {
-
-                                            $forum_ID = $row['forum_ID'];
-                                            $topic_title = $row['topic_title'];
-                                            $topic_content = $row['topic_content'];
-                                            $topic_author = $row['topic_author'];
-                                            $topic_created_date = $row['topic_created_date'];
-                                            $topic_category = $row['topic_category'];
-                                            $topic_sub_category = $row['topic_sub_category'];
-
-                                            ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                                    <img alt="" class="rounded-full"
-                                                         src="dist/images/profile-10.png">
-                                                </div>
-                                                <div class="ml-2 overflow-hidden">
-                                                    <div class="flex items-center">
-                                                        <a href="javascript:;"
-                                                           class="font-medium"><?php echo $topic_title; ?></a>
-                                                    </div>
-                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
-
-                                                    </div>
-                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                                </div>
-                                            </div>
-                                </li>
-                                            <?php
-
-                                        }
-                                    }
-
-                                    ?>
-
-
-                                    <div class="mt-4 text-gray-600 hide-title">Pickbox Project</div>
-
-                                    <?php
-
-                                    $query_g_pickbox = "select * from forum where topic_category='General' and topic_sub_category='Pickbox Project' order by forum_ID desc";
-
-                                    if (!empty($con)) {
-
-                                        $run_query_g_pickbox = mysqli_query($con, $query_g_pickbox);
-
-                                    }
-
-                                    $count_g_pickbox = mysqli_num_rows($run_query_g_pickbox);
-
-                                    if ($count_g_pickbox == 0) {
-
-                                        echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                                    } else {
-
-                                        while ($row = mysqli_fetch_assoc($run_query_g_pickbox)) {
-
-                                            $forum_ID = $row['forum_ID'];
-                                            $topic_title = $row['topic_title'];
-                                            $topic_content = $row['topic_content'];
-                                            $topic_author = $row['topic_author'];
-                                            $topic_created_date = $row['topic_created_date'];
-                                            $topic_category = $row['topic_category'];
-                                            $topic_sub_category = $row['topic_sub_category'];
-
-                                            ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                                    <img alt="" class="rounded-full"
-                                                         src="dist/images/profile-10.png">
-                                                </div>
-                                                <div class="ml-2 overflow-hidden">
-                                                    <div class="flex items-center">
-                                                        <a href="javascript:;"
-                                                           class="font-medium"><?php echo $topic_title; ?></a>
-                                                    </div>
-                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
-
-                                                    </div>
-                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                                </div>
-                                            </div>
-                                </li>
-                                            <?php
-
-                                        }
-                                    }
-
-                                    ?>
-
-
-                                    <div class="mt-4 text-gray-600 hide-title">Aurea Project</div>
-
-                                    <?php
-
-                                    $query_g_aurea = "select * from forum where topic_category='General' and topic_sub_category='Aurea Project' order by forum_ID desc";
-
-                                    if (!empty($con)) {
-
-                                        $run_query_g_aurea = mysqli_query($con, $query_g_aurea);
-
-                                    }
-
-                                    $count_g_aurea = mysqli_num_rows($run_query_g_aurea);
-
-                                    if ($count_g_aurea == 0) {
-
-                                        echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                                    } else {
-
-                                        while ($row = mysqli_fetch_assoc($run_query_g_aurea)) {
-
-                                            $forum_ID = $row['forum_ID'];
-                                            $topic_title = $row['topic_title'];
-                                            $topic_content = $row['topic_content'];
-                                            $topic_author = $row['topic_author'];
-                                            $topic_created_date = $row['topic_created_date'];
-                                            $topic_category = $row['topic_category'];
-                                            $topic_sub_category = $row['topic_sub_category'];
-
-                                            ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                                    <img alt="" class="rounded-full"
-                                                         src="dist/images/profile-10.png">
-                                                </div>
-                                                <div class="ml-2 overflow-hidden">
-                                                    <div class="flex items-center">
-                                                        <a href="javascript:;"
-                                                           class="font-medium"><?php echo $topic_title; ?></a>
-                                                    </div>
-                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
-
-                                                    </div>
-                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                                </div>
-                                            </div>
-                                </li>
-                                            <?php
-
-                                        }
-                                    }
-
-                                    ?>
-
-
-                                    <div class="mt-4 text-gray-600 hide-title">Nishtshade Project</div>
-
-                                    <?php
-
-                                    $query_g_nishtshade = "select * from forum where topic_category='General' and topic_sub_category='Nishtshade Project' order by forum_ID desc";
-
-                                    if (!empty($con)) {
-
-                                        $run_query_g_nishtshade = mysqli_query($con, $query_g_nishtshade);
-
-                                    }
-
-                                    $count_g_nishtshade = mysqli_num_rows($run_query_g_nishtshade);
-
-                                    if ($count_g_nishtshade == 0) {
-
-                                        echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                                    } else {
-
-                                        while ($row = mysqli_fetch_assoc($run_query_g_nishtshade)) {
-
-                                            $forum_ID = $row['forum_ID'];
-                                            $topic_title = $row['topic_title'];
-                                            $topic_content = $row['topic_content'];
-                                            $topic_author = $row['topic_author'];
-                                            $topic_created_date = $row['topic_created_date'];
-                                            $topic_category = $row['topic_category'];
-                                            $topic_sub_category = $row['topic_sub_category'];
-
-                                            ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                                    <img alt="" class="rounded-full"
-                                                         src="dist/images/profile-10.png">
-                                                </div>
-                                                <div class="ml-2 overflow-hidden">
-                                                    <div class="flex items-center">
-                                                        <a href="javascript:;"
-                                                           class="font-medium"><?php echo $topic_title; ?></a>
-                                                    </div>
-                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
-
-                                                    </div>
-                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                                </div>
-                                            </div>
-                                </li>
-                                            <?php
-
-                                        }
-                                    }
-
-                                    ?>
-
-
-                                    <div class="mt-4 text-gray-600 hide-title">Development</div>
-
-                                    <?php
-
-                                    $query_g_development = "select * from forum where topic_category='General' and topic_sub_category='Development' order by forum_ID desc";
-
-                                    if (!empty($con)) {
-
-                                        $run_query_g_development = mysqli_query($con, $query_g_development);
-
-                                    }
-
-                                    $count_g_development = mysqli_num_rows($run_query_g_development);
-
-                                    if ($count_g_development == 0) {
-
-                                        echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                                    } else {
-
-                                        while ($row = mysqli_fetch_assoc($run_query_g_development)) {
-
-                                            $forum_ID = $row['forum_ID'];
-                                            $topic_title = $row['topic_title'];
-                                            $topic_content = $row['topic_content'];
-                                            $topic_author = $row['topic_author'];
-                                            $topic_created_date = $row['topic_created_date'];
-                                            $topic_category = $row['topic_category'];
-                                            $topic_sub_category = $row['topic_sub_category'];
-
-                                            ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                                    <img alt="" class="rounded-full"
-                                                         src="dist/images/profile-10.png">
-                                                </div>
-                                                <div class="ml-2 overflow-hidden">
-                                                    <div class="flex items-center">
-                                                        <a href="javascript:;"
-                                                           class="font-medium"><?php echo $topic_title; ?></a>
-                                                    </div>
-                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
-
-                                                    </div>
-                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                                </div>
-                                            </div>
-                                </li>
-                                            <?php
-
-                                        }
-                                    }
-
-                                    ?>
-
-
-                                    <div class="mt-4 text-gray-600 hide-title">Quality Assurance</div>
-
-                                    <?php
-
-                                    $query_g_quality = "select * from forum where topic_category='General' and topic_sub_category='Quality Assurance' order by forum_ID desc";
-
-                                    if (!empty($con)) {
-
-                                        $run_query_g_quality = mysqli_query($con, $query_g_quality);
-
-                                    }
-
-                                    $count_g_quality = mysqli_num_rows($run_query_g_quality);
-
-                                    if ($count_g_quality == 0) {
-
-                                        echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                                    } else {
-
-                                        while ($row = mysqli_fetch_assoc($run_query_g_quality)) {
-
-                                            $forum_ID = $row['forum_ID'];
-                                            $topic_title = $row['topic_title'];
-                                            $topic_content = $row['topic_content'];
-                                            $topic_author = $row['topic_author'];
-                                            $topic_created_date = $row['topic_created_date'];
-                                            $topic_category = $row['topic_category'];
-                                            $topic_sub_category = $row['topic_sub_category'];
-
-                                            ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                                    <img alt="" class="rounded-full"
-                                                         src="dist/images/profile-10.png">
-                                                </div>
-                                                <div class="ml-2 overflow-hidden">
-                                                    <div class="flex items-center">
-                                                        <a href="javascript:;"
-                                                           class="font-medium"><?php echo $topic_title; ?></a>
-                                                    </div>
-                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
-
-                                                    </div>
-                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                                </div>
-                                            </div>
-                                </li>
                             </ul>
-                                            <?php
+                        <?php
 
-                                        }
-                                    }
+                        }
+                        }
 
-                                    ?>
+                        ?>
 
 
                         </div>
@@ -678,21 +727,21 @@
 
                             } else {
 
-                                while ($row = mysqli_fetch_assoc($run_query_d_hr)) {
+                            while ($row = mysqli_fetch_assoc($run_query_d_hr)) {
 
-                                    $forum_ID = $row['forum_ID'];
-                                    $topic_title = $row['topic_title'];
-                                    $topic_content = $row['topic_content'];
-                                    $topic_author = $row['topic_author'];
-                                    $topic_created_date = $row['topic_created_date'];
-                                    $topic_category = $row['topic_category'];
-                                    $topic_sub_category = $row['topic_sub_category'];
+                            $forum_ID = $row['forum_ID'];
+                            $topic_title = $row['topic_title'];
+                            $topic_content = $row['topic_content'];
+                            $topic_author = $row['topic_author'];
+                            $topic_created_date = $row['topic_created_date'];
+                            $topic_category = $row['topic_category'];
+                            $topic_sub_category = $row['topic_sub_category'];
 
-                                    ?>
+                            ?>
                             <!-- list -->
                             <ul class="globalTargetList">
 
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
+                                <li>
                                     <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                         <div class="w-12 h-12 flex-none image-fit mr-1">
                                             <img alt="" class="rounded-full"
@@ -710,442 +759,442 @@
                                         </div>
                                     </div>
                                 </li>
-                                    <?php
+                                <?php
 
                                 }
-                            }
+                                }
 
-                            ?>
+                                ?>
 
-                            <div class="mt-4 text-gray-600 hide-title">Finance</div>
+                                <div class="mt-4 text-gray-600 hide-title">Finance</div>
 
-                            <?php
+                                <?php
 
-                            $query_d_finance = "select * from forum where topic_category='Dev' and topic_sub_category='Finance' order by forum_ID desc";
+                                $query_d_finance = "select * from forum where topic_category='Dev' and topic_sub_category='Finance' order by forum_ID desc";
 
-                            if (!empty($con)) {
+                                if (!empty($con)) {
 
-                                $run_query_d_finance = mysqli_query($con, $query_d_finance);
-
-                            }
-
-                            $count_d_finance = mysqli_num_rows($run_query_d_finance);
-
-                            if ($count_d_finance == 0) {
-
-                                echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                            } else {
-
-                                while ($row = mysqli_fetch_assoc($run_query_d_finance)) {
-
-                                    $forum_ID = $row['forum_ID'];
-                                    $topic_title = $row['topic_title'];
-                                    $topic_content = $row['topic_content'];
-                                    $topic_author = $row['topic_author'];
-                                    $topic_created_date = $row['topic_created_date'];
-                                    $topic_category = $row['topic_category'];
-                                    $topic_sub_category = $row['topic_sub_category'];
-
-                                    ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                        <div class="w-12 h-12 flex-none image-fit mr-1">
-                                            <img alt="" class="rounded-full"
-                                                 src="dist/images/profile-10.png">
-                                        </div>
-                                        <div class="ml-2 overflow-hidden">
-                                            <div class="flex items-center">
-                                                <a href="javascript:;"
-                                                   class="font-medium"><?php echo $topic_title; ?></a>
-                                            </div>
-                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
-
-                                            </div>
-                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                    <?php
+                                    $run_query_d_finance = mysqli_query($con, $query_d_finance);
 
                                 }
-                            }
 
-                            ?>
+                                $count_d_finance = mysqli_num_rows($run_query_d_finance);
 
-                            <div class="mt-4 text-gray-600 hide-title">Marketing</div>
+                                if ($count_d_finance == 0) {
 
-                            <?php
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
 
-                            $query_d_marketing = "select * from forum where topic_category='Dev' and topic_sub_category='Marketing' order by forum_ID desc";
+                                } else {
 
-                            if (!empty($con)) {
+                                    while ($row = mysqli_fetch_assoc($run_query_d_finance)) {
 
-                                $run_query_d_marketing = mysqli_query($con, $query_d_marketing);
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
 
-                            }
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
 
-                            $count_d_marketing = mysqli_num_rows($run_query_d_marketing);
-
-                            if ($count_d_marketing == 0) {
-
-                                echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                            } else {
-
-                                while ($row = mysqli_fetch_assoc($run_query_d_marketing)) {
-
-                                    $forum_ID = $row['forum_ID'];
-                                    $topic_title = $row['topic_title'];
-                                    $topic_content = $row['topic_content'];
-                                    $topic_author = $row['topic_author'];
-                                    $topic_created_date = $row['topic_created_date'];
-                                    $topic_category = $row['topic_category'];
-                                    $topic_sub_category = $row['topic_sub_category'];
-
-                                    ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                        <div class="w-12 h-12 flex-none image-fit mr-1">
-                                            <img alt="" class="rounded-full"
-                                                 src="dist/images/profile-10.png">
-                                        </div>
-                                        <div class="ml-2 overflow-hidden">
-                                            <div class="flex items-center">
-                                                <a href="javascript:;"
-                                                   class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
                                             </div>
-                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+                                        </li>
+                                        <?php
 
-                                            </div>
-                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                    <?php
+                                    }
+                                }
+
+                                ?>
+
+                                <div class="mt-4 text-gray-600 hide-title">Marketing</div>
+
+                                <?php
+
+                                $query_d_marketing = "select * from forum where topic_category='Dev' and topic_sub_category='Marketing' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_d_marketing = mysqli_query($con, $query_d_marketing);
 
                                 }
-                            }
 
-                            ?>
+                                $count_d_marketing = mysqli_num_rows($run_query_d_marketing);
 
+                                if ($count_d_marketing == 0) {
 
-                            <div class="mt-4 text-gray-600 hide-title">Technical</div>
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
 
-                            <?php
+                                } else {
 
-                            $query_d_technical = "select * from forum where topic_category='Dev' and topic_sub_category='Technical' order by forum_ID desc";
+                                    while ($row = mysqli_fetch_assoc($run_query_d_marketing)) {
 
-                            if (!empty($con)) {
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
 
-                                $run_query_d_technical = mysqli_query($con, $query_d_technical);
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
 
-                            }
-
-                            $count_d_technical = mysqli_num_rows($run_query_d_technical);
-
-                            if ($count_d_technical == 0) {
-
-                                echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                            } else {
-
-                                while ($row = mysqli_fetch_assoc($run_query_d_technical)) {
-
-                                    $forum_ID = $row['forum_ID'];
-                                    $topic_title = $row['topic_title'];
-                                    $topic_content = $row['topic_content'];
-                                    $topic_author = $row['topic_author'];
-                                    $topic_created_date = $row['topic_created_date'];
-                                    $topic_category = $row['topic_category'];
-                                    $topic_sub_category = $row['topic_sub_category'];
-
-                                    ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                        <div class="w-12 h-12 flex-none image-fit mr-1">
-                                            <img alt="" class="rounded-full"
-                                                 src="dist/images/profile-10.png">
-                                        </div>
-                                        <div class="ml-2 overflow-hidden">
-                                            <div class="flex items-center">
-                                                <a href="javascript:;"
-                                                   class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
                                             </div>
-                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+                                        </li>
+                                        <?php
 
-                                            </div>
-                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                    <?php
+                                    }
+                                }
+
+                                ?>
+
+
+                                <div class="mt-4 text-gray-600 hide-title">Technical</div>
+
+                                <?php
+
+                                $query_d_technical = "select * from forum where topic_category='Dev' and topic_sub_category='Technical' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_d_technical = mysqli_query($con, $query_d_technical);
 
                                 }
-                            }
 
-                            ?>
+                                $count_d_technical = mysqli_num_rows($run_query_d_technical);
 
+                                if ($count_d_technical == 0) {
 
-                            <div class="mt-4 text-gray-600 hide-title">Pickbox Project</div>
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
 
-                            <?php
+                                } else {
 
-                            $query_d_pickbox = "select * from forum where topic_category='Dev' and topic_sub_category='Pickbox Project' order by forum_ID desc";
+                                    while ($row = mysqli_fetch_assoc($run_query_d_technical)) {
 
-                            if (!empty($con)) {
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
 
-                                $run_query_d_pickbox = mysqli_query($con, $query_d_pickbox);
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
 
-                            }
-
-                            $count_d_pickbox = mysqli_num_rows($run_query_d_pickbox);
-
-                            if ($count_d_pickbox == 0) {
-
-                                echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                            } else {
-
-                                while ($row = mysqli_fetch_assoc($run_query_d_pickbox)) {
-
-                                    $forum_ID = $row['forum_ID'];
-                                    $topic_title = $row['topic_title'];
-                                    $topic_content = $row['topic_content'];
-                                    $topic_author = $row['topic_author'];
-                                    $topic_created_date = $row['topic_created_date'];
-                                    $topic_category = $row['topic_category'];
-                                    $topic_sub_category = $row['topic_sub_category'];
-
-                                    ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                        <div class="w-12 h-12 flex-none image-fit mr-1">
-                                            <img alt="" class="rounded-full"
-                                                 src="dist/images/profile-10.png">
-                                        </div>
-                                        <div class="ml-2 overflow-hidden">
-                                            <div class="flex items-center">
-                                                <a href="javascript:;"
-                                                   class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
                                             </div>
-                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+                                        </li>
+                                        <?php
 
-                                            </div>
-                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                    <?php
+                                    }
+                                }
+
+                                ?>
+
+
+                                <div class="mt-4 text-gray-600 hide-title">Pickbox Project</div>
+
+                                <?php
+
+                                $query_d_pickbox = "select * from forum where topic_category='Dev' and topic_sub_category='Pickbox Project' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_d_pickbox = mysqli_query($con, $query_d_pickbox);
 
                                 }
-                            }
 
-                            ?>
+                                $count_d_pickbox = mysqli_num_rows($run_query_d_pickbox);
 
-                            <div class="mt-4 text-gray-600 hide-title">Aurea Project</div>
+                                if ($count_d_pickbox == 0) {
 
-                            <?php
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
 
-                            $query_d_aurea = "select * from forum where topic_category='Dev' and topic_sub_category='Aurea Project' order by forum_ID desc";
+                                } else {
 
-                            if (!empty($con)) {
+                                    while ($row = mysqli_fetch_assoc($run_query_d_pickbox)) {
 
-                                $run_query_d_aurea = mysqli_query($con, $query_d_aurea);
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
 
-                            }
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
 
-                            $count_d_aurea = mysqli_num_rows($run_query_d_aurea);
-
-                            if ($count_d_aurea == 0) {
-
-                                echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                            } else {
-
-                                while ($row = mysqli_fetch_assoc($run_query_d_aurea)) {
-
-                                    $forum_ID = $row['forum_ID'];
-                                    $topic_title = $row['topic_title'];
-                                    $topic_content = $row['topic_content'];
-                                    $topic_author = $row['topic_author'];
-                                    $topic_created_date = $row['topic_created_date'];
-                                    $topic_category = $row['topic_category'];
-                                    $topic_sub_category = $row['topic_sub_category'];
-
-                                    ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                        <div class="w-12 h-12 flex-none image-fit mr-1">
-                                            <img alt="" class="rounded-full"
-                                                 src="dist/images/profile-10.png">
-                                        </div>
-                                        <div class="ml-2 overflow-hidden">
-                                            <div class="flex items-center">
-                                                <a href="javascript:;"
-                                                   class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
                                             </div>
-                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+                                        </li>
+                                        <?php
 
-                                            </div>
-                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                    <?php
+                                    }
+                                }
+
+                                ?>
+
+                                <div class="mt-4 text-gray-600 hide-title">Aurea Project</div>
+
+                                <?php
+
+                                $query_d_aurea = "select * from forum where topic_category='Dev' and topic_sub_category='Aurea Project' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_d_aurea = mysqli_query($con, $query_d_aurea);
 
                                 }
-                            }
 
-                            ?>
+                                $count_d_aurea = mysqli_num_rows($run_query_d_aurea);
 
+                                if ($count_d_aurea == 0) {
 
-                            <div class="mt-4 text-gray-600 hide-title">Nishtshade Project</div>
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
 
-                            <?php
+                                } else {
 
-                            $query_d_nishtshade = "select * from forum where topic_category='Dev' and topic_sub_category='Nishtshade Project' order by forum_ID desc";
+                                    while ($row = mysqli_fetch_assoc($run_query_d_aurea)) {
 
-                            if (!empty($con)) {
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
 
-                                $run_query_d_nishtshade = mysqli_query($con, $query_d_nishtshade);
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
 
-                            }
-
-                            $count_d_nishtshade = mysqli_num_rows($run_query_d_nishtshade);
-
-                            if ($count_d_nishtshade == 0) {
-
-                                echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                            } else {
-
-                                while ($row = mysqli_fetch_assoc($run_query_d_nishtshade)) {
-
-                                    $forum_ID = $row['forum_ID'];
-                                    $topic_title = $row['topic_title'];
-                                    $topic_content = $row['topic_content'];
-                                    $topic_author = $row['topic_author'];
-                                    $topic_created_date = $row['topic_created_date'];
-                                    $topic_category = $row['topic_category'];
-                                    $topic_sub_category = $row['topic_sub_category'];
-
-                                    ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                        <div class="w-12 h-12 flex-none image-fit mr-1">
-                                            <img alt="" class="rounded-full"
-                                                 src="dist/images/profile-10.png">
-                                        </div>
-                                        <div class="ml-2 overflow-hidden">
-                                            <div class="flex items-center">
-                                                <a href="javascript:;"
-                                                   class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
                                             </div>
-                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+                                        </li>
+                                        <?php
 
-                                            </div>
-                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                    <?php
+                                    }
+                                }
+
+                                ?>
+
+
+                                <div class="mt-4 text-gray-600 hide-title">Nishtshade Project</div>
+
+                                <?php
+
+                                $query_d_nishtshade = "select * from forum where topic_category='Dev' and topic_sub_category='Nishtshade Project' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_d_nishtshade = mysqli_query($con, $query_d_nishtshade);
 
                                 }
-                            }
 
-                            ?>
+                                $count_d_nishtshade = mysqli_num_rows($run_query_d_nishtshade);
 
+                                if ($count_d_nishtshade == 0) {
 
-                            <div class="mt-4 text-gray-600 hide-title">Development</div>
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
 
-                            <?php
+                                } else {
 
-                            $query_d_development = "select * from forum where topic_category='Dev' and topic_sub_category='Development' order by forum_ID desc";
+                                    while ($row = mysqli_fetch_assoc($run_query_d_nishtshade)) {
 
-                            if (!empty($con)) {
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
 
-                                $run_query_d_development = mysqli_query($con, $query_d_development);
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
 
-                            }
-
-                            $count_d_development = mysqli_num_rows($run_query_d_development);
-
-                            if ($count_d_development == 0) {
-
-                                echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
-
-                            } else {
-
-                                while ($row = mysqli_fetch_assoc($run_query_d_development)) {
-
-                                    $forum_ID = $row['forum_ID'];
-                                    $topic_title = $row['topic_title'];
-                                    $topic_content = $row['topic_content'];
-                                    $topic_author = $row['topic_author'];
-                                    $topic_created_date = $row['topic_created_date'];
-                                    $topic_category = $row['topic_category'];
-                                    $topic_sub_category = $row['topic_sub_category'];
-
-                                    ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
-                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                        <div class="w-12 h-12 flex-none image-fit mr-1">
-                                            <img alt="" class="rounded-full"
-                                                 src="dist/images/profile-10.png">
-                                        </div>
-                                        <div class="ml-2 overflow-hidden">
-                                            <div class="flex items-center">
-                                                <a href="javascript:;"
-                                                   class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
                                             </div>
-                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+                                        </li>
+                                        <?php
 
-                                            </div>
-                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                    <?php
+                                    }
+                                }
+
+                                ?>
+
+
+                                <div class="mt-4 text-gray-600 hide-title">Development</div>
+
+                                <?php
+
+                                $query_d_development = "select * from forum where topic_category='Dev' and topic_sub_category='Development' order by forum_ID desc";
+
+                                if (!empty($con)) {
+
+                                    $run_query_d_development = mysqli_query($con, $query_d_development);
 
                                 }
-                            }
 
-                            ?>
+                                $count_d_development = mysqli_num_rows($run_query_d_development);
+
+                                if ($count_d_development == 0) {
+
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
+
+                                } else {
+
+                                    while ($row = mysqli_fetch_assoc($run_query_d_development)) {
+
+                                        $forum_ID = $row['forum_ID'];
+                                        $topic_title = $row['topic_title'];
+                                        $topic_content = $row['topic_content'];
+                                        $topic_author = $row['topic_author'];
+                                        $topic_created_date = $row['topic_created_date'];
+                                        $topic_category = $row['topic_category'];
+                                        $topic_sub_category = $row['topic_sub_category'];
+
+                                        ?>
+                                        <li>
+                                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                                    <img alt="" class="rounded-full"
+                                                         src="dist/images/profile-10.png">
+                                                </div>
+                                                <div class="ml-2 overflow-hidden">
+                                                    <div class="flex items-center">
+                                                        <a href="javascript:;"
+                                                           class="font-medium"><?php echo $topic_title; ?></a>
+                                                    </div>
+                                                    <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                                    </div>
+                                                    <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <?php
+
+                                    }
+                                }
+
+                                ?>
 
 
-                            <div class="mt-4 text-gray-600 hide-title">Quality Assurance</div>
+                                <div class="mt-4 text-gray-600 hide-title">Quality Assurance</div>
 
-                            <?php
+                                <?php
 
-                            $query_d_quality = "select * from forum where topic_category='Dev' and topic_sub_category='Quality Assurance' order by forum_ID desc";
+                                $query_d_quality = "select * from forum where topic_category='Dev' and topic_sub_category='Quality Assurance' order by forum_ID desc";
 
-                            if (!empty($con)) {
+                                if (!empty($con)) {
 
-                                $run_query_d_quality = mysqli_query($con, $query_d_quality);
+                                    $run_query_d_quality = mysqli_query($con, $query_d_quality);
 
-                            }
+                                }
 
-                            $count_d_quality = mysqli_num_rows($run_query_d_quality);
+                                $count_d_quality = mysqli_num_rows($run_query_d_quality);
 
-                            if ($count_d_quality == 0) {
+                                if ($count_d_quality == 0) {
 
-                                echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
+                                    echo "<div class='text-gray-500 text-muted no-small-mute'><small>There are no topics available for this category.</small></div>";
 
-                            } else {
+                                } else {
 
                                 while ($row = mysqli_fetch_assoc($run_query_d_quality)) {
 
-                                    $forum_ID = $row['forum_ID'];
-                                    $topic_title = $row['topic_title'];
-                                    $topic_content = $row['topic_content'];
-                                    $topic_author = $row['topic_author'];
-                                    $topic_created_date = $row['topic_created_date'];
-                                    $topic_category = $row['topic_category'];
-                                    $topic_sub_category = $row['topic_sub_category'];
+                                $forum_ID = $row['forum_ID'];
+                                $topic_title = $row['topic_title'];
+                                $topic_content = $row['topic_content'];
+                                $topic_author = $row['topic_author'];
+                                $topic_created_date = $row['topic_created_date'];
+                                $topic_category = $row['topic_category'];
+                                $topic_sub_category = $row['topic_sub_category'];
 
-                                    ?>
-                                <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
+                                ?>
+                                <li>
                                     <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                         <div class="w-12 h-12 flex-none image-fit mr-1">
                                             <img alt="" class="rounded-full"
@@ -1164,12 +1213,12 @@
                                     </div>
                                 </li>
                             </ul>
-                                    <?php
+                        <?php
 
-                                }
-                            }
+                        }
+                        }
 
-                            ?>
+                        ?>
 
                         </div>
                         <!-- Dev End -->
@@ -1724,7 +1773,7 @@
             <div class="intro-y col-span-12 lg:col-span-8 xxl:col-span-9">
                 <div class="chat__box box">
                     <!-- BEGIN: Chat Active -->
-                    <div class="hidden h-full flex flex-col">
+                    <div class=" h-full flex flex-col">
                         <div class="flex flex-col sm:flex-row border-b border-gray-200 dark:border-dark-5 px-5 py-4">
                             <div class="flex items-center">
                                 <div class="w-10 h-10 sm:w-12 sm:h-12 flex-none image-fit relative">
@@ -1732,9 +1781,9 @@
                                          src="dist/images/profile-6.jpg">
                                 </div>
                                 <div class="ml-3 mr-auto">
-                                    <div class="font-medium text-base">Leonardo DiCaprio</div>
-                                    <div class="text-gray-600 text-xs sm:text-sm">Hey, I am using chat <span
-                                                class="mx-1">•</span> Online
+                                    <div class="font-medium text-base"><?php echo $get_topic_title; ?></div>
+                                    <div class="text-gray-600 text-xs sm:text-sm"><?php echo $get_topic_author; ?><span
+                                                class="mx-1">•</span> <?php echo $get_topic_category.' • '.$get_topic_sub_category; ?>
                                     </div>
                                 </div>
                             </div>
@@ -1746,10 +1795,8 @@
                                         <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                             <a href=""
                                                class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="share-2" class="w-4 h-4 mr-2"></i> Share Contact </a>
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="settings" class="w-4 h-4 mr-2"></i> Settings </a>
+                                                <i data-feather="x" class="w-4 h-4 mr-2"></i> Close Forum </a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -5977,7 +6024,7 @@
                     </div>
                     <!-- END: Chat Active -->
                     <!-- BEGIN: Chat Default -->
-                    <div class="h-full flex items-center">
+                    <div class="hidden h-full flex items-center">
                         <div class="mx-auto text-center">
                             <div class="w-16 h-16 flex-none image-fit rounded-full overflow-hidden mx-auto">
                                 <img alt="" src="dist/images/profile-6.jpg">
@@ -5996,5 +6043,8 @@
         </div>
     </div>
     <!-- END: Content -->
+<?php
+}
+?>
 
 <?php include 'dist/include/footer.php' ?>

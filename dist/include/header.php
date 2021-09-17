@@ -120,8 +120,6 @@ Document - Explicit
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        .globalSearchResultNoFoundFeedback{font-size: 30px;  padding: 20px; color: #999; text-align: center;}
-
     </style>
 
 </head>
@@ -219,7 +217,7 @@ $page = end($link_array);
 
             <li>
                 <a href="forum.php" class="side-menu
-                <?php if ($page == "forum.php" || $page == "new-forum.php") { ?>
+                <?php if ($page == "forum.php" || $page == "new-forum.php" || $page == "forum_chat.php") { ?>
                 side-menu--active
                 <?php } ?>">
                     <div class="side-menu__icon"><i data-feather="message-square"></i></div>
