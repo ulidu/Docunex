@@ -12,33 +12,6 @@ foreach ($db as $key => $value) {
 }
 $con = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME, DB_PORT);
 
-if (isset($_POST["submit"]))
-{
-
-    $content = $_POST["content"];
-    $caption = $_POST["caption"];
-    $pname = rand(1000,10000)."-".$_FILES["file"]["name"];
-    $tname = $_FILES["files"]["tmp_name"];
-    $uploads_dir ='/documents';
-    $upload_by = $_POST["upload_by"];
-    $post_date = $_POST["post_date"];
-    $tags = $_POST["tags"];
-    $publish_status = $_POST["publish_status"];
-    $author_name_status = $_POST["author_name_status"];
-
-    move_uploaded_file($tname, $uploads_dir.'/'.$pname);
-
-    $sql = "INSERT into documents(content,caption,document, upload_by, post_date, tags, publish_status, author_name_status) 
-    VALUES('$content', '$caption', '$pname', '$upload_by', '$post_date', '$tags', '$publish_status', '$author_name_status')";
-
-    if (mysqli_query($con, $sql)){
-        echo "File uploaded successfully";
-    }
-    else{
-        echo "Error";
-    }
-}
-
 
 
 if ($con) {

@@ -123,6 +123,114 @@
     });
 
 </script>
+<script>
+
+    $(document).ready(function () {
+
+        const uiPreloader = UiPreloader.init();
+
+        $('#submitDocument').click(function (e) {
+
+            e.preventDefault();
+
+            uiPreloader.render();
+
+            var title = $('#title').val();
+            var content = $('#content').val();
+            var caption = $('#post-form-7').val();
+            var author = $('#author').val();
+            var created_date = '<?php if (!empty($date)) { echo $date; } ?>';
+            var category = $('#post-form-3').val();
+            var tags = $('#post-form-4').val();
+
+            const isEmpty = str => !str.trim().length;
+
+            toastr.options = {
+                "newestOnTop": false,
+            };
+
+            if (isEmpty(title)) {
+                uiPreloader.destroy();
+                toastr.error('Please enter a title.');
+                $('#title').focus();
+
+                return false;
+            }
+
+            if (isEmpty(content)) {
+                uiPreloader.destroy();
+                toastr.error('Please provide the content.');
+                $('#content').focus();
+
+                return false;
+            }
+
+            if (isEmpty(caption)) {
+                uiPreloader.destroy();
+                toastr.error('Please provide a caption.');
+                $('#caption').focus();
+
+                return false;
+            }
+
+            if (isEmpty(category)) {
+                uiPreloader.destroy();
+                toastr.error('Please select a category.');
+                $('#post-form-3').focus();
+
+                return false;
+            }
+
+
+            $.ajax({
+
+                url: "new-document-app.php",
+                method: "POST",
+                data: {
+                    title : title,
+                    content: content,
+                    caption: caption,
+                    author: author,
+                    created_date: created_date,
+                    category: category,
+                    tags: tags
+                },
+
+                success: function (data) {
+
+                    if (data.toString() == 1) {
+
+                        uiPreloader.destroy();
+
+                        Swal.fire({
+                            title: "Published",
+                            html: "Your Document has been uploaded Successfully.",
+                            icon: 'success',
+                            showCancelButton: false,
+                            confirmButtonText: "OK",
+                            confirmButtonColor: '#1c3faa',
+                            timer: 5000
+                        }).then(function() {
+                            window.location = "file-manager.php";
+                        });
+                    }
+
+                    if (data.toString() == 0) {
+
+                        uiPreloader.destroy();
+                        swal.fire("Something went wrong !", "Failed uploading the document", "error");
+
+                    }
+
+                }
+
+            });
+
+        });
+
+    });
+
+</script>
 
 </body>
 </html>

@@ -30,30 +30,45 @@
                     </div>
                     <!-- END: Account Menu -->
                 </div>
+
+                <form class="validate-form" name="new_document" id="new_document" method="post"  action="">
                 <!-- END: Top Bar -->
                 <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
                     <h2 class="text-xl font-medium mr-auto">
                         Add New Document
                     </h2>
                     <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-                        <div class="dropdown mr-2">
-                            <button class="dropdown-toggle btn box text-gray-700 dark:text-gray-300 flex items-center" aria-expanded="false"> English <i class="w-4 h-4 ml-2" data-feather="chevron-down"></i> </button>
-                            <div class="dropdown-menu w-40">
+                        <div class="dropdown mr-2" style="position: relative;">
+                            <a class="dropdown-toggle btn box text-gray-700 dark:text-gray-300 flex items-center"
+                               aria-expanded="false"> Cancel
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none"
+                                     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                     class="feather feather-chevron-down w-4 h-4 ml-2">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </a>
+                            <div class="dropdown-menu w-40" id="_az8lq0288" data-popper-placement="bottom-end"
+                                 style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-64px, 38px);">
                                 <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="activity" class="w-4 h-4 mr-2"></i> <span class="truncate">English</span> </a>
-                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="activity" class="w-4 h-4 mr-2"></i> <span class="truncate">Indonesian</span> </a>
+                                    <a href="file-manager.php"
+                                       class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
+                                        <i data-feather="x" class="w-4 h-4 mr-2"></i>
+                                        <span class="truncate">Cancel</span> </a>
+
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="btn box text-gray-700 dark:text-gray-300 mr-2 flex items-center ml-auto sm:ml-0"> <i class="w-4 h-4 mr-2" data-feather="eye"></i> Preview </button>
                         <div class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary shadow-md flex items-center" aria-expanded="false" type="submit"> Save <i class="w-4 h-4 ml-2" data-feather="chevron-down"></i> </button>
+                            <a class="dropdown-toggle btn btn-primary shadow-md flex items-center" aria-expanded="false">
+                                Save <i class="w-4 h-4 ml-2" data-feather="chevron-down"></i></a>
                             <div class="dropdown-menu w-40">
                                 <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="file-text" class="w-4 h-4 mr-2"></i> As New Post </a>
-                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="file-text" class="w-4 h-4 mr-2"></i> As Draft </a>
-                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Export to PDF </a>
-                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Export to Word </a>
+                                    <button type="submit" id="submitDocument" name="submitDocument"
+                                            class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
+                                        <i data-feather="save" class="w-4 h-4 mr-2"></i> Publish Document
+                                    </button>
+
                                 </div>
                             </div>
                         </div>
@@ -62,21 +77,24 @@
                 <div class="pos intro-y grid grid-cols-12 gap-5 mt-5">
                     <!-- BEGIN: Post Content -->
                     <div class="intro-y col-span-12 lg:col-span-8">
-                        <input type="text" class="intro-y form-control py-3 px-4 box pr-10 placeholder-theme-13" placeholder="Title">
+                        <input type="text" id="title" name="title" class="intro-y form-control py-3 px-4 box pr-10 placeholder-theme-13"
+                               placeholder="Enter a Title">
                         <div class="post intro-y overflow-hidden box mt-5">
                             <div class="post__tabs nav nav-tabs flex-col sm:flex-row bg-gray-300 dark:bg-dark-2 text-gray-600" role="tablist">
-                                <a title="Fill in the article content" data-toggle="tab" data-target="#content" href="javascript:;" class="tooltip w-full sm:w-40 py-4 text-center flex justify-center items-center active" id="content-tab" role="tab" aria-controls="content" aria-selected="true"> <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Content </a>
-                                <a title="Adjust the meta title" data-toggle="tab" data-target="#meta-title" href="javascript:;" class="tooltip w-full sm:w-40 py-4 text-center flex justify-center items-center" id="meta-title-tab" role="tab" aria-selected="false"> <i data-feather="code" class="w-4 h-4 mr-2"></i> Meta Title </a>
-                                <a title="Use search keywords" data-toggle="tab" data-target="#keywords" href="javascript:;" class="tooltip w-full sm:w-40 py-4 text-center flex justify-center items-center" id="keywords-tab" role="tab" aria-selected="false"> <i data-feather="align-left" class="w-4 h-4 mr-2"></i> Keywords </a>
+                                <a title="Fill in the article content" data-toggle="tab" data-target="#content" href="javascript:;" class="tooltip w-full sm:w-40 py-4 text-center flex justify-center items-center active" id="content-tab" role="tab" aria-controls="content" aria-selected="true">
+                                    <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Content </a>
+                           <!--     <a title="Adjust the meta title" data-toggle="tab" data-target="#meta-title" href="javascript:;" class="tooltip w-full sm:w-40 py-4 text-center flex justify-center items-center" id="meta-title-tab" role="tab" aria-selected="false"> <i data-feather="code" class="w-4 h-4 mr-2"></i> Meta Title </a>
+                                <a title="Use search keywords" data-toggle="tab" data-target="#keywords" href="javascript:;" class="tooltip w-full sm:w-40 py-4 text-center flex justify-center items-center" id="keywords-tab" role="tab" aria-selected="false"> <i data-feather="align-left" class="w-4 h-4 mr-2"></i> Keywords </a> -->
                             </div>
                             <div class="post__content tab-content">
-                                <div id="content" class="tab-pane p-5 active" role="tabpanel" aria-labelledby="content-tab">
+                                <div id="" class="tab-pane p-5 active" role="tabpanel" aria-labelledby="content-tab">
                                     <div class="border border-gray-200 dark:border-dark-5 rounded-md p-5">
-                                        <div class="font-medium flex items-center border-b border-gray-200 dark:border-dark-5 pb-5"> <i data-feather="chevron-down" class="w-4 h-4 mr-2"></i> Text Content </div>
+                                        <div class="font-medium flex items-center border-b border-gray-200 dark:border-dark-5 pb-5">
+                                            <i data-feather="chevron-down" class="w-4 h-4 mr-2"></i> Text Content </div>
                                         <div class="mt-5">
-                                            <div class="editor">
-                                                <p>Content</p>
-                                            </div>
+
+                                            <textarea type="text" id="content" name="content" rows="6" cols="50" class="form-control" placeholder="Enter the Content"></textarea>
+
                                         </div>
                                     </div>
                                     <div class="border border-gray-200 dark:border-dark-5 rounded-md p-5 mt-5">
@@ -84,38 +102,60 @@
                                         <div class="mt-5">
                                             <div>
                                                 <label for="post-form-7" class="form-label">Caption</label>
-                                                <input id="post-form-7" type="text" class="form-control" placeholder="Write caption">
+                                                <input id="post-form-7" name="post-form-7" type="text" class="form-control" placeholder="Write caption">
                                             </div>
                                             <div class="mt-3">
 
-                                                <form method="post" enctype="multipart/form-data">
+                                               <!-- <form method="post" enctype="multipart/form-data">   -->
 
                                                 <label class="form-label">Upload file</label>
                                                 <div class="border-2 border-dashed dark:border-dark-5 rounded-md pt-4">
                                                     <div class="flex flex-wrap px-4">
-                                                        <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
+                                                       <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
                                                             <img class="rounded-md" alt="" src="dist/images/preview-8.jpg">
                                                             <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                                                        </div>
-                                                        <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                                                            <img class="rounded-md" alt="" src="dist/images/preview-9.jpg">
-                                                            <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                                                        </div>
-                                                        <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                                                            <img class="rounded-md" alt="" src="dist/images/preview-4.jpg">
-                                                            <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                                                        </div>
-                                                        <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                                                            <img class="rounded-md" alt="" src="dist/images/preview-9.jpg">
-                                                            <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                                                        </div>
+                                                            </div>
+                                                        <!--    <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
+                                                               <img class="rounded-md" alt="" src="dist/images/preview-9.jpg">
+                                                               <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
+                                                           </div>
+                                                           <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
+                                                               <img class="rounded-md" alt="" src="dist/images/preview-4.jpg">
+                                                               <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
+                                                           </div>
+                                                           <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
+                                                               <img class="rounded-md" alt="" src="dist/images/preview-9.jpg">
+                                                               <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
+                                                           </div> -->
                                                     </div>
+
+
                                                     <div class="px-4 pb-4 flex items-center cursor-pointer relative">
-                                                        <i data-feather="image" class="w-4 h-4 mr-2"></i> <span class="text-theme-1 dark:text-theme-10 mr-1">Upload a file</span> or drag and drop
+                                                        <i data-feather="image" class="w-4 h-4 mr-2"></i>
+                                                        <span class="text-theme-1 dark:text-theme-10 mr-1">Upload a file</span> or drag and drop
                                                         <input type="file" class="w-full h-full top-0 left-0 absolute opacity-0">
                                                     </div>
+
+
+                                                 <?php
+                                                    if (isset($_SESSION['message']) && $_SESSION['message'])
+                                                    {
+                                                        echo '<p class="notification">'.$_SESSION['message'];'</p>';
+                                                        unset($_SESSION['message']);
+                                                    }
+                                                    ?>
+                                                    <form method="POST" action="upload.php" enctype="multipart/form-data">
+                                                        <div class="upload-wrapper">
+
+                                                            <input type="file"  id="file-upload" name="uploadedFile">
+                                                        </div>
+
+                                                        <input type="submit" name="uploadBtn" value="Upload" />
+                                                    </form>
+
+
                                                 </div>
-                                                </form>
+                                        <!--        </form> -->
                                             </div>
                                         </div>
                                     </div>
@@ -128,85 +168,57 @@
                     <div class="col-span-12 lg:col-span-4">
                         <div class="intro-y box p-5">
                             <div>
-                                <label class="form-label">Uploaded by</label>
-                                <div class="dropdown">
-                                    <div class="dropdown-toggle btn w-full btn-outline-secondary dark:bg-dark-2 dark:border-dark-2 flex items-center justify-start" role="button" aria-expanded="false">
+                                <label class="form-label">Uploaded By</label>
+                                <div class="">
+                                    <div class="dropdown-toggle btn w-full btn-outline-secondary dark:bg-dark-2 dark:border-dark-2 flex items-center justify-start"
+                                         role="button" aria-expanded="false">
                                         <div class="w-6 h-6 image-fit mr-3">
-                                            <img class="rounded" alt="" src="dist/images/profile-5.jpg">
+                                            <img class="rounded" alt=""
+                                                 src="dist/images/profile-5.jpg">
                                         </div>
                                         <div class="truncate">Robert De Niro</div>
-                                        <i class="w-4 h-4 ml-auto" data-feather="chevron-down"></i> 
+                                        <input hidden value="Robert De Niro" name="author" id="author">
                                     </div>
-                                    <div class="dropdown-menu w-full">
-                                        <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                            <a href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <div class="w-6 h-6 absolute image-fit mr-3">
-                                                    <img class="rounded" alt="" src="dist/images/profile-5.jpg">
-                                                </div>
-                                                <div class="ml-8 pl-1">Robert De Niro</div>
-                                            </a>
-                                            <a href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <div class="w-6 h-6 absolute image-fit mr-3">
-                                                    <img class="rounded" alt="" src="dist/images/profile-1.jpg">
-                                                </div>
-                                                <div class="ml-8 pl-1">Johnny Depp</div>
-                                            </a>
-                                            <a href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <div class="w-6 h-6 absolute image-fit mr-3">
-                                                    <img class="rounded" alt="" src="dist/images/profile-15.jpg">
-                                                </div>
-                                                <div class="ml-8 pl-1">Tom Cruise</div>
-                                            </a>
-                                            <a href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <div class="w-6 h-6 absolute image-fit mr-3">
-                                                    <img class="rounded" alt="" src="dist/images/profile-7.jpg">
-                                                </div>
-                                                <div class="ml-8 pl-1">John Travolta</div>
-                                            </a>
-                                            <a href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <div class="w-6 h-6 absolute image-fit mr-3">
-                                                    <img class="rounded" alt="" src="dist/images/profile-10.jpg">
-                                                </div>
-                                                <div class="ml-8 pl-1">Edward Norton</div>
-                                            </a>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
+
                             <div class="mt-3">
                                 <label for="post-form-2" class="form-label">Post Date</label>
-                                <input class="datepicker form-control" id="post-form-2" data-single-mode="true">
+                                <input class="datepicker form-control" id="post-form-2" disabled data-single-mode="true">
                             </div>
                             <div class="mt-3">
-                                <label for="post-form-3" class="form-label">Categories</label>
-                                <select data-placeholder="Select categories" class="tom-select w-full" id="post-form-3" multiple>
-                                    <option value="1" selected>Images</option>
-                                    <option value="2" selected>Documents</option>
-                                    <option value="3" selected>Video</option>
+                                <label for="post-form-3" class="form-label">Category</label>
+                                <select data-placeholder="Select Category" class="tom-select w-full" name="post-form-3" id="post-form-3">
+                                    <option value="Documents">Documents </option>
+                                    <option value="Images">Images</option>
+                                    <option value="Videos">Videos</option>
                                 </select>
                             </div>
                             <div class="mt-3">
                                 <label for="post-form-4" class="form-label">Tags</label>
-                                <select data-placeholder="Select a tag" class="tom-select w-full" id="post-form-4" multiple>
-                                    <option value="1" selected>User-Guide</option>
-                                    <option value="2">Process-flow</option>
-                                    <option value="3" selected>Demo</option>
-                                    <option value="4">click-up</option>
-                                    <option value="5">slack</option>
+                                <select data-placeholder="Select a tag" class="tom-select w-full" id="post-form-4" name="post-form-4" multiple>
+                                    <option value="User-Guide" >User-Guide</option>
+                                    <option value="Process-flow">Process-flow</option>
+                                    <option value="Demo" >Demo</option>
+                                    <option value="Click-up">Click-up</option>
+                                    <option value="Slack">Slack</option>
                                 </select>
                             </div>
-                            <div class="form-check flex-col items-start mt-3">
+                       <!--     <div class="form-check flex-col items-start mt-3">
                                 <label for="post-form-5" class="form-check-label ml-0 mb-2">Published</label>
                                 <input id="post-form-5" class="form-check-switch" type="checkbox">
                             </div>
                             <div class="form-check flex-col items-start mt-3">
                                 <label for="post-form-6" class="form-check-label ml-0 mb-2">Show Author Name</label>
                                 <input id="post-form-6" class="form-check-switch" type="checkbox">
-                            </div>
+                            </div>  -->
                         </div>
                     </div>
                     <!-- END: Post Info -->
                 </div>
+
+                </form>
             </div>
 
 <?php include 'dist/include/footer.php' ?>
