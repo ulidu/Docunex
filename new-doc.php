@@ -47,7 +47,7 @@
                         </div>
                         <button type="button" class="btn box text-gray-700 dark:text-gray-300 mr-2 flex items-center ml-auto sm:ml-0"> <i class="w-4 h-4 mr-2" data-feather="eye"></i> Preview </button>
                         <div class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary shadow-md flex items-center" aria-expanded="false"> Save <i class="w-4 h-4 ml-2" data-feather="chevron-down"></i> </button>
+                            <button class="dropdown-toggle btn btn-primary shadow-md flex items-center" aria-expanded="false" type="submit"> Save <i class="w-4 h-4 ml-2" data-feather="chevron-down"></i> </button>
                             <div class="dropdown-menu w-40">
                                 <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                     <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="file-text" class="w-4 h-4 mr-2"></i> As New Post </a>
@@ -75,19 +75,22 @@
                                         <div class="font-medium flex items-center border-b border-gray-200 dark:border-dark-5 pb-5"> <i data-feather="chevron-down" class="w-4 h-4 mr-2"></i> Text Content </div>
                                         <div class="mt-5">
                                             <div class="editor">
-                                                <p>Content of the editor.</p>
+                                                <p>Content</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="border border-gray-200 dark:border-dark-5 rounded-md p-5 mt-5">
-                                        <div class="font-medium flex items-center border-b border-gray-200 dark:border-dark-5 pb-5"> <i data-feather="chevron-down" class="w-4 h-4 mr-2"></i> Caption & Images </div>
+                                        <div class="font-medium flex items-center border-b border-gray-200 dark:border-dark-5 pb-5"> <i data-feather="chevron-down" class="w-4 h-4 mr-2"></i> Caption & Documents </div>
                                         <div class="mt-5">
                                             <div>
                                                 <label for="post-form-7" class="form-label">Caption</label>
                                                 <input id="post-form-7" type="text" class="form-control" placeholder="Write caption">
                                             </div>
                                             <div class="mt-3">
-                                                <label class="form-label">Upload Image</label>
+
+                                                <form method="post" enctype="multipart/form-data">
+
+                                                <label class="form-label">Upload file</label>
                                                 <div class="border-2 border-dashed dark:border-dark-5 rounded-md pt-4">
                                                     <div class="flex flex-wrap px-4">
                                                         <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
@@ -108,10 +111,11 @@
                                                         </div>
                                                     </div>
                                                     <div class="px-4 pb-4 flex items-center cursor-pointer relative">
-                                                        <i data-feather="image" class="w-4 h-4 mr-2"></i> <span class="text-theme-1 dark:text-theme-10 mr-1">Upload a file</span> or drag and drop 
+                                                        <i data-feather="image" class="w-4 h-4 mr-2"></i> <span class="text-theme-1 dark:text-theme-10 mr-1">Upload a file</span> or drag and drop
                                                         <input type="file" class="w-full h-full top-0 left-0 absolute opacity-0">
                                                     </div>
                                                 </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -124,7 +128,7 @@
                     <div class="col-span-12 lg:col-span-4">
                         <div class="intro-y box p-5">
                             <div>
-                                <label class="form-label">Written By</label>
+                                <label class="form-label">Uploaded by</label>
                                 <div class="dropdown">
                                     <div class="dropdown-toggle btn w-full btn-outline-secondary dark:bg-dark-2 dark:border-dark-2 flex items-center justify-start" role="button" aria-expanded="false">
                                         <div class="w-6 h-6 image-fit mr-3">
@@ -176,21 +180,19 @@
                             <div class="mt-3">
                                 <label for="post-form-3" class="form-label">Categories</label>
                                 <select data-placeholder="Select categories" class="tom-select w-full" id="post-form-3" multiple>
-                                    <option value="1" selected>Horror</option>
-                                    <option value="2">Sci-fi</option>
-                                    <option value="3" selected>Action</option>
-                                    <option value="4">Drama</option>
-                                    <option value="5">Comedy</option>
+                                    <option value="1" selected>Images</option>
+                                    <option value="2" selected>Documents</option>
+                                    <option value="3" selected>Video</option>
                                 </select>
                             </div>
                             <div class="mt-3">
                                 <label for="post-form-4" class="form-label">Tags</label>
-                                <select data-placeholder="Select your favorite actors" class="tom-select w-full" id="post-form-4" multiple>
-                                    <option value="1" selected>Leonardo DiCaprio</option>
-                                    <option value="2">Johnny Deep</option>
-                                    <option value="3" selected>Robert Downey, Jr</option>
-                                    <option value="4">Samuel L. Jackson</option>
-                                    <option value="5">Morgan Freeman</option>
+                                <select data-placeholder="Select a tag" class="tom-select w-full" id="post-form-4" multiple>
+                                    <option value="1" selected>User-Guide</option>
+                                    <option value="2">Process-flow</option>
+                                    <option value="3" selected>Demo</option>
+                                    <option value="4">click-up</option>
+                                    <option value="5">slack</option>
                                 </select>
                             </div>
                             <div class="form-check flex-col items-start mt-3">
