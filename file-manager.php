@@ -12,7 +12,7 @@
                     <div class="intro-x dropdown w-8 h-8">
                         <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
                              role="button" aria-expanded="false">
-                            <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/2.png">
+                            <img alt="" src="dist/images/2.png">
                         </div>
                         <div class="dropdown-menu w-56">
                             <div class="dropdown-menu__content box bg-theme-26 dark:bg-dark-6 text-white">
@@ -35,7 +35,7 @@
                 <!-- END: Top Bar -->
                 <div class="grid grid-cols-12 gap-6 mt-8">
                     <div class="col-span-12 lg:col-span-3 xxl:col-span-2">
-                        <h2 class="intro-y text-lg font-medium mr-auto mt-2">
+                        <h2 class="intro-y text-xl font-medium mr-auto mt-2">
                             File Manager
                         </h2>
                         <!-- BEGIN: File Manager Menu -->
@@ -196,7 +196,7 @@
                                     </div>
                                     <a href="" class="w-3/5 file__icon file__icon--image mx-auto">
                                         <div class="file__icon--image__preview image-fit">
-                                            <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/preview-11.jpg">
+                                            <img alt="" src="dist/images/preview-11.jpg">
                                         </div>
                                     </a>
                                     <a href="" class="block font-medium mt-4 text-center truncate">preview-11.jpg</a> 
@@ -219,7 +219,7 @@
                                     </div>
                                     <a href="" class="w-3/5 file__icon file__icon--image mx-auto">
                                         <div class="file__icon--image__preview image-fit">
-                                            <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/preview-9.jpg">
+                                            <img alt="" src="dist/images/preview-9.jpg">
                                         </div>
                                     </a>
                                     <a href="" class="block font-medium mt-4 text-center truncate">preview-9.jpg</a> 
@@ -320,7 +320,7 @@
                                     </div>
                                     <a href="" class="w-3/5 file__icon file__icon--image mx-auto">
                                         <div class="file__icon--image__preview image-fit">
-                                            <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/preview-10.jpg">
+                                            <img alt="" src="dist/images/preview-10.jpg">
                                         </div>
                                     </a>
                                     <a href="" class="block font-medium mt-4 text-center truncate">preview-10.jpg</a> 
@@ -361,7 +361,7 @@
                                     </div>
                                     <a href="" class="w-3/5 file__icon file__icon--image mx-auto">
                                         <div class="file__icon--image__preview image-fit">
-                                            <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/preview-7.jpg">
+                                            <img alt="" src="dist/images/preview-7.jpg">
                                         </div>
                                     </a>
                                     <a href="" class="block font-medium mt-4 text-center truncate">preview-7.jpg</a> 
@@ -405,7 +405,7 @@
                                     </div>
                                     <a href="" class="w-3/5 file__icon file__icon--image mx-auto">
                                         <div class="file__icon--image__preview image-fit">
-                                            <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/preview-6.jpg">
+                                            <img alt="" src="dist/images/preview-6.jpg">
                                         </div>
                                     </a>
                                     <a href="" class="block font-medium mt-4 text-center truncate">preview-6.jpg</a> 
@@ -482,7 +482,7 @@
                                     </div>
                                     <a href="" class="w-3/5 file__icon file__icon--image mx-auto">
                                         <div class="file__icon--image__preview image-fit">
-                                            <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/preview-1.jpg">
+                                            <img alt="" src="dist/images/preview-1.jpg">
                                         </div>
                                     </a>
                                     <a href="" class="block font-medium mt-4 text-center truncate">preview-1.jpg</a> 
@@ -526,7 +526,7 @@
                                     </div>
                                     <a href="" class="w-3/5 file__icon file__icon--image mx-auto">
                                         <div class="file__icon--image__preview image-fit">
-                                            <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/preview-2.jpg">
+                                            <img alt="" src="dist/images/preview-2.jpg">
                                         </div>
                                     </a>
                                     <a href="" class="block font-medium mt-4 text-center truncate">preview-2.jpg</a> 

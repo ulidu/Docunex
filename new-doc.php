@@ -11,7 +11,7 @@
                     <div class="intro-x dropdown w-8 h-8">
                         <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
                              role="button" aria-expanded="false">
-                            <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/2.png">
+                            <img alt="" src="dist/images/2.png">
                         </div>
                         <div class="dropdown-menu w-56">
                             <div class="dropdown-menu__content box bg-theme-26 dark:bg-dark-6 text-white">
@@ -32,7 +32,7 @@
                 </div>
                 <!-- END: Top Bar -->
                 <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
-                    <h2 class="text-lg font-medium mr-auto">
+                    <h2 class="text-xl font-medium mr-auto">
                         Add New Document
                     </h2>
                     <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
@@ -94,19 +94,19 @@
                                                 <div class="border-2 border-dashed dark:border-dark-5 rounded-md pt-4">
                                                     <div class="flex flex-wrap px-4">
                                                         <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                                                            <img class="rounded-md" alt="Rubick Tailwind HTML Admin Template" src="dist/images/preview-8.jpg">
+                                                            <img class="rounded-md" alt="" src="dist/images/preview-8.jpg">
                                                             <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
                                                         </div>
                                                         <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                                                            <img class="rounded-md" alt="Rubick Tailwind HTML Admin Template" src="dist/images/preview-9.jpg">
+                                                            <img class="rounded-md" alt="" src="dist/images/preview-9.jpg">
                                                             <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
                                                         </div>
                                                         <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                                                            <img class="rounded-md" alt="Rubick Tailwind HTML Admin Template" src="dist/images/preview-4.jpg">
+                                                            <img class="rounded-md" alt="" src="dist/images/preview-4.jpg">
                                                             <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
                                                         </div>
                                                         <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                                                            <img class="rounded-md" alt="Rubick Tailwind HTML Admin Template" src="dist/images/preview-9.jpg">
+                                                            <img class="rounded-md" alt="" src="dist/images/preview-9.jpg">
                                                             <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
                                                         </div>
                                                     </div>
@@ -132,7 +132,7 @@
                                 <div class="dropdown">
                                     <div class="dropdown-toggle btn w-full btn-outline-secondary dark:bg-dark-2 dark:border-dark-2 flex items-center justify-start" role="button" aria-expanded="false">
                                         <div class="w-6 h-6 image-fit mr-3">
-                                            <img class="rounded" alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-5.jpg">
+                                            <img class="rounded" alt="" src="dist/images/profile-5.jpg">
                                         </div>
                                         <div class="truncate">Robert De Niro</div>
                                         <i class="w-4 h-4 ml-auto" data-feather="chevron-down"></i> 
@@ -141,31 +141,31 @@
                                         <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                             <a href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
                                                 <div class="w-6 h-6 absolute image-fit mr-3">
-                                                    <img class="rounded" alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-5.jpg">
+                                                    <img class="rounded" alt="" src="dist/images/profile-5.jpg">
                                                 </div>
                                                 <div class="ml-8 pl-1">Robert De Niro</div>
                                             </a>
                                             <a href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
                                                 <div class="w-6 h-6 absolute image-fit mr-3">
-                                                    <img class="rounded" alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-1.jpg">
+                                                    <img class="rounded" alt="" src="dist/images/profile-1.jpg">
                                                 </div>
                                                 <div class="ml-8 pl-1">Johnny Depp</div>
                                             </a>
                                             <a href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
                                                 <div class="w-6 h-6 absolute image-fit mr-3">
-                                                    <img class="rounded" alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-15.jpg">
+                                                    <img class="rounded" alt="" src="dist/images/profile-15.jpg">
                                                 </div>
                                                 <div class="ml-8 pl-1">Tom Cruise</div>
                                             </a>
                                             <a href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
                                                 <div class="w-6 h-6 absolute image-fit mr-3">
-                                                    <img class="rounded" alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-7.jpg">
+                                                    <img class="rounded" alt="" src="dist/images/profile-7.jpg">
                                                 </div>
                                                 <div class="ml-8 pl-1">John Travolta</div>
                                             </a>
                                             <a href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
                                                 <div class="w-6 h-6 absolute image-fit mr-3">
-                                                    <img class="rounded" alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-10.jpg">
+                                                    <img class="rounded" alt="" src="dist/images/profile-10.jpg">
                                                 </div>
                                                 <div class="ml-8 pl-1">Edward Norton</div>
                                             </a>

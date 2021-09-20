@@ -43,7 +43,7 @@ session_start();
                 Docunex</span>
                     </a>
                     <div class="my-auto">
-                        <img alt="Rubick Tailwind HTML Admin Template" class="-intro-x w-1/2 -mt-16" src="dist/images/login.png">
+                        <img alt="" class="-intro-x w-1/2 -mt-16" src="dist/images/login.png">
                         <div class="-intro-x text-white font-medium text-4xl leading-tight mt-10">
                             A few more clicks to 
                             <br>

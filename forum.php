@@ -15,7 +15,7 @@
             <div class="intro-x dropdown w-8 h-8">
                 <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
                      role="button" aria-expanded="false">
-                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/2.png">
+                    <img alt="" src="dist/images/2.png">
                 </div>
                 <div class="dropdown-menu w-56">
                     <div class="dropdown-menu__content box bg-theme-26 dark:bg-dark-6 text-white">
@@ -36,7 +36,7 @@
         </div>
         <!-- END: Top Bar -->
         <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
-            <h2 class="text-lg font-medium mr-auto">
+            <h2 class="text-xl font-medium mr-auto">
                 Forums
             </h2>
             <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
@@ -60,33 +60,33 @@
             </div>
         </div>
         <div class="intro-y chat grid grid-cols-12 gap-5 mt-5">
+
             <!-- BEGIN: Chat Side Menu -->
             <div class="col-span-12 lg:col-span-4 xxl:col-span-3">
+
                 <div class="intro-y pr-1">
                     <div class="box p-2">
                         <div class="chat__tabs nav nav-tabs justify-center" role="tablist">
-                            <a id="chats-tab"
-                                                                                              data-toggle="tab"
-                                                                                              data-target="#chats"
-                                                                                              href="javascript:;"
-                                                                                              class="flex-1 py-2 rounded-md text-center active"
-                                                                                              role="tab"
-                                                                                              aria-controls="chats"
-                                                                                              aria-selected="true">General</a>
+                            <a id="chats-tab" data-toggle="tab" data-target="#chats" href="javascript:;"
+                               class="flex-1 py-2 rounded-md text-center active" role="tab" aria-controls="chats"
+                               aria-selected="true">General</a>
                             <a id="friends-tab" data-toggle="tab" data-target="#friends" href="javascript:;"
                                class="flex-1 py-2 rounded-md text-center" role="tab" aria-controls="friends"
                                aria-selected="false">Dev</a>
-                            <a id="profile-tab" data-toggle="tab"
-                                                                   data-target="#profile" href="javascript:;"
-                                                                   class="flex-1 py-2 rounded-md text-center" role="tab"
-                                                                   aria-controls="profile"
-                                                                   aria-selected="false">Intern</a></div>
+                            <a id="profile-tab" data-toggle="tab" data-target="#profile" href="javascript:;"
+                               class="flex-1 py-2 rounded-md text-center" role="tab" aria-controls="profile"
+                               aria-selected="false">Training</a>
+                        </div>
                     </div>
                 </div>
+
                 <div class="tab-content">
+
                     <div id="chats" class="tab-pane active" role="tabpanel" aria-labelledby="chats-tab">
                         <div class="pr-1">
                             <div class="box px-5 pt-5 pb-5 lg:pb-0 mt-5">
+
+
                                 <div class="relative text-gray-700 dark:text-gray-300">
                                     <input type="text"
                                            class="form-control py-3 px-4 border-transparent bg-gray-200 pr-10 placeholder-theme-13"
@@ -94,6 +94,8 @@
                                     <i class="w-4 h-4 hidden sm:absolute my-auto inset-y-0 mr-3 right-0"
                                        data-feather="search"></i>
                                 </div>
+                                <button type="button" class="btn btn-primary w-full mt-3">Search Forums</button>
+
                                 <div class="overflow-x-auto scrollbar-hidden">
                                     <div class="flex mt-5">
 
@@ -101,397 +103,288 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- General Start -->
                         <div class="chat__chat-list overflow-y-auto scrollbar-hidden pr-1 pt-1 mt-4">
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 ">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-6.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Leonardo DiCaprio</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
+
+                            <div class="mt-4 text-gray-600">HR</div>
+                            <?php
+
+                            $query_g_hr = "select * from forum where topic_category='General' and topic_sub_category='HR' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_g_hr = mysqli_query($con, $query_g_hr);
+
+                            }
+
+                            $count_h_hr = mysqli_num_rows($run_query_g_hr);
+
+                            if ($count_h_hr == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_g_hr)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                           </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
                                     </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">It is a long established fact that
-                                        a reader will be distracted by the readable content of a page when looking at
-                                        its layout. The point of using Lorem
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
+                            <div class="mt-4 text-gray-600">Finance</div>
+                            <?php
+
+                            $query_g_finance = "select * from forum where topic_category='General' and topic_sub_category='Finance' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_g_finance = mysqli_query($con, $query_g_finance);
+
+                            }
+
+                            $count_g_finance = mysqli_num_rows($run_query_g_finance);
+
+                            if ($count_g_finance == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_g_finance)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-3.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Brad Pitt</a>
-                                        <div class="text-xs text-gray-500 ml-auto">05:09 AM</div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
+                            <div class="mt-4 text-gray-600">Marketing</div>
+                            <?php
+
+                            $query_g_marketing = "select * from forum where topic_category='General' and topic_sub_category='Marketing' order by forum_ID desc";
+
+                            if (!empty($con)) {
+
+                                $run_query_g_marketing = mysqli_query($con, $query_g_marketing);
+
+                            }
+
+                            $count_g_marketing = mysqli_num_rows($run_query_g_marketing);
+
+                            if ($count_g_marketing == 0) {
+
+                                echo "<div class='text-gray-500 text-muted'><small>There are no topics available for this category.</small></div>";
+
+                            } else {
+
+                                while ($row = mysqli_fetch_assoc($run_query_g_marketing)) {
+
+                                    $forum_ID = $row['forum_ID'];
+                                    $topic_title = $row['topic_title'];
+                                    $topic_content = $row['topic_content'];
+                                    $topic_author = $row['topic_author'];
+                                    $topic_created_date = $row['topic_created_date'];
+                                    $topic_category = $row['topic_category'];
+                                    $topic_sub_category = $row['topic_sub_category'];
+
+                                    ?>
+
+                                    <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
+                                        <div class="w-12 h-12 flex-none image-fit mr-1">
+                                            <img alt="" class="rounded-full"
+                                                 src="dist/images/profile-10.png">
+                                        </div>
+                                        <div class="ml-2 overflow-hidden">
+                                            <div class="flex items-center">
+                                                <a href="javascript:;" class="font-medium"><?php echo $topic_title; ?></a>
+                                            </div>
+                                            <div class="w-full truncate text-gray-600 mt-0.5"><?php echo $topic_author; ?>
+
+                                            </div>
+                                            <div class="text-xs text-gray-500 ml-auto"><?php echo $topic_created_date; ?></div>
+                                        </div>
                                     </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">It is a long established fact that
-                                        a reader will be distracted by the readable content of a page when looking at
-                                        its layout. The point of using Lorem
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-10.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Angelina Jolie</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">Lorem Ipsum is simply dummy text
-                                        of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s
-                                        standard dummy text ever since the 1500
-                                    </div>
-                                </div>
-                                <div class="w-5 h-5 flex items-center justify-center absolute top-0 right-0 text-xs text-white rounded-full bg-theme-1 font-medium -mt-1 -mr-1">
-                                    5
-                                </div>
-                            </div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-10.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Kevin Spacey</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">It is a long established fact that
-                                        a reader will be distracted by the readable content of a page when looking at
-                                        its layout. The point of using Lorem
-                                    </div>
-                                </div>
-                                <div class="w-5 h-5 flex items-center justify-center absolute top-0 right-0 text-xs text-white rounded-full bg-theme-1 font-medium -mt-1 -mr-1">
-                                    1
-                                </div>
-                            </div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-15.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">John Travolta</a>
-                                        <div class="text-xs text-gray-500 ml-auto">06:05 AM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">Lorem Ipsum is simply dummy text
-                                        of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s
-                                        standard dummy text ever since the 1500
-                                    </div>
-                                </div>
-                                <div class="w-5 h-5 flex items-center justify-center absolute top-0 right-0 text-xs text-white rounded-full bg-theme-1 font-medium -mt-1 -mr-1">
-                                    3
-                                </div>
-                            </div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-1.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Sylvester Stallone</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">There are many variations of
-                                        passages of Lorem Ipsum available, but the majority have suffered alteration in
-                                        some form, by injected humour, or randomi
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-13.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Johnny Depp</a>
-                                        <div class="text-xs text-gray-500 ml-auto">06:05 AM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">Contrary to popular belief, Lorem
-                                        Ipsum is not simply random text. It has roots in a piece of classical Latin
-                                        literature from 45 BC, making it over 20
-                                    </div>
-                                </div>
-                                <div class="w-5 h-5 flex items-center justify-center absolute top-0 right-0 text-xs text-white rounded-full bg-theme-1 font-medium -mt-1 -mr-1">
-                                    6
-                                </div>
-                            </div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-5.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Robert De Niro</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">It is a long established fact that
-                                        a reader will be distracted by the readable content of a page when looking at
-                                        its layout. The point of using Lorem
-                                    </div>
-                                </div>
-                                <div class="w-5 h-5 flex items-center justify-center absolute top-0 right-0 text-xs text-white rounded-full bg-theme-1 font-medium -mt-1 -mr-1">
-                                    2
-                                </div>
-                            </div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-11.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Brad Pitt</a>
-                                        <div class="text-xs text-gray-500 ml-auto">05:09 AM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">Lorem Ipsum is simply dummy text
-                                        of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s
-                                        standard dummy text ever since the 1500
-                                    </div>
-                                </div>
-                                <div class="w-5 h-5 flex items-center justify-center absolute top-0 right-0 text-xs text-white rounded-full bg-theme-1 font-medium -mt-1 -mr-1">
-                                    6
-                                </div>
-                            </div>
-                            <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-3.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium">Brad Pitt</a>
-                                        <div class="text-xs text-gray-500 ml-auto">01:10 PM</div>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">Lorem Ipsum is simply dummy text
-                                        of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s
-                                        standard dummy text ever since the 1500
-                                    </div>
-                                </div>
-                                <div class="w-5 h-5 flex items-center justify-center absolute top-0 right-0 text-xs text-white rounded-full bg-theme-1 font-medium -mt-1 -mr-1">
-                                    4
-                                </div>
-                            </div>
+
+                                    <?php
+
+                                }
+                            }
+
+                            ?>
+
+                            <div class="mt-4 text-gray-600">Technical</div>
+
+                            <div class="mt-4 text-gray-600">Pickbox Project</div>
+
+                            <div class="mt-4 text-gray-600">Aurea Project</div>
+
+                            <div class="mt-4 text-gray-600">Nishtshade Project</div>
+
+                            <div class="mt-4 text-gray-600">Development</div>
+
+                            <div class="mt-4 text-gray-600">Quality Assurance</div>
+
+
                         </div>
+                        <!-- General End -->
+
                     </div>
                     <div id="friends" class="tab-pane" role="tabpanel" aria-labelledby="friends-tab">
                         <div class="pr-1">
-                            <div class="box p-5 mt-5">
+                            <div class="box px-5 pt-5 pb-5 lg:pb-0 mt-5">
+
+
                                 <div class="relative text-gray-700 dark:text-gray-300">
                                     <input type="text"
                                            class="form-control py-3 px-4 border-transparent bg-gray-200 pr-10 placeholder-theme-13"
-                                           placeholder="Search for messages or users...">
+                                           placeholder="Search Forum Topics">
                                     <i class="w-4 h-4 hidden sm:absolute my-auto inset-y-0 mr-3 right-0"
                                        data-feather="search"></i>
                                 </div>
-                                <button type="button" class="btn btn-primary w-full mt-3">Invite Friends</button>
-                            </div>
-                        </div>
-                        <div class="chat__user-list overflow-y-auto scrollbar-hidden pr-1 pt-1">
-                            <div class="mt-4 text-gray-600">A</div>
-                            <div class="cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-6.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center"><a href="" class="font-medium">Leonardo DiCaprio</a>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">Last seen 2 hours ago</div>
-                                </div>
-                                <div class="dropdown ml-auto">
-                                    <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false">
-                                        <i data-feather="more-horizontal"
-                                           class="w-5 h-5 text-gray-600 dark:text-gray-300"></i> </a>
-                                    <div class="dropdown-menu w-40">
-                                        <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="share-2" class="w-4 h-4 mr-2"></i> Share Contact </a>
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="copy" class="w-4 h-4 mr-2"></i> Copy Contact </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-3.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center"><a href="" class="font-medium">Brad Pitt</a></div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">Last seen 2 hours ago</div>
-                                </div>
-                                <div class="dropdown ml-auto">
-                                    <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false">
-                                        <i data-feather="more-horizontal"
-                                           class="w-5 h-5 text-gray-600 dark:text-gray-300"></i> </a>
-                                    <div class="dropdown-menu w-40">
-                                        <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="share-2" class="w-4 h-4 mr-2"></i> Share Contact </a>
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="copy" class="w-4 h-4 mr-2"></i> Copy Contact </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-4 text-gray-600">B</div>
-                            <div class="cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-10.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center"><a href="" class="font-medium">Angelina Jolie</a>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">Last seen 2 hours ago</div>
-                                </div>
-                                <div class="dropdown ml-auto">
-                                    <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false">
-                                        <i data-feather="more-horizontal"
-                                           class="w-5 h-5 text-gray-600 dark:text-gray-300"></i> </a>
-                                    <div class="dropdown-menu w-40">
-                                        <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="share-2" class="w-4 h-4 mr-2"></i> Share Contact </a>
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="copy" class="w-4 h-4 mr-2"></i> Copy Contact </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-10.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center"><a href="" class="font-medium">Kevin Spacey</a></div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">Last seen 2 hours ago</div>
-                                </div>
-                                <div class="dropdown ml-auto">
-                                    <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false">
-                                        <i data-feather="more-horizontal"
-                                           class="w-5 h-5 text-gray-600 dark:text-gray-300"></i> </a>
-                                    <div class="dropdown-menu w-40">
-                                        <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="share-2" class="w-4 h-4 mr-2"></i> Share Contact </a>
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="copy" class="w-4 h-4 mr-2"></i> Copy Contact </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cursor-pointer box relative flex items-center p-5 mt-5">
-                                <div class="w-12 h-12 flex-none image-fit mr-1">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
-                                         src="dist/images/profile-15.jpg">
-                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
-                                </div>
-                                <div class="ml-2 overflow-hidden">
-                                    <div class="flex items-center"><a href="" class="font-medium">John Travolta</a>
-                                    </div>
-                                    <div class="w-full truncate text-gray-600 mt-0.5">Last seen 2 hours ago</div>
-                                </div>
-                                <div class="dropdown ml-auto">
-                                    <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false">
-                                        <i data-feather="more-horizontal"
-                                           class="w-5 h-5 text-gray-700 dark:text-gray-300"></i> </a>
-                                    <div class="dropdown-menu w-40">
-                                        <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="share-2" class="w-4 h-4 mr-2"></i> Share Contact </a>
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="copy" class="w-4 h-4 mr-2"></i> Copy Contact </a>
-                                        </div>
+                                <button type="button" class="btn btn-primary w-full mt-3">Search Forums</button>
+
+                                <div class="overflow-x-auto scrollbar-hidden">
+                                    <div class="flex mt-5">
+
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Dev Start -->
+                        <div class="chat__chat-list overflow-y-auto scrollbar-hidden pr-1 pt-1 mt-4">
+
+                            <div class="mt-4 text-gray-600">HR</div>
+
+                            <div class="mt-4 text-gray-600">Finance</div>
+
+                            <div class="mt-4 text-gray-600">Marketing</div>
+
+                            <div class="mt-4 text-gray-600">Technical</div>
+
+                            <div class="mt-4 text-gray-600">Pickbox Project</div>
+
+                            <div class="mt-4 text-gray-600">Aurea Project</div>
+
+                            <div class="mt-4 text-gray-600">Nishtshade Project</div>
+
+                            <div class="mt-4 text-gray-600">Development</div>
+
+                            <div class="mt-4 text-gray-600">Quality Assurance</div>
+
+                        </div>
+                        <!-- Dev End -->
+
                     </div>
                     <div id="profile" class="tab-pane" role="tabpanel" aria-labelledby="profile-tab">
                         <div class="pr-1">
-                            <div class="box px-5 py-10 mt-5">
-                                <div class="w-20 h-20 flex-none image-fit rounded-full overflow-hidden mx-auto">
-                                    <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-6.jpg">
+                            <div class="box px-5 pt-5 pb-5 lg:pb-0 mt-5">
+
+
+                                <div class="relative text-gray-700 dark:text-gray-300">
+                                    <input type="text"
+                                           class="form-control py-3 px-4 border-transparent bg-gray-200 pr-10 placeholder-theme-13"
+                                           placeholder="Search Forum Topics">
+                                    <i class="w-4 h-4 hidden sm:absolute my-auto inset-y-0 mr-3 right-0"
+                                       data-feather="search"></i>
                                 </div>
-                                <div class="text-center mt-3">
-                                    <div class="font-medium text-lg">Leonardo DiCaprio</div>
-                                    <div class="text-gray-600 mt-1">Tailwind HTML Admin Template</div>
-                                </div>
-                            </div>
-                            <div class="box p-5 mt-5">
-                                <div class="flex items-center border-b border-gray-200 dark:border-dark-5 pb-5">
-                                    <div>
-                                        <div class="text-gray-600">Country</div>
-                                        <div class="mt-1">New York City, USA</div>
+                                <button type="button" class="btn btn-primary w-full mt-3">Search Forums</button>
+
+                                <div class="overflow-x-auto scrollbar-hidden">
+                                    <div class="flex mt-5">
+
                                     </div>
-                                    <i data-feather="globe" class="w-4 h-4 text-gray-600 ml-auto"></i>
-                                </div>
-                                <div class="flex items-center border-b border-gray-200 dark:border-dark-5 py-5">
-                                    <div>
-                                        <div class="text-gray-600">Phone</div>
-                                        <div class="mt-1">+32 19 23 62 24 34</div>
-                                    </div>
-                                    <i data-feather="mic" class="w-4 h-4 text-gray-600 ml-auto"></i>
-                                </div>
-                                <div class="flex items-center border-b border-gray-200 dark:border-dark-5 py-5">
-                                    <div>
-                                        <div class="text-gray-600">Email</div>
-                                        <div class="mt-1">leonardodicaprio@left4code.com</div>
-                                    </div>
-                                    <i data-feather="mail" class="w-4 h-4 text-gray-600 ml-auto"></i>
-                                </div>
-                                <div class="flex items-center pt-5">
-                                    <div>
-                                        <div class="text-gray-600">Joined Date</div>
-                                        <div class="mt-1">16 January 2021</div>
-                                    </div>
-                                    <i data-feather="clock" class="w-4 h-4 text-gray-600 ml-auto"></i>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Training Start -->
+                        <div class="chat__chat-list overflow-y-auto scrollbar-hidden pr-1 pt-1 mt-4">
+
+                            <div class="mt-4 text-gray-600">HR</div>
+
+                            <div class="mt-4 text-gray-600">Finance</div>
+
+                            <div class="mt-4 text-gray-600">Marketing</div>
+
+                            <div class="mt-4 text-gray-600">Technical</div>
+
+                            <div class="mt-4 text-gray-600">Pickbox Project</div>
+
+                            <div class="mt-4 text-gray-600">Aurea Project</div>
+
+                            <div class="mt-4 text-gray-600">Nishtshade Project</div>
+
+                            <div class="mt-4 text-gray-600">Development</div>
+
+                            <div class="mt-4 text-gray-600">Quality Assurance</div>
+
+                        </div>
+                        <!-- Training End -->
+
                     </div>
+
                 </div>
             </div>
             <!-- END: Chat Side Menu -->
+
             <!-- BEGIN: Chat Content -->
             <div class="intro-y col-span-12 lg:col-span-8 xxl:col-span-9">
                 <div class="chat__box box">
@@ -500,7 +393,7 @@
                         <div class="flex flex-col sm:flex-row border-b border-gray-200 dark:border-dark-5 px-5 py-4">
                             <div class="flex items-center">
                                 <div class="w-10 h-10 sm:w-12 sm:h-12 flex-none image-fit relative">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
+                                    <img alt="" class="rounded-full"
                                          src="dist/images/profile-6.jpg">
                                 </div>
                                 <div class="ml-3 mr-auto">
@@ -534,7 +427,7 @@
                         <div class="overflow-y-scroll scrollbar-hidden px-5 pt-5 flex-1">
                             <div class="chat__box__text-box flex items-end float-left mb-4">
                                 <div class="w-10 h-10 hidden sm:block flex-none image-fit relative mr-5">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
+                                    <img alt="" class="rounded-full"
                                          src="dist/images/profile-6.jpg">
                                 </div>
                                 <div class="bg-gray-200 dark:bg-dark-5 px-4 py-3 text-gray-700 dark:text-gray-300 rounded-r-md rounded-t-md">
@@ -577,7 +470,7 @@
                                     <div class="mt-1 text-xs text-theme-21">1 mins ago</div>
                                 </div>
                                 <div class="w-10 h-10 hidden sm:block flex-none image-fit relative ml-5">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
+                                    <img alt="" class="rounded-full"
                                          src="dist/images/profile-3.jpg">
                                 </div>
                             </div>
@@ -602,7 +495,7 @@
                                     <div class="mt-1 text-xs text-theme-21">59 secs ago</div>
                                 </div>
                                 <div class="w-10 h-10 hidden sm:block flex-none image-fit relative ml-5">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
+                                    <img alt="" class="rounded-full"
                                          src="dist/images/profile-3.jpg">
                                 </div>
                             </div>
@@ -611,7 +504,7 @@
                             </div>
                             <div class="chat__box__text-box flex items-end float-left mb-4">
                                 <div class="w-10 h-10 hidden sm:block flex-none image-fit relative mr-5">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
+                                    <img alt="" class="rounded-full"
                                          src="dist/images/profile-6.jpg">
                                 </div>
                                 <div class="bg-gray-200 dark:bg-dark-5 px-4 py-3 text-gray-700 dark:text-gray-300 rounded-r-md rounded-t-md">
@@ -654,14 +547,14 @@
                                     <div class="mt-1 text-xs text-theme-21">1 secs ago</div>
                                 </div>
                                 <div class="w-10 h-10 hidden sm:block flex-none image-fit relative ml-5">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
+                                    <img alt="" class="rounded-full"
                                          src="dist/images/profile-3.jpg">
                                 </div>
                             </div>
                             <div class="clear-both"></div>
                             <div class="chat__box__text-box flex items-end float-left mb-4">
                                 <div class="w-10 h-10 hidden sm:block flex-none image-fit relative mr-5">
-                                    <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full"
+                                    <img alt="" class="rounded-full"
                                          src="dist/images/profile-6.jpg">
                                 </div>
                                 <div class="bg-gray-200 dark:bg-dark-5 px-4 py-3 text-gray-700 dark:text-gray-300 rounded-r-md rounded-t-md">
@@ -4756,7 +4649,7 @@
                     <div class="h-full flex items-center">
                         <div class="mx-auto text-center">
                             <div class="w-16 h-16 flex-none image-fit rounded-full overflow-hidden mx-auto">
-                                <img alt="Rubick Tailwind HTML Admin Template" src="dist/images/profile-6.jpg">
+                                <img alt="" src="dist/images/profile-6.jpg">
                             </div>
                             <div class="mt-3">
                                 <div class="font-medium">Hey, Leonardo DiCaprio!</div>
@@ -4768,6 +4661,7 @@
                 </div>
             </div>
             <!-- END: Chat Content -->
+
         </div>
     </div>
     <!-- END: Content -->
