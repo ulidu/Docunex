@@ -62,6 +62,79 @@
 
 </script>
 
+
+<script>
+
+    $(document).ready(function () {
+
+        const uiPreloader = UiPreloader.init();
+
+        $('#submitclose').click(function (e) {
+
+            e.preventDefault();
+
+            var forumid = '<?php echo $f_id_get; ?>';
+
+            toastr.options = {
+                "newestOnTop": false,
+            };
+
+            $.ajax({
+
+                url: "forum-close-app.php",
+                method: "POST",
+                data: {
+                    forumid: forumid
+                },
+                success: function (data) {
+
+                    if (data.toString() == 1) {
+
+                        uiPreloader.destroy();
+
+                        Swal.fire({
+                            title: "Are you sure ?",
+                            html: "No one can reply to the forum topic after it's closed.",
+                            icon: 'warning',
+
+                            confirmButtonText: "Yes, Close forum !",
+                            confirmButtonColor: '#d33',
+                            showCancelButton: true,
+                            cancelButtonColor: '#1c3faa',
+
+                        }).then((result) => {
+
+                            if (result.isConfirmed) {
+                                Swal.fire(
+                                    'Closed !',
+                                    'The forum has been closed.',
+                                    'success'
+                                )
+
+                                window.location = "forum.php";
+
+                            }
+
+                        });
+                    }
+
+                    if (data.toString() == 0) {
+
+                        uiPreloader.destroy();
+                        swal.fire("Something went wrong !", "Failed closing the topic", "error");
+
+                    }
+
+                }
+
+            });
+
+        });
+
+    });
+
+</script>
+
 <script>
 
     $(document).ready(function () {
@@ -71,8 +144,6 @@
         $('#submitTopic').click(function (e) {
 
             e.preventDefault();
-
-            uiPreloader.render();
 
             var title = $('#title').val();
             var content = $('#content').val();
@@ -169,6 +240,8 @@
     });
 
 </script>
+
+
 
 </body>
 </html>
