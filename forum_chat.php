@@ -39,6 +39,7 @@ while ($row = mysqli_fetch_assoc($run_query_f_details)) {
     $get_topic_created_date = $row['topic_created_date'];
     $get_topic_category = $row['topic_category'];
     $get_topic_sub_category = $row['topic_sub_category'];
+    $get_forum_status = $row['forum_status'];
 
     $get_reply_ID = $row['reply_ID'];
     $get_reply_date = $row['reply_date'];
@@ -1793,9 +1794,8 @@ while ($row = mysqli_fetch_assoc($run_query_f_details)) {
                                        aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5"></i> </a>
                                     <div class="dropdown-menu w-40">
                                         <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                                <i data-feather="x" class="w-4 h-4 mr-2"></i> Close Forum </a>
+                                            <button type="submit" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
+                                                <i data-feather="x" class="w-4 h-4 mr-2"></i> Close Forum </button>
 
                                         </div>
                                     </div>
