@@ -111,47 +111,47 @@
                                                 <label class="form-label">Upload file</label>
                                                 <div class="border-2 border-dashed dark:border-dark-5 rounded-md pt-4">
                                                     <div class="flex flex-wrap px-4">
-                                                       <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                                                            <img class="rounded-md" alt="" src="dist/images/preview-8.jpg">
-                                                            <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                                                            </div>
-                                                        <!--    <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                                                               <img class="rounded-md" alt="" src="dist/images/preview-9.jpg">
-                                                               <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                                                           </div>
-                                                           <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                                                               <img class="rounded-md" alt="" src="dist/images/preview-4.jpg">
-                                                               <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                                                           </div>
-                                                           <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                                                               <img class="rounded-md" alt="" src="dist/images/preview-9.jpg">
-                                                               <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                                                           </div> -->
+
+
+                                                        <input id="fileupload" type="file" name="fileupload"/>
+                                                        <button id="upload-button" onclick="saveFile()">Upload</button>
+
+
+                                                        <script>
+                                                            async function saveFile() {
+                                                                let formData = new FormData();
+                                                                formData.append("file", fileupload.files[0]);
+                                                                await fetch('upload.php', {method: "POST", body: formData});
+                                                                //alert('The file has been uploaded successfully');
+                                                            }
+                                                        </script>
+                                                        <!-- <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
+                                                              <img class="rounded-md" alt="" src="dist/images/preview-8.jpg">
+                                                              <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
+                                                              </div>
+                                                              <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
+                                                                 <img class="rounded-md" alt="" src="dist/images/preview-9.jpg">
+                                                                 <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
+                                                             </div>
+                                                             <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
+                                                                 <img class="rounded-md" alt="" src="dist/images/preview-4.jpg">
+                                                                 <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
+                                                             </div>
+                                                             <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
+                                                                 <img class="rounded-md" alt="" src="dist/images/preview-9.jpg">
+                                                                 <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
+                                                             </div> -->
                                                     </div>
 
 
-                                                    <div class="px-4 pb-4 flex items-center cursor-pointer relative">
+                                                <!--    <div class="px-4 pb-4 flex items-center cursor-pointer relative">
                                                         <i data-feather="image" class="w-4 h-4 mr-2"></i>
                                                         <span class="text-theme-1 dark:text-theme-10 mr-1">Upload a file</span> or drag and drop
                                                         <input type="file" class="w-full h-full top-0 left-0 absolute opacity-0">
-                                                    </div>
+                                                    </div> -->
 
 
-                                                 <?php
-                                                    if (isset($_SESSION['message']) && $_SESSION['message'])
-                                                    {
-                                                        echo '<p class="notification">'.$_SESSION['message'];'</p>';
-                                                        unset($_SESSION['message']);
-                                                    }
-                                                    ?>
-                                                    <form method="POST" action="upload.php" enctype="multipart/form-data">
-                                                        <div class="upload-wrapper">
 
-                                                            <input type="file"  id="file-upload" name="uploadedFile">
-                                                        </div>
-
-                                                        <input type="submit" name="uploadBtn" value="Upload" />
-                                                    </form>
 
 
                                                 </div>

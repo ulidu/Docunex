@@ -138,6 +138,7 @@
             var title = $('#title').val();
             var content = $('#content').val();
             var caption = $('#post-form-7').val();
+            var fileupload = $('#fileupload').val();
             var author = $('#author').val();
             var created_date = '<?php if (!empty($date)) { echo $date; } ?>';
             var category = $('#post-form-3').val();
@@ -169,6 +170,13 @@
                 uiPreloader.destroy();
                 toastr.error('Please provide a caption.');
                 $('#caption').focus();
+
+                return false;
+            }
+            if (isEmpty(category)) {
+                uiPreloader.destroy();
+                toastr.error('Please upload a file.');
+                $('#fileupload').focus();
 
                 return false;
             }
