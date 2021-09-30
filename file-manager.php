@@ -44,7 +44,7 @@
                                 <a href="" class="flex items-center px-3 py-2 rounded-md bg-theme-1 text-white font-medium"> <i class="w-4 h-4 mr-2" data-feather="image"></i> Images </a>
                                 <a href="" class="flex items-center px-3 py-2 mt-2 rounded-md"> <i class="w-4 h-4 mr-2" data-feather="video"></i> Videos </a>
                                 <a href="" class="flex items-center px-3 py-2 mt-2 rounded-md"> <i class="w-4 h-4 mr-2" data-feather="file"></i> Documents </a>
-                                <a href="" class="flex items-center px-3 py-2 mt-2 rounded-md"> <i class="w-4 h-4 mr-2" data-feather="users"></i> Shared </a>
+
                                 <a href="" class="flex items-center px-3 py-2 mt-2 rounded-md"> <i class="w-4 h-4 mr-2" data-feather="trash"></i> Trash </a>
                             </div>
                             <div class="border-t border-gray-200 dark:border-dark-5 mt-4 pt-4">
@@ -83,33 +83,45 @@
                                     <i class="dropdown-toggle w-4 h-4 cursor-pointer text-gray-700 dark:text-gray-300" role="button" aria-expanded="false" data-feather="chevron-down"></i> 
                                     <div class="inbox-filter__dropdown-menu dropdown-menu pt-2">
                                         <div class="dropdown-menu__content box p-5">
-                                            <div class="grid grid-cols-12 gap-4 gap-y-3">
+
+
+                                                <form class="grid grid-cols-12 gap-4 gap-y-3" action="file-manager_search.php" method="get">
                                                 <div class="col-span-6">
                                                     <label for="input-filter-1" class="form-label text-xs">File Name</label>
-                                                    <input id="input-filter-1" type="text" class="form-control flex-1" placeholder="Type the file name">
+                                                    <input id="filename" name="filename" type="text" class="form-control flex-1" placeholder="Type the file name">
                                                 </div>
                                                 <div class="col-span-6">
-                                                    <label for="input-filter-2" class="form-label text-xs">Shared With</label>
-                                                    <input id="input-filter-2" type="text" class="form-control flex-1" placeholder="example@gmail.com">
-                                                </div>
-                                                <div class="col-span-6">
-                                                    <label for="input-filter-3" class="form-label text-xs">Created At</label>
-                                                    <input id="input-filter-3" type="text" class="form-control flex-1" placeholder="Important Meeting">
-                                                </div>
-                                                <div class="col-span-6">
-                                                    <label for="input-filter-4" class="form-label text-xs">Size</label>
+                                                    <label for="input-filter-2" class="form-label text-xs">Category</label>
                                                     <select id="input-filter-4" class="form-select flex-1">
-                                                        <option>10</option>
-                                                        <option>25</option>
-                                                        <option>35</option>
-                                                        <option>50</option>
+                                                        <option>Videos</option>
+                                                        <option>Documents</option>
+                                                        <option>Images</option>
                                                     </select>
                                                 </div>
+                                                <div class="col-span-6">
+                                                    <label for="input-filter-3" class="form-label text-xs">Created By</label>
+                                                    <input id="input-filter-3" type="text" class="form-control flex-1" placeholder="Username">
+                                                </div>
+                                                <div class="col-span-6">
+                                                    <label for="input-filter-4" class="form-label text-xs">Tags</label>
+                                                    <select id="input-filter-4" class="form-select flex-1">
+                                                        <option>Demo</option>
+                                                        <option>Clickup</option>
+                                                        <option>Slack</option>
+                                                        <option>User Guide</option>
+                                                    </select>
+                                                </div>
+
+
+
                                                 <div class="col-span-12 flex items-center mt-3">
                                                     <button class="btn btn-secondary w-32 ml-auto">Create Filter</button>
-                                                    <button class="btn btn-primary w-32 ml-2">Search</button>
+                                                    <button type="submit" class="btn btn-primary w-32 ml-2">Search</button>
                                                 </div>
-                                            </div>
+
+
+                                                </form>
+
                                         </div>
                                     </div>
                                 </div>
@@ -133,25 +145,7 @@
                         <!-- BEGIN: Directory & Files -->
                         <div class="intro-y grid grid-cols-12 gap-3 sm:gap-6 mt-5">
 
-                            <div id="1" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
-                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
-                                    <div class="absolute left-0 top-0 mt-3 ml-3">
-                                        <input class="form-check-input border border-gray-500" type="checkbox">
-                                    </div>
-                                    <a href="" class="w-3/5 file__icon file__icon--directory mx-auto"></a>
-                                    <a href="" class="block font-medium mt-4 text-center truncate">Dota 2</a>
-                                    <div class="text-gray-600 text-xs text-center mt-0.5">112 GB</div>
-                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
-                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
-                                        <div class="dropdown-menu w-40">
-                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a id="a" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div id="2" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
                                 <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
                                     <div class="absolute left-0 top-0 mt-3 ml-3">

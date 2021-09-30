@@ -24,7 +24,7 @@
 <script>
 
     $('.globalSearchResultNoFoundFeedback').hide()
-    $(".globalInputSearch").keyup(function() {
+    $(".globalInputSearch").keyup(function () {
 
         // Retrieve the input field text and reset the count to zero
         var filter = $(this).val(),
@@ -38,7 +38,7 @@
 
 
         // Loop through the comment list
-        $('.globalTargetList li').each(function() {
+        $('.globalTargetList li').each(function () {
             // If the list item does not contain the text phrase fade it out
 
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
@@ -255,7 +255,9 @@
             var caption = $('#post-form-7').val();
             var fileupload = $('#fileupload').val();
             var author = $('#author').val();
-            var created_date = '<?php if (!empty($date)) { echo $date; } ?>';
+            var created_date = '<?php if (!empty($date)) {
+                echo $date;
+            } ?>';
             var category = $('#post-form-3').val();
             var tags = $('#post-form-4').val();
 
@@ -310,7 +312,7 @@
                 url: "new-document-app.php",
                 method: "POST",
                 data: {
-                    title : title,
+                    title: title,
                     content: content,
                     caption: caption,
                     author: author,
@@ -321,19 +323,19 @@
 
                 success: function (data) {
 
-                        uiPreloader.destroy();
+                    uiPreloader.destroy();
 
-                        Swal.fire({
-                            title: "Published",
-                            html: "Your Document has been uploaded Successfully.",
-                            icon: 'success',
-                            showCancelButton: false,
-                            confirmButtonText: "OK",
-                            confirmButtonColor: '#1c3faa',
-                            timer: 5000
-                        }).then(function() {
-                            window.location = "file-manager.php";
-                        });
+                    Swal.fire({
+                        title: "Published",
+                        html: "Your Document has been uploaded Successfully.",
+                        icon: 'success',
+                        showCancelButton: false,
+                        confirmButtonText: "OK",
+                        confirmButtonColor: '#1c3faa',
+                        timer: 5000
+                    }).then(function () {
+                        window.location = "file-manager.php";
+                    });
 
                 }
 
@@ -347,15 +349,7 @@
 
 <script>
 
-    $("#a").click(function(event){
-        jQuery.fx.off = true;
-        if (confirm('Are you sure you want to delete this file ?')) {
-            $("#1").css("display", "none");
-            document.getElementById("bl").click();
-        }
-    });
-
-    $("#b").click(function(event){
+    $("#b").click(function (event) {
         jQuery.fx.off = true;
         if (confirm('Are you sure you want to delete this file ?')) {
             $("#2").css("display", "none");
@@ -363,7 +357,7 @@
         }
     });
 
-    $("#c").click(function(event){
+    $("#c").click(function (event) {
         jQuery.fx.off = true;
         if (confirm('Are you sure you want to delete this file ?')) {
             $("#3").css("display", "none");
@@ -371,7 +365,7 @@
         }
     });
 
-    $("#d").click(function(event){
+    $("#d").click(function (event) {
         jQuery.fx.off = true;
         if (confirm('Are you sure you want to delete this file ?')) {
             $("#4").css("display", "none");
@@ -379,7 +373,7 @@
         }
     });
 
-    $("#e").click(function(event){
+    $("#e").click(function (event) {
         jQuery.fx.off = true;
         if (confirm('Are you sure you want to delete this file ?')) {
             $("#5").css("display", "none");
@@ -387,7 +381,7 @@
         }
     });
 
-    $("#f").click(function(event){
+    $("#f").click(function (event) {
         jQuery.fx.off = true;
         if (confirm('Are you sure you want to delete this file ?')) {
             $("#6").css("display", "none");
@@ -395,7 +389,7 @@
         }
     });
 
-    $("#g").click(function(event){
+    $("#g").click(function (event) {
         jQuery.fx.off = true;
         if (confirm('Are you sure you want to delete this file ?')) {
             $("#7").css("display", "none");
@@ -403,7 +397,7 @@
         }
     });
 
-    $("#h").click(function(event){
+    $("#h").click(function (event) {
         jQuery.fx.off = true;
         if (confirm('Are you sure you want to delete this file ?')) {
             $("#8").css("display", "none");
@@ -411,7 +405,7 @@
         }
     });
 
-    $("#i").click(function(event){
+    $("#i").click(function (event) {
         jQuery.fx.off = true;
         if (confirm('Are you sure you want to delete this file ?')) {
             $("#9").css("display", "none");
@@ -419,7 +413,7 @@
         }
     });
 
-    $("#j").click(function(event){
+    $("#j").click(function (event) {
         jQuery.fx.off = true;
         if (confirm('Are you sure you want to delete this file ?')) {
             $("#10").css("display", "none");
@@ -427,13 +421,93 @@
         }
     });
 
-    $("#k").click(function(event){
+    $("#k").click(function (event) {
         jQuery.fx.off = true;
         if (confirm('Are you sure you want to delete this file ?')) {
             $("#11").css("display", "none");
             document.getElementById("bl").click();
         }
     });
+
+</script>
+
+<script>
+
+    $("#2").css("display", "none");
+    $("#3").css("display", "none");
+    $("#4").css("display", "none");
+    $("#5").css("display", "none");
+    $("#6").css("display", "none");
+    $("#7").css("display", "none");
+    $("#8").css("display", "none");
+    $("#9").css("display", "none");
+    $("#10").css("display", "none");
+    $("#11").css("display", "none");
+
+    var filename_get_sc = "<?php echo $filename_get; ?>";
+    var i = 0;
+
+    filename_get = filename_get_sc.toLowerCase();
+
+    if (filename_get == "dota"){
+        $("#2").css("display", "revert");
+        i++;
+    }
+
+    if (filename_get == "resources"){
+        $("#3").css("display", "revert");
+        i++;
+    }
+
+    if (filename_get == "preview"){
+        $("#4").css("display", "revert");
+        i++;
+    }
+
+    if (filename_get == "preview"){
+        $("#5").css("display", "revert");
+        i++;
+    }
+
+    if (filename_get == "repository"){
+        $("#6").css("display", "revert");
+        i++;
+    }
+
+    if (filename_get == "celine"){
+        $("#7").css("display", "revert");
+        i++;
+    }
+
+    if (filename_get == "documentation"){
+        $("#8").css("display", "revert");
+        i++;
+    }
+
+    if (filename_get == "celine"){
+        $("#9").css("display", "revert");
+        i++;
+    }
+
+    if (filename_get == "preview"){
+        $("#10").css("display", "revert");
+        i++;
+    }
+
+    if (filename_get == "dota"){
+        $("#11").css("display", "revert");
+        i++;
+    }
+
+    if (i == 0){
+
+        $("#no_results").html("<div class='alert alert-primary show mb-5 ml-5 mr-5' role='alert'> <i data-feather='alert-circle' class='w-6 h-6 mr-2'></i> No results found !</div>");
+
+    }
+
+
+
+
 
 </script>
 
