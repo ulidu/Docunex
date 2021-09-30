@@ -224,7 +224,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                 <!-- list -->
                                 <ul class="globalTargetList">
 
-                                    <li onclick="location.href='forum_chat.php?f_id=1';">
+                                    <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
 
                                         <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                             <div class="w-12 h-12 flex-none image-fit mr-1">
@@ -283,7 +283,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
 
                                             ?>
 
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -340,7 +340,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -396,7 +396,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -453,7 +453,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -510,7 +510,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -567,7 +567,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -624,7 +624,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -681,7 +681,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                     $topic_sub_category = $row['topic_sub_category'];
 
                                     ?>
-                                    <li>
+                                    <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                         <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                             <div class="w-12 h-12 flex-none image-fit mr-1">
                                                 <img alt="" class="rounded-full"
@@ -772,7 +772,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                 <!-- list -->
                                 <ul class="globalTargetList">
 
-                                    <li>
+                                    <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                         <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                             <div class="w-12 h-12 flex-none image-fit mr-1">
                                                 <img alt="" class="rounded-full"
@@ -828,7 +828,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -884,7 +884,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -941,7 +941,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -998,7 +998,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -1054,7 +1054,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -1111,7 +1111,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -1168,7 +1168,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                             $topic_sub_category = $row['topic_sub_category'];
 
                                             ?>
-                                            <li>
+                                            <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                                 <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                                     <div class="w-12 h-12 flex-none image-fit mr-1">
                                                         <img alt="" class="rounded-full"
@@ -1225,7 +1225,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                                     $topic_sub_category = $row['topic_sub_category'];
 
                                     ?>
-                                    <li>
+                                    <li onclick="location.href='forum_chat.php?f_id=<?php echo $forum_ID; ?>';">
                                         <div class="intro-x cursor-pointer box relative flex items-center p-5 mt-5">
                                             <div class="w-12 h-12 flex-none image-fit mr-1">
                                                 <img alt="" class="rounded-full"
