@@ -250,8 +250,6 @@
 
             e.preventDefault();
 
-            uiPreloader.render();
-
             var title = $('#title').val();
             var content = $('#content').val();
             var caption = $('#post-form-7').val();

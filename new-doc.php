@@ -66,7 +66,7 @@
                                 <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                     <button type="submit" id="submitDocument" name="submitDocument"
                                             class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                        <i data-feather="save" class="w-4 h-4 mr-2"></i> Publish Document
+                                        <i data-feather="save" class="w-4 h-4 mr-2"></i> Upload
                                     </button>
 
                                 </div>
@@ -113,8 +113,11 @@
                                                     <div class="flex flex-wrap px-4">
 
 
-                                                        <input id="fileupload" type="file" name="fileupload"/>
-                                                        <button id="upload-button" onclick="saveFile()">Upload</button>
+                                                        <input id="fileupload" class="btn btn-secondary" type="file" name="fileupload"/>
+
+
+                                                    </div>
+                                                        <button style="margin: 1rem;" class="btn btn-primary" id="upload-button" onclick="saveFile()">Upload</button>
 
 
                                                         <script>
@@ -141,7 +144,7 @@
                                                                  <img class="rounded-md" alt="" src="dist/images/preview-9.jpg">
                                                                  <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
                                                              </div> -->
-                                                    </div>
+
 
 
                                                 <!--    <div class="px-4 pb-4 flex items-center cursor-pointer relative">
