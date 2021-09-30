@@ -5980,11 +5980,11 @@
                     <div class="h-full flex items-center">
                         <div class="mx-auto text-center">
                             <div class="w-16 h-16 flex-none image-fit rounded-full overflow-hidden mx-auto">
-                                <img alt="" src="dist/images/profile-6.jpg">
+                                <img alt="" src="dist/images/profile-6.png">
                             </div>
                             <div class="mt-3">
                                 <div class="font-medium">Hey, Leonardo DiCaprio!</div>
-                                <div class="text-gray-600 mt-1">Please select a chat to start messaging.</div>
+                                <div class="text-gray-600 mt-1">Please select a forum topic to help your team members.</div>
                             </div>
                         </div>
                     </div>

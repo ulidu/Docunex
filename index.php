@@ -63,7 +63,27 @@
                                                             data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i></div>
                                             </div>
                                         </div>
-                                        <div class="text-3xl font-medium leading-8 mt-6">4.710</div>
+                                        <div class="text-3xl font-medium leading-8 mt-6">
+
+
+                                            <?php
+
+                                            $query_doc = "select * from documents";
+
+                                            if (!empty($con)) {
+
+                                                $run_query_doc = mysqli_query($con, $query_doc);
+
+                                            }
+
+                                            $count_doc = mysqli_num_rows($run_query_doc);
+
+                                            echo $count_doc;
+
+                                            ?>
+
+
+                                        </div>
                                         <div class="text-base text-gray-600 mt-1">Total Documents</div>
                                     </div>
                                 </div>
@@ -80,8 +100,26 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="text-3xl font-medium leading-8 mt-6">3.721</div>
-                                        <div class="text-base text-gray-600 mt-1">Total Forums</div>
+                                        <div class="text-3xl font-medium leading-8 mt-6">
+
+                                            <?php
+
+                                            $query_doc = "select * from forum";
+
+                                            if (!empty($con)) {
+
+                                                $run_query_doc = mysqli_query($con, $query_doc);
+
+                                            }
+
+                                            $count_doc = mysqli_num_rows($run_query_doc);
+
+                                            echo $count_doc;
+
+                                            ?>
+
+                                        </div>
+                                        <div class="text-base text-gray-600 mt-1">Forum Topics</div>
                                     </div>
                                 </div>
                             </div>
@@ -136,17 +174,25 @@
                                 <div class="flex">
                                     <div>
                                         <div class="text-theme-19 dark:text-gray-300 text-lg xl:text-xl font-medium">
-                                            $15,000
+                                            <?php
+
+                                            $query_doc = "select * from documents";
+
+                                            if (!empty($con)) {
+
+                                                $run_query_doc = mysqli_query($con, $query_doc);
+
+                                            }
+
+                                            $count_doc = mysqli_num_rows($run_query_doc);
+
+                                            echo $count_doc;
+
+                                            ?> Documents
                                         </div>
                                         <div class="mt-0.5 text-gray-600 dark:text-gray-600">This Month</div>
                                     </div>
-                                    <div class="w-px h-12 border border-r border-dashed border-gray-300 dark:border-dark-5 mx-4 xl:mx-5"></div>
-                                    <div>
-                                        <div class="text-gray-600 dark:text-gray-600 text-lg xl:text-xl font-medium">
-                                            $10,000
-                                        </div>
-                                        <div class="mt-0.5 text-gray-600 dark:text-gray-600">Last Month</div>
-                                    </div>
+
                                 </div>
                                 <div class="dropdown xl:ml-auto mt-5 xl:mt-0">
                                     <button class="dropdown-toggle btn btn-outline-secondary font-normal"
@@ -155,16 +201,14 @@
                                     </button>
                                     <div class="dropdown-menu w-40">
                                         <div class="dropdown-menu__content box dark:bg-dark-1 p-2 overflow-y-auto h-32">
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">PC
-                                                & Laptop</a> <a href=""
-                                                                class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">Smartphone</a>
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">Electronic</a>
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">Photography</a>
-                                            <a href=""
-                                               class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">Sport</a>
+                                            <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">HR</a>
+                                            <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">Finance</a>
+                                            <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">Marketing</a>
+                                            <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">Pickbox Project</a>
+                                            <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">Development</a>
+                                            <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">Quality Assurance</a>
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -178,10 +222,9 @@
                     <div class="col-span-12 sm:col-span-6 lg:col-span-3 mt-8">
                         <div class="intro-y flex items-center h-10">
                             <h2 class="text-lg font-medium truncate mr-5">
-                                Weekly Top Seller
+                                Top Documents
                             </h2>
-                            <a href="" class="ml-auto text-theme-1 dark:text-theme-10 truncate">Show More</a>
-                        </div>
+                           </div>
                         <div class="intro-y box p-5 mt-5">
                             <canvas class="mt-3" id="report-pie-chart" height="300"></canvas>
                             <div class="mt-8">
@@ -210,10 +253,9 @@
                     <div class="col-span-12 sm:col-span-6 lg:col-span-3 mt-8">
                         <div class="intro-y flex items-center h-10">
                             <h2 class="text-lg font-medium truncate mr-5">
-                                Sales Report
+                                Top Forums
                             </h2>
-                            <a href="" class="ml-auto text-theme-1 dark:text-theme-10 truncate">Show More</a>
-                        </div>
+                             </div>
                         <div class="intro-y box p-5 mt-5">
                             <canvas class="mt-3" id="report-donut-chart" height="300"></canvas>
                             <div class="mt-8">
