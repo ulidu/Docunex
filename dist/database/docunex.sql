@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 30, 2021 at 06:47 PM
+-- Generation Time: Sep 30, 2021 at 07:51 PM
 -- Server version: 8.0.21
 -- PHP Version: 7.3.21
 
@@ -38,13 +38,15 @@ CREATE TABLE IF NOT EXISTS `documents` (
   `document_category` varchar(1000) NOT NULL,
   `document_tag` varchar(500) NOT NULL,
   PRIMARY KEY (`document_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `documents`
 --
 
 INSERT INTO `documents` (`document_ID`, `document_title`, `document_content`, `document_caption`, `document_author`, `document_created_date`, `document_category`, `document_tag`) VALUES
+(39, 'dhdh', 'fhdfhd', 'dfhdfhdf', 'Robert De Niro', '2021-10-01', 'Documents', 'Array'),
+(38, 'dfgs', 'gsxdg', 'sfdgsdgs', 'Robert De Niro', '2021-10-01', 'Documents', 'Array'),
 (37, 'gchfth', 'fhfthrf', 'ghr', 'Robert De Niro', '2021-10-01', 'Documents', 'Array'),
 (36, 'fghsrft', 'ghxfghhfgh', 'ghjfsgj', 'Robert De Niro', '2021-10-01', 'Documents', ''),
 (35, 'fgd', 'fgdhfdgh', 'hghdh', 'Robert De Niro', '2021-09-30', 'Documents', 'Array'),
@@ -74,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `forum` (
   `topic_sub_category` varchar(200) DEFAULT NULL,
   `forum_status` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`forum_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `forum`
@@ -83,7 +85,8 @@ CREATE TABLE IF NOT EXISTS `forum` (
 INSERT INTO `forum` (`forum_ID`, `topic_title`, `topic_content`, `topic_author`, `topic_created_date`, `topic_category`, `topic_sub_category`, `forum_status`) VALUES
 (50, 'gfhtfh', 'thrtrh', 'Robert De Niro', '2021-09-30 18:39:04', 'General', 'HR', 'closed'),
 (51, 'dhtdhd', 'hdthdrth', 'Robert De Niro', '2021-09-30 18:45:31', 'General', 'HR', 'closed'),
-(52, 'hfhftjrtyjrtfyjrjrtj', 'rtjrtjrtjrtj', 'Robert De Niro', '2021-09-30 21:59:48', 'General', 'HR', 'closed');
+(52, 'hfhftjrtyjrtfyjrjrtj', 'rtjrtjrtjrtj', 'Robert De Niro', '2021-09-30 21:59:48', 'General', 'HR', 'closed'),
+(53, 'sgdh', 'afsfa', 'Robert De Niro', '2021-10-01 01:08:52', 'General', 'HR', 'closed');
 
 -- --------------------------------------------------------
 
