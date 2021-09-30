@@ -355,7 +355,97 @@
 
 </script>
 
+<script>
 
+    $("#a").click(function(event){
+        jQuery.fx.off = true;
+        if (confirm('Are you sure you want to delete this file ?')) {
+            $("#1").css("display", "none");
+            document.getElementById("bl").click();
+        }
+    });
+
+    $("#b").click(function(event){
+        jQuery.fx.off = true;
+        if (confirm('Are you sure you want to delete this file ?')) {
+            $("#2").css("display", "none");
+            document.getElementById("bl").click();
+        }
+    });
+
+    $("#c").click(function(event){
+        jQuery.fx.off = true;
+        if (confirm('Are you sure you want to delete this file ?')) {
+            $("#3").css("display", "none");
+            document.getElementById("bl").click();
+        }
+    });
+
+    $("#d").click(function(event){
+        jQuery.fx.off = true;
+        if (confirm('Are you sure you want to delete this file ?')) {
+            $("#4").css("display", "none");
+            document.getElementById("bl").click();
+        }
+    });
+
+    $("#e").click(function(event){
+        jQuery.fx.off = true;
+        if (confirm('Are you sure you want to delete this file ?')) {
+            $("#5").css("display", "none");
+            document.getElementById("bl").click();
+        }
+    });
+
+    $("#f").click(function(event){
+        jQuery.fx.off = true;
+        if (confirm('Are you sure you want to delete this file ?')) {
+            $("#6").css("display", "none");
+            document.getElementById("bl").click();
+        }
+    });
+
+    $("#g").click(function(event){
+        jQuery.fx.off = true;
+        if (confirm('Are you sure you want to delete this file ?')) {
+            $("#7").css("display", "none");
+            document.getElementById("bl").click();
+        }
+    });
+
+    $("#h").click(function(event){
+        jQuery.fx.off = true;
+        if (confirm('Are you sure you want to delete this file ?')) {
+            $("#8").css("display", "none");
+            document.getElementById("bl").click();
+        }
+    });
+
+    $("#i").click(function(event){
+        jQuery.fx.off = true;
+        if (confirm('Are you sure you want to delete this file ?')) {
+            $("#9").css("display", "none");
+            document.getElementById("bl").click();
+        }
+    });
+
+    $("#j").click(function(event){
+        jQuery.fx.off = true;
+        if (confirm('Are you sure you want to delete this file ?')) {
+            $("#10").css("display", "none");
+            document.getElementById("bl").click();
+        }
+    });
+
+    $("#k").click(function(event){
+        jQuery.fx.off = true;
+        if (confirm('Are you sure you want to delete this file ?')) {
+            $("#11").css("display", "none");
+            document.getElementById("bl").click();
+        }
+    });
+
+</script>
 
 </body>
 </html>

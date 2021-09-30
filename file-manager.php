@@ -35,7 +35,7 @@
                 <!-- END: Top Bar -->
                 <div class="grid grid-cols-12 gap-6 mt-8">
                     <div class="col-span-12 lg:col-span-3 xxl:col-span-2">
-                        <h2 class="intro-y text-xl font-medium mr-auto mt-2">
+                        <h2 id="bl" class="intro-y text-xl font-medium mr-auto mt-2">
                             File Manager
                         </h2>
                         <!-- BEGIN: File Manager Menu -->
@@ -132,7 +132,27 @@
                         <!-- END: File Manager Filter -->
                         <!-- BEGIN: Directory & Files -->
                         <div class="intro-y grid grid-cols-12 gap-3 sm:gap-6 mt-5">
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
+
+                            <div id="1" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
+                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
+                                    <div class="absolute left-0 top-0 mt-3 ml-3">
+                                        <input class="form-check-input border border-gray-500" type="checkbox">
+                                    </div>
+                                    <a href="" class="w-3/5 file__icon file__icon--directory mx-auto"></a>
+                                    <a href="" class="block font-medium mt-4 text-center truncate">Dota 2</a>
+                                    <div class="text-gray-600 text-xs text-center mt-0.5">112 GB</div>
+                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
+                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
+                                        <div class="dropdown-menu w-40">
+                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
+                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
+                                                <a id="a" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="2" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
                                 <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
                                     <div class="absolute left-0 top-0 mt-3 ml-3">
                                         <input class="form-check-input border border-gray-500" type="checkbox">
@@ -144,31 +164,13 @@
                                         <div class="dropdown-menu w-40">
                                             <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
+                                                <a id="b" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
-                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
-                                    <div class="absolute left-0 top-0 mt-3 ml-3">
-                                        <input class="form-check-input border border-gray-500" type="checkbox">
-                                    </div>
-                                    <a href="" class="w-3/5 file__icon file__icon--directory mx-auto"></a> <a href="" class="block font-medium mt-4 text-center truncate">Dota 2</a> 
-                                    <div class="text-gray-600 text-xs text-center mt-0.5">112 GB</div>
-                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
-                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
-                                        <div class="dropdown-menu w-40">
-                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
+                            <div id="3" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
                                 <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
                                     <div class="absolute left-0 top-0 mt-3 ml-3">
                                         <input class="form-check-input border border-gray-500" type="checkbox">
@@ -183,13 +185,13 @@
                                         <div class="dropdown-menu w-40">
                                             <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
+                                                <a id="c" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
+                            <div id="4" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
                                 <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
                                     <div class="absolute left-0 top-0 mt-3 ml-3">
                                         <input class="form-check-input border border-gray-500" type="checkbox">
@@ -206,13 +208,13 @@
                                         <div class="dropdown-menu w-40">
                                             <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
+                                                <a id="d" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
+                            <div id="5" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
                                 <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
                                     <div class="absolute left-0 top-0 mt-3 ml-3">
                                         <input class="form-check-input border border-gray-500" type="checkbox">
@@ -229,13 +231,13 @@
                                         <div class="dropdown-menu w-40">
                                             <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
+                                                <a id="e" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
+                            <div id="6" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
                                 <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
                                     <div class="absolute left-0 top-0 mt-3 ml-3">
                                         <input class="form-check-input border border-gray-500" type="checkbox">
@@ -247,13 +249,13 @@
                                         <div class="dropdown-menu w-40">
                                             <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
+                                                <a id="f" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
+                            <div id="7" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
                                 <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
                                     <div class="absolute left-0 top-0 mt-3 ml-3">
                                         <input class="form-check-input border border-gray-500" type="checkbox">
@@ -268,13 +270,13 @@
                                         <div class="dropdown-menu w-40">
                                             <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
+                                                <a id="g" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
+                            <div id="8" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
                                 <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
                                     <div class="absolute left-0 top-0 mt-3 ml-3">
                                         <input class="form-check-input border border-gray-500" type="checkbox">
@@ -286,13 +288,13 @@
                                         <div class="dropdown-menu w-40">
                                             <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
+                                                <a id="h" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
+                            <div id="9" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
                                 <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
                                     <div class="absolute left-0 top-0 mt-3 ml-3">
                                         <input class="form-check-input border border-gray-500" type="checkbox">
@@ -307,13 +309,13 @@
                                         <div class="dropdown-menu w-40">
                                             <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
+                                                <a id="i" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
+                            <div id="10" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
                                 <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
                                     <div class="absolute left-0 top-0 mt-3 ml-3">
                                         <input class="form-check-input border border-gray-500" type="checkbox">
@@ -330,13 +332,13 @@
                                         <div class="dropdown-menu w-40">
                                             <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
+                                                <a id="j" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
+                            <div id="11" class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
                                 <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
                                     <div class="absolute left-0 top-0 mt-3 ml-3">
                                         <input class="form-check-input border border-gray-500" type="checkbox">
@@ -348,200 +350,13 @@
                                         <div class="dropdown-menu w-40">
                                             <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
                                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
+                                                <a id="k" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
-                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
-                                    <div class="absolute left-0 top-0 mt-3 ml-3">
-                                        <input class="form-check-input border border-gray-500" type="checkbox">
-                                    </div>
-                                    <a href="" class="w-3/5 file__icon file__icon--image mx-auto">
-                                        <div class="file__icon--image__preview image-fit">
-                                            <img alt="" src="dist/images/preview-7.jpg">
-                                        </div>
-                                    </a>
-                                    <a href="" class="block font-medium mt-4 text-center truncate">preview-7.jpg</a> 
-                                    <div class="text-gray-600 text-xs text-center mt-0.5">1.4 MB</div>
-                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
-                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
-                                        <div class="dropdown-menu w-40">
-                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
-                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
-                                    <div class="absolute left-0 top-0 mt-3 ml-3">
-                                        <input class="form-check-input border border-gray-500" type="checkbox">
-                                    </div>
-                                    <a href="" class="w-3/5 file__icon file__icon--file mx-auto">
-                                        <div class="file__icon__file-name">PHP</div>
-                                    </a>
-                                    <a href="" class="block font-medium mt-4 text-center truncate">Routes.php</a> 
-                                    <div class="text-gray-600 text-xs text-center mt-0.5">1 KB</div>
-                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
-                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
-                                        <div class="dropdown-menu w-40">
-                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
-                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
-                                    <div class="absolute left-0 top-0 mt-3 ml-3">
-                                        <input class="form-check-input border border-gray-500" type="checkbox">
-                                    </div>
-                                    <a href="" class="w-3/5 file__icon file__icon--image mx-auto">
-                                        <div class="file__icon--image__preview image-fit">
-                                            <img alt="" src="dist/images/preview-6.jpg">
-                                        </div>
-                                    </a>
-                                    <a href="" class="block font-medium mt-4 text-center truncate">preview-6.jpg</a> 
-                                    <div class="text-gray-600 text-xs text-center mt-0.5">1 MB</div>
-                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
-                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
-                                        <div class="dropdown-menu w-40">
-                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
-                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
-                                    <div class="absolute left-0 top-0 mt-3 ml-3">
-                                        <input class="form-check-input border border-gray-500" type="checkbox">
-                                    </div>
-                                    <a href="" class="w-3/5 file__icon file__icon--directory mx-auto"></a> <a href="" class="block font-medium mt-4 text-center truncate">Dota 2</a> 
-                                    <div class="text-gray-600 text-xs text-center mt-0.5">112 GB</div>
-                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
-                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
-                                        <div class="dropdown-menu w-40">
-                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
-                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
-                                    <div class="absolute left-0 top-0 mt-3 ml-3">
-                                        <input class="form-check-input border border-gray-500" type="checkbox">
-                                    </div>
-                                    <a href="" class="w-3/5 file__icon file__icon--empty-directory mx-auto"></a> <a href="" class="block font-medium mt-4 text-center truncate">Laravel 7</a> 
-                                    <div class="text-gray-600 text-xs text-center mt-0.5">120 MB</div>
-                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
-                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
-                                        <div class="dropdown-menu w-40">
-                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
-                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
-                                    <div class="absolute left-0 top-0 mt-3 ml-3">
-                                        <input class="form-check-input border border-gray-500" type="checkbox">
-                                    </div>
-                                    <a href="" class="w-3/5 file__icon file__icon--directory mx-auto"></a> <a href="" class="block font-medium mt-4 text-center truncate">Dota 2</a> 
-                                    <div class="text-gray-600 text-xs text-center mt-0.5">112 GB</div>
-                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
-                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
-                                        <div class="dropdown-menu w-40">
-                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
-                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
-                                    <div class="absolute left-0 top-0 mt-3 ml-3">
-                                        <input class="form-check-input border border-gray-500" type="checkbox">
-                                    </div>
-                                    <a href="" class="w-3/5 file__icon file__icon--image mx-auto">
-                                        <div class="file__icon--image__preview image-fit">
-                                            <img alt="" src="dist/images/preview-1.jpg">
-                                        </div>
-                                    </a>
-                                    <a href="" class="block font-medium mt-4 text-center truncate">preview-1.jpg</a> 
-                                    <div class="text-gray-600 text-xs text-center mt-0.5">1 MB</div>
-                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
-                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
-                                        <div class="dropdown-menu w-40">
-                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
-                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
-                                    <div class="absolute left-0 top-0 mt-3 ml-3">
-                                        <input class="form-check-input border border-gray-500" type="checkbox">
-                                    </div>
-                                    <a href="" class="w-3/5 file__icon file__icon--file mx-auto">
-                                        <div class="file__icon__file-name">MP4</div>
-                                    </a>
-                                    <a href="" class="block font-medium mt-4 text-center truncate">Celine Dion - Ashes.mp4</a> 
-                                    <div class="text-gray-600 text-xs text-center mt-0.5">20 MB</div>
-                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
-                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
-                                        <div class="dropdown-menu w-40">
-                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">
-                                <div class="file box rounded-md px-5 pt-8 pb-5 px-3 sm:px-5 relative zoom-in">
-                                    <div class="absolute left-0 top-0 mt-3 ml-3">
-                                        <input class="form-check-input border border-gray-500" type="checkbox">
-                                    </div>
-                                    <a href="" class="w-3/5 file__icon file__icon--image mx-auto">
-                                        <div class="file__icon--image__preview image-fit">
-                                            <img alt="" src="dist/images/preview-2.jpg">
-                                        </div>
-                                    </a>
-                                    <a href="" class="block font-medium mt-4 text-center truncate">preview-2.jpg</a> 
-                                    <div class="text-gray-600 text-xs text-center mt-0.5">1.2 MB</div>
-                                    <div class="absolute top-0 right-0 mr-2 mt-2 dropdown ml-auto">
-                                        <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600"></i> </a>
-                                        <div class="dropdown-menu w-40">
-                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> Share File </a>
-                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="trash" class="w-4 h-4 mr-2"></i> Delete </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <!-- END: Directory & Files -->
                         <!-- BEGIN: Pagination -->
