@@ -217,7 +217,7 @@ $page = end($link_array);
 
             <li>
                 <a href="forum.php" class="side-menu
-                <?php if ($page == "forum.php" || $page == "new-forum.php") { ?>
+                <?php if ($page == "forum.php" || $page == "new-forum.php" || $page == "forum_chat.php") { ?>
                 side-menu--active
                 <?php } ?>">
                     <div class="side-menu__icon"><i data-feather="message-square"></i></div>
