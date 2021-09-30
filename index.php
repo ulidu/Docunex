@@ -229,20 +229,20 @@
                             <canvas class="mt-3" id="report-pie-chart" height="300"></canvas>
                             <div class="mt-8">
                                 <div class="flex items-center">
-                                    <div class="w-2 h-2 bg-theme-11 rounded-full mr-3"></div>
-                                    <span class="truncate">17 - 30 Years old</span>
+                                    <div class="w-2 h-2 bg-theme-1 rounded-full mr-3"></div>
+                                    <span class="truncate">Development</span>
                                     <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
                                     <span class="font-medium xl:ml-auto">62%</span>
                                 </div>
                                 <div class="flex items-center mt-4">
-                                    <div class="w-2 h-2 bg-theme-1 rounded-full mr-3"></div>
-                                    <span class="truncate">31 - 50 Years old</span>
+                                    <div class="w-2 h-2 bg-theme-11 rounded-full mr-3"></div>
+                                    <span class="truncate">General</span>
                                     <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
                                     <span class="font-medium xl:ml-auto">33%</span>
                                 </div>
                                 <div class="flex items-center mt-4">
                                     <div class="w-2 h-2 bg-theme-12 rounded-full mr-3"></div>
-                                    <span class="truncate">>= 50 Years old</span>
+                                    <span class="truncate">HR</span>
                                     <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
                                     <span class="font-medium xl:ml-auto">10%</span>
                                 </div>
@@ -260,20 +260,20 @@
                             <canvas class="mt-3" id="report-donut-chart" height="300"></canvas>
                             <div class="mt-8">
                                 <div class="flex items-center">
-                                    <div class="w-2 h-2 bg-theme-11 rounded-full mr-3"></div>
-                                    <span class="truncate">17 - 30 Years old</span>
+                                    <div class="w-2 h-2 bg-theme-1 rounded-full mr-3"></div>
+                                    <span class="truncate">HR</span>
                                     <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
                                     <span class="font-medium xl:ml-auto">62%</span>
                                 </div>
                                 <div class="flex items-center mt-4">
                                     <div class="w-2 h-2 bg-theme-1 rounded-full mr-3"></div>
-                                    <span class="truncate">31 - 50 Years old</span>
+                                    <span class="truncate">Finance</span>
                                     <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
                                     <span class="font-medium xl:ml-auto">33%</span>
                                 </div>
                                 <div class="flex items-center mt-4">
                                     <div class="w-2 h-2 bg-theme-12 rounded-full mr-3"></div>
-                                    <span class="truncate">>= 50 Years old</span>
+                                    <span class="truncate">Marketing</span>
                                     <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
                                     <span class="font-medium xl:ml-auto">10%</span>
                                 </div>
