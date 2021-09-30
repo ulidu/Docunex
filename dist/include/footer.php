@@ -321,8 +321,6 @@
 
                 success: function (data) {
 
-                    if (data.toString() == 1) {
-
                         uiPreloader.destroy();
 
                         Swal.fire({
@@ -336,14 +334,6 @@
                         }).then(function() {
                             window.location = "file-manager.php";
                         });
-                    }
-
-                    if (data.toString() == 0) {
-
-                        uiPreloader.destroy();
-                        swal.fire("Something went wrong !", "Failed uploading the document", "error");
-
-                    }
 
                 }
 
