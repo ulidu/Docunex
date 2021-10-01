@@ -78,9 +78,9 @@ $get_reply_content = $_SESSION['get_reply_content'];
 $get_replied_by = $_SESSION['get_replied_by'];
 
 ?>
-    <form action="" method="post" name="new_reply" id="new_reply">
+    <form class="content" action="" method="post" name="new_reply" id="new_reply">
         <!-- BEGIN: Content -->
-        <div class="content">
+
             <!-- BEGIN: Top Bar -->
             <div class="top-bar">
                 <!-- BEGIN: Breadcrumb -->
@@ -1970,7 +1970,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                 <!-- END: Chat Content -->
 
             </div>
-        </div>
+
 
     </form>
 
