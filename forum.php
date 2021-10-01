@@ -5983,7 +5983,7 @@
                                 <img alt="" src="dist/images/profile-6.png">
                             </div>
                             <div class="mt-3">
-                                <div class="font-medium">Hey, Leonardo DiCaprio!</div>
+                                <div class="font-medium">Hey, Robert De Niro !</div>
                                 <div class="text-gray-600 mt-1">Please select a forum topic to help your team members.</div>
                             </div>
                         </div>
