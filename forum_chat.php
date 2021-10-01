@@ -78,8 +78,8 @@ $get_reply_content = $_SESSION['get_reply_content'];
 $get_replied_by = $_SESSION['get_replied_by'];
 
 ?>
+
     <form class="content" action="" method="post" name="new_reply" id="new_reply">
-        <!-- BEGIN: Content -->
 
             <!-- BEGIN: Top Bar -->
             <div class="top-bar">
@@ -1971,9 +1971,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
 
             </div>
 
-
     </form>
-
 
 <?php
 
