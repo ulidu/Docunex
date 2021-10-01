@@ -114,6 +114,7 @@ $get_replied_by = $_SESSION['get_replied_by'];
                 <!-- END: Account Menu -->
             </div>
             <!-- END: Top Bar -->
+
             <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
                 <h2 class="text-xl font-medium mr-auto">
                     Forums
